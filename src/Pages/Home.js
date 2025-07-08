@@ -10,13 +10,13 @@ import StayWithUs from '../components/StayWithUs'
 import HomeAbout from '../components/HomeAbout'
 import WhyDifferent from '../components/WhyDifferent'
 import HomeProducts from '../components/HomeProducts'
-import  PieChart  from '../components/PieChart'
+
 
 function Home() {
   return (
     <div>
     <HomeBanner/>
-    <PieChart/>
+   
     <HomeAbout/>
     <HomeProducts/>
     <WhyDifferent/>

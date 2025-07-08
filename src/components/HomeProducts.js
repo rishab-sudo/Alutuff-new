@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import './HomeProducts.css';
 
 const productData = [
-  { id: 1, category: 'Architecture', image: require('../assets/home-about1.jpeg'), title: 'Project 1', description: 'Architecture Design' },
-  { id: 2, category: 'Interior', image: require('../assets/home-about1.jpeg'), title: 'Project 2', description: 'Interior Design' },
-  { id: 3, category: 'Design', image: require('../assets/home-about1.jpeg'), title: 'Project 3', description: 'Creative Design' },
-  { id: 4, category: 'Construction', image: require('../assets/home-about1.jpeg'), title: 'Project 4', description: 'Construction Site' },
-  { id: 5, category: 'Architecture', image: require('../assets/home-about1.jpeg'), title: 'Project 5', description: 'Architecture Masterpiece' },
-  { id: 6, category: 'Interior', image: require('../assets/home-about1.jpeg'), title: 'Project 6', description: 'Elegant Interior' },
-  { id: 7, category: 'Design', image: require('../assets/home-about1.jpeg'), title: 'Project 7', description: 'Modern Design' },
-  { id: 8, category: 'Construction', image: require('../assets/home-about1.jpeg'), title: 'Project 8', description: 'Building Construction' },
+  { id: 1, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 1', description: 'Architecture Design' },
+  { id: 2, category: 'Marble&Stone', image: require('../assets/home-about1.jpeg'), title: 'Project 2', description: 'Interior Design' },
+  { id: 3, category: 'SandSeries', image: require('../assets/home-about1.jpeg'), title: 'Project 3', description: 'Creative Design' },
+  { id: 4, category: 'RusticSeries', image: require('../assets/home-about1.jpeg'), title: 'Project 4', description: 'Construction Site' },
+  { id: 5, category: 'Bold&Solid', image: require('../assets/home-about1.jpeg'), title: 'Project 5', description: 'Architecture Masterpiece' },
+  { id: 6, category: 'Partitions', image: require('../assets/home-about1.jpeg'), title: 'Project 6', description: 'Elegant Interior' },
+
   // Add more products if needed
 ];
 
@@ -18,7 +17,7 @@ export default function HomeProducts() {
   const [visibleCount, setVisibleCount] = useState(4);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const categories = ['All', 'Architecture', 'Interior', 'Design', 'Construction'];
+  const categories = ['All', 'Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series','Bold & Solid','Partitions'];
 
   const filteredProducts = selectedCategory === 'All'
     ? productData

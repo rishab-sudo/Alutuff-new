@@ -18,7 +18,7 @@ import Established from './Pages/Established';
 function App() {
   return (
     <Router>
-      <div className="">
+      <div className="App">
         <Navbar />
    
         <Routes>

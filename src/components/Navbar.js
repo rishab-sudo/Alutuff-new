@@ -22,19 +22,17 @@ const Navbar = () => {
 
           {/* Dropdown About */}
           <li
-            className="dropdown"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
-            <span className="dropdown-toggle">About ▾</span>
-            {dropdownOpen && (
-              <ul className="dropdown-menu">
-                <li><a href="/about/company">Company</a></li>
-                <li><a href="/about/team">Team</a></li>
-                <li><a href="/about/history">History</a></li>
-              </ul>
-            )}
-          </li>
+  className="dropdown"
+  onMouseEnter={() => setDropdownOpen(true)}
+  onMouseLeave={() => setDropdownOpen(false)}
+>
+  <span className="dropdown-toggle">About</span>
+  <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/established">Established Exellence</a></li>
+
+  </ul>
+</li>
 
           <li><a href="/product">Product</a></li>
           <li><a href="/contact">Contact</a></li>
@@ -50,7 +48,7 @@ const Navbar = () => {
       <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
         <div className="side-menu-header">
           <img className="side-logo" src={require("../assets/footer_logo.png")} alt="Logo" />
-          <div className="side-close-icon" onClick={toggleMenu}><FaTimes /></div>
+         
         </div>
 
         <ul className="side-nav-links">

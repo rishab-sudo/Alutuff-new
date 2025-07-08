@@ -90,6 +90,262 @@ align-items: center;
   font-size: 18px;
   color: #fff;
 }
+/* ==================== Glance Section ==================== */
+.glance {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.glance h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.glance p {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.glance-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  position: relative; /* Important: parent of lines */
+}
+
+/* Points Section */
+.glance-points {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.point-box {
+  background-color: #f1f1f1;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Center Image */
+.glance-image {
+  position: relative;
+  z-index: 2; /* Bring image above lines */
+}
+
+.glance-image img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ==================== Connecting Lines ==================== */
+/* ==================== Connecting Lines ==================== */
+.line {
+  position: absolute;
+  height: 1px;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+/* Lines to the Left */
+.line-left-1 {
+  top: 20%;
+  right: calc(50% + 200px); /* 200px is half of 400px image width */
+ width: 225px; 
+}
+
+.line-left-2 {
+  top: 50%;
+  right: calc(50% + 200px);
+ width: 225px;
+}
+
+.line-left-3 {
+  top: 80%;
+  right: calc(50% + 200px);
+ width: 225px;
+}
+
+/* Lines to the Right */
+.line-right-1 {
+  top: 20%;
+  left: calc(50% + 200px);
+ width: 225px;
+}
+
+.line-right-2 {
+  top: 50%;
+  left: calc(50% + 200px);
+ width: 225px;
+}
+
+.line-right-3 {
+  top: 80%;
+  left: calc(50% + 200px);
+  width: 225px;
+}
+/* ==================== Animation Keyframes ==================== */
+
+/* ==================== Animation Keyframes ==================== */
+
+/* Image Slide Up */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Line Draw Animation */
+@keyframes drawLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 225px; /* Your updated final width */
+  }
+}
+
+/* Points Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================== Apply Animations ==================== */
+
+/* Image Animation */
+.glance-image {
+  animation: slideUp 1.3s ease forwards;
+}
+
+/* Left Lines Animation */
+.line-left-1,
+.line-left-2,
+.line-left-3 {
+  animation: drawLine 1s ease forwards;
+  animation-delay: 1s;
+  width: 0; /* Required: Start from 0 */
+  overflow: hidden;
+}
+
+/* Right Lines Animation */
+.line-right-1,
+.line-right-2,
+.line-right-3 {
+  animation: drawLine 1.5s ease forwards;
+  animation-delay: 1s;
+  width: 0; /* Required: Start from 0 */
+  overflow: hidden;
+}
+
+/* Points Animation */
+.glance-points .point-box {
+  opacity: 0; /* Required: Start hidden */
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.2s; /* Points appear after lines */
+}
+/* -----------------key-values-sec--------------- */
+.zigzag-card-section {
+  padding: 0px ;
+}
+
+.zigzag-card-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.zigzag-card {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0px;
+  background-color: #fff !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.zigzag-card-1 {
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.zigzag-card-2 {
+  border-top-left-radius: 120px;
+  border-bottom-left-radius: 120px;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.zigzag-card-3 {
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.zigzag-card-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.zigzag-img-div img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* ----------------slider------------------------------------------- */
+.about-slider-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.about-slide-image-wrapper {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-slide-image-wrapper img {
+   
+  height: 200px;
+  width: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #fff; /* Optional: adds a clean background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.236); /* Soft decent shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Optional: Add a slight lift on hover */
+.about-slide-image-wrapper img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
@@ -119,6 +375,47 @@ gap: 35px;
   .about-stats-wrapper {
     flex-direction: column;
     gap: 30px;
+  }
+  /*  */
+    .glance-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .glance-points {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .glance-left {
+    order: 1;
+  }
+
+  .glance-image {
+    order: 2;
+  }
+
+  .glance-right {
+    order: 3;
+  }
+
+  /* Hide lines on mobile for clean layout */
+  .line {
+    display: none;
+  }
+
+  .glance-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+  /*  */
+   .zigzag-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .zigzag-card-2 {
+    justify-content: center;
   }
 }
 

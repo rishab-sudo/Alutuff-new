@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HomeProducts.css';
 
 const productData = [
@@ -8,24 +8,41 @@ const productData = [
   { id: 4, category: 'RusticSeries', image: require('../assets/home-about1.jpeg'), title: 'Project 4', description: 'Construction Site' },
   { id: 5, category: 'Bold&Solid', image: require('../assets/home-about1.jpeg'), title: 'Project 5', description: 'Architecture Masterpiece' },
   { id: 6, category: 'Partitions', image: require('../assets/home-about1.jpeg'), title: 'Project 6', description: 'Elegant Interior' },
-
-  // Add more products if needed
+  { id: 7, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 7', description: 'Premium Look' },
+  { id: 8, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 8', description: 'Cozy Feel' },
 ];
 
 export default function HomeProducts() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [startIndex, setStartIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState('forward');
   const [selectedImage, setSelectedImage] = useState(null);
+  const [animationClass, setAnimationClass] = useState('');
 
-  const categories = ['All', 'Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series','Bold & Solid','Partitions'];
+  const categories = ['All', 'Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series', 'Bold & Solid', 'Partitions'];
 
   const filteredProducts = selectedCategory === 'All'
     ? productData
-    : productData.filter(product => product.category === selectedCategory);
+    : productData.filter(product => product.category.replace(/\s|&/g, '') === selectedCategory.replace(/\s|&/g, ''));
 
-  const handleViewMore = () => {
-    setVisibleCount(prev => prev + 4);
+  const currentProducts = filteredProducts.slice(startIndex, startIndex + 4);
+
+  const handleSlide = () => {
+    if (startIndex + 4 < filteredProducts.length) {
+      setSlideDirection('forward');
+      setAnimationClass('forward');
+      setStartIndex(prev => prev + 4);
+    } else {
+      setSlideDirection('backward');
+      setAnimationClass('backward');
+      setStartIndex(prev => Math.max(prev - 4, 0));
+    }
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setAnimationClass(''), 500);
+    return () => clearTimeout(timeout);
+  }, [animationClass]);
 
   return (
     <div className="homeproduct-section">
@@ -37,15 +54,19 @@ export default function HomeProducts() {
           <button
             key={category}
             className={selectedCategory === category ? 'active' : ''}
-            onClick={() => { setSelectedCategory(category); setVisibleCount(4); }}
+            onClick={() => {
+              setSelectedCategory(category);
+              setStartIndex(0);
+              setSlideDirection('forward');
+            }}
           >
             {category}
           </button>
         ))}
       </div>
 
-      <div className="product-cards">
-        {filteredProducts.slice(0, visibleCount).map(product => (
+      <div className={`product-cards ${animationClass}`}>
+        {currentProducts.map(product => (
           <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
             <img src={product.image} alt={product.title} />
             <div className="overlay">
@@ -56,9 +77,11 @@ export default function HomeProducts() {
         ))}
       </div>
 
-      {visibleCount < filteredProducts.length && (
+      {filteredProducts.length > 4 && (
         <div className="view-more">
-          <button onClick={handleViewMore}>View More</button>
+          <button onClick={handleSlide}>
+            {startIndex + 4 < filteredProducts.length ? 'View More' : 'Back'}
+          </button>
         </div>
       )}
 

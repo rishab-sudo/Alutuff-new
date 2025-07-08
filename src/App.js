@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 // Import Components
 import Navbar from './components/Navbar';
 import Home from './Pages/Home';
@@ -11,6 +13,7 @@ import About from './Pages/About';
 import ProductPage from './Pages/ProductPage';
 import Contact from './Pages/Contact';
 import Established from './Pages/Established';
+import Projects from './Pages/Projects';
 
 
 
@@ -27,6 +30,7 @@ function App() {
           <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/product" element={<ProductPage />} />
+               <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
                   <Route path="/established" element={<Established />} />
         </Routes>

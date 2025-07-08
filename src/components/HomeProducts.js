@@ -49,21 +49,26 @@ export default function HomeProducts() {
       <h2>Our Project</h2>
       <p>Our Last Projects</p>
 
-      <div className="filter-buttons">
-        {categories.map(category => (
-          <button
-            key={category}
-            className={selectedCategory === category ? 'active' : ''}
-            onClick={() => {
-              setSelectedCategory(category);
-              setStartIndex(0);
-              setSlideDirection('forward');
-            }}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+<div className="filter-buttons">
+  {categories.map(category => (
+    <button
+      key={category}
+      className={selectedCategory === category ? 'active' : ''}
+      onClick={() => {
+        setSelectedCategory(category);
+        setStartIndex(0);
+        setSlideDirection('forward');
+      }}
+    >
+      {category}
+    </button>
+  ))}
+</div>
+<div className="swipe-indicator">
+  <svg viewBox="0 0 24 24">
+    <path d="M10 6L16 12L10 18" />
+  </svg>
+</div>
 
       <div className={`product-cards ${animationClass}`}>
         {currentProducts.map(product => (

@@ -1,0 +1,63 @@
+.home-about-section {
+    margin-top: 5%;
+  background-image: url('../assets/home-about-bg.jpg'); /* Provide correct path */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  width: 100%;
+  padding: 50px 0; /* Add padding as per your design */
+}
+
+
+.home-about-content-div {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.home-about-text-div{
+    max-width: 45%;
+}
+.pink-button{
+    background-color: pink;
+    padding: 10px 20px;
+    border: none;
+}
+.home-about-img1-div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.home-about-img1{
+    max-width: 80%;
+    margin-left: auto;
+    height: auto;
+    background-color: #000;
+}
+@media screen and (max-width: 768px) {
+ .home-about-content-div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 35px;
+}   
+.home-about-text-div{
+    min-width: 100%;
+}
+.pink-button{
+    background-color: pink;
+    padding: 10px 20px;
+    border: none;
+}
+.home-about-img1-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-about-img1{
+    min-width: 100%;
+    margin-left: auto;
+    height: auto;
+    background-color: #000;
+}
+}

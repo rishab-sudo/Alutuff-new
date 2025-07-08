@@ -1,0 +1,143 @@
+.legacy-section {
+  margin-top: 5%;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.legacy-content-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.legacy-content-div > div:first-child {
+  flex: 2;
+}
+
+.business-entity-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.business-entity-wrapper p {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.business-entity-wrapper p:hover {
+  transform: translateY(-5px);
+}
+/*  */
+.busniss-unit-card-section {
+  margin-top: 5%;
+  padding: 20px;
+}
+
+.busniss-unit-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Card Styles */
+.business-unit-card {
+  width: 32%;
+  height: 250px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Card heading */
+.card-heading {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Bullet Points */
+.card-point {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.card-point::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: hotpink;
+  font-weight: bold;
+}
+/*  */
+.road-map-section{
+    margin-top: 5%;
+}
+.road-map-content-div{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+}
+.road-map-img{
+max-width: 100%;
+height: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .business-unit-card {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business-unit-card {
+    width: 100%;
+  }
+
+  .card-heading {
+    font-size: 16px;
+  }
+
+  .card-point {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Responsive - Mobile */
+@media screen and (max-width: 768px) {
+  .legacy-content-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .business-entity-wrapper {
+    width: 100%;
+  }
+
+  .business-entity-wrapper p {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

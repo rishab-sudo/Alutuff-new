@@ -1,0 +1,68 @@
+.stack-section {
+  margin-top: 6.5% !important;
+    background: #f5f5f5;
+  width: 100%;
+  margin: auto;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Increased gap between cards */
+}
+
+.card {
+  width: 80%;
+  height: 350px; /* Reduced height */
+  margin: auto;
+  background-color: #000;
+  color: aliceblue;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 120px;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.overlap-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.overlap-card-img {
+  max-width: 45%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.overlap-card-text{
+  width: 50%;
+}
+.card1 {
+  background-color: aqua;
+}
+
+.card3 {
+  background-color: antiquewhite;
+  color: #000;
+}
+
+.lift {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .overlap-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+}

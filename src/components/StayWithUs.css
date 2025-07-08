@@ -1,0 +1,82 @@
+.stay-with-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stay-with-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.stay-with-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.stay-with-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.stay-button {
+  position: relative; /* To position the circle inside */
+  padding: 10px 40px 10px 20px; /* Extra right padding for the circle */
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.stay-content button:hover {
+  background-color: #ddd;
+}
+
+.stay-button-circle {
+    padding: 8px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stay-button-circle i {
+  color: #fff;
+  font-size: 12px;
+  transform: rotate(45deg); /* Arrow points to top-right */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stay-with-content h1 {
+    font-size: 2rem;
+  }
+
+  .stay-with-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .stay-with-content button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

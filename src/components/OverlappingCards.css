@@ -13,8 +13,8 @@
   width: 80%;
   height: 350px; /* Reduced height */
   margin: auto;
-  background-color: #000;
-  color: aliceblue;
+  background-color: #ffffff;
+  color: #000;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -44,11 +44,12 @@
   width: 50%;
 }
 .card1 {
-  background-color: aqua;
+  background-color: #ffffff;
+  
 }
 
 .card3 {
-  background-color: antiquewhite;
+  background-color: #ffffff;
   color: #000;
 }
 

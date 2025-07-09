@@ -111,7 +111,7 @@ align-items: center;
   align-items: center;
   justify-content: space-around;
   gap: 40px;
-  position: relative; /* Important: parent of lines */
+  position: relative; 
 }
 
 /* Points Section */
@@ -142,8 +142,7 @@ align-items: center;
   display: block;
 }
 
-/* ==================== Connecting Lines ==================== */
-/* ==================== Connecting Lines ==================== */
+/* ==== Connecting Lines ====== */
 .line {
   position: absolute;
   height: 1px;
@@ -151,10 +150,10 @@ align-items: center;
   z-index: 1;
 }
 
-/* Lines to the Left */
+
 .line-left-1 {
   top: 20%;
-  right: calc(50% + 200px); /* 200px is half of 400px image width */
+  right: calc(50% + 200px); 
  width: 225px; 
 }
 
@@ -188,9 +187,7 @@ align-items: center;
   left: calc(50% + 200px);
   width: 225px;
 }
-/* ==================== Animation Keyframes ==================== */
-
-/* ==================== Animation Keyframes ==================== */
+/* ==== Animation Keyframes ===== */
 
 /* Image Slide Up */
 @keyframes slideUp {
@@ -210,7 +207,7 @@ align-items: center;
     width: 0;
   }
   100% {
-    width: 225px; /* Your updated final width */
+    width: 225px; 
   }
 }
 
@@ -226,7 +223,7 @@ align-items: center;
   }
 }
 
-/* ==================== Apply Animations ==================== */
+/* ===== Apply Animations ====== */
 
 /* Image Animation */
 .glance-image {
@@ -259,7 +256,7 @@ align-items: center;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1.2s; /* Points appear after lines */
 }
-/* -----------------key-values-sec--------------- */
+/* ------------------------key-values-sec--------------------- */
 .zigzag-card-section {
   padding: 0px ;
 }
@@ -303,10 +300,9 @@ align-items: center;
 }
 
 .zigzag-card-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 80%;
+  text-align: center;
+  
 }
 
 .zigzag-img-div img {
@@ -408,14 +404,32 @@ gap: 35px;
     width: 100%;
     max-width: 300px;
   }
-  /*  */
+  /* zig-zag */
+
    .zigzag-card {
+    width: 100%;
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
-
+.zigzag-card-div{
+  margin-right: auto;
+ max-width: 45% !important;
+ background-color: black;
+}
   .zigzag-card-2 {
     justify-content: center;
+  }
+  .zigzag-img{
+    max-width: 70px;
+    max-height: 70px;
+
+  }
+  .zigzag-card-heading{
+    font-size: 17px;
+  }
+  .zigzag-card-descp{
+    font-size: 15px;
   }
 }
 

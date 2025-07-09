@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import './About.css';
+import CircleSlider from '../components/CircleSlider';
 
 
 const stats = [
@@ -15,33 +16,8 @@ const stats = [
   { id: 4, image: require('../assets/index2_count_icon1.png'), count: 45, suffix: '+', label: ' Years Market Trust' },
 ];
 const About = () => {
-  const glanceRef = useRef(null);
+    const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              setIsVisible(true);
-            }, 2000); // Delay the animation by 1 second
-          }
-        });
-      },
-      { threshold: 0.8 }
-    );
-
-    if (glanceRef.current) {
-      observer.observe(glanceRef.current);
-    }
-
-    return () => {
-      if (glanceRef.current) {
-        observer.unobserve(glanceRef.current);
-      }
-    };
-  }, []);
 
   const images = [
     require('../assets/map.png'),
@@ -76,9 +52,26 @@ const About = () => {
  
        </Container>
      </Container>
+     {/*  */}
+           <Container fluid className='about-us-section'>
+            <Container className='about-us-content-div'>
+      
+      <div className='about-us-text-div'>
+        <p>About US</p>
+        <p>We Build Our Projects With Your <br/>
+      Dreams And Ideas.</p>
+      <p>Elitsed do eiusimod tempor incididunt ut labore et dolore magna aliqua Utnim ad minim veniam, quis nostrixercitation ullamco laboris.</p>
+      <p>Consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusimod tempor incididunt ut labor e et dolore magna aliqua. Ut enimere ad minim veerernireeam qureesgiis nostrixercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure doerlor in repreheinderit tate velit eesse cillum dolore eu fugiat nulla parereiatur. Excepteur sint occerewaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+      <p>Ut enim ad minim veniam quis nostrixercitation ullamco laboris nisi ut aliquip eerex earer commodo consequat. Duis aute irure dolor in repreheinderit tate.</p>
+      <button className='pink-button'>Purchase</button>
+      </div>
+      
+      <img className='about-us-img' src ={require("../assets/about02.jpeg")} alt=""/>
+            </Container>
+          </Container>
 
       {/* Glance Section */}
-      <div className={`glance ${isVisible ? 'animate-glance' : ''}`} ref={glanceRef}>
+  <div ref={sectionRef} className={`glance ${isVisible ? "visible" : ""}`}>
         <h2>At a Glance</h2>
         <p>Here's a quick look at what we offer and stand for.</p>
 
@@ -120,38 +113,42 @@ const About = () => {
           {/* Card 1 */}
           <div className='zigzag-card zigzag-card-1'>
             <div className='zigzag-card-div'>
-              <h3>Hello Broo...!</h3>
-              <p>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+              <h3>Our Mission</h3>
+              <p>To transform spaces with world-class Metal Composite Panels by ensuring superior quality, on-time service, and exceptional reliability—empowering customers, dealers, and stakeholders to build with trust, pride,
+and confidence in every project we touch every partnership we honor, and every innovation we bring to the surface of modern construction.</p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
-              <img src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
             </div>
           </div>
 
           {/* Card 2 */}
           <div className='zigzag-card zigzag-card-2'>
             <div className='zigzag-img-div' style={{ marginRight: "auto" }}>
-              <img src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
             </div>
-            <div className='zigzag-card-div'>
-              <h3>Hello Broo...!</h3>
-              <p>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+            <div className='zigzag-card-div' style={{marginLeft:"auto",marginRight:"0px"}}>
+              <h3>OUR VISION</h3>
+              <p>To be India’s most trusted and preferred ACP brand, recognized globally for innovation, consistency, and integrity—by building lasting relationships with customers, channel partners, and communities.
+We dream of a future where every architect, builder, or homeowner confidently chooses Alutuff as their first choice—because they know we stand not just for panels, but for promise, precision, and partnership</p>
             </div>
           </div>
 
           {/* Card 3 */}
           <div className='zigzag-card zigzag-card-3'>
             <div className='zigzag-card-div'>
-              <h3>Hello Broo...!</h3>
-              <p>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+              <h3 className='zigzag-card-heading'>OUR PROMISE</h3>
+              <p className='zigzag-card-descp'>At Alutuff, we don’t just manufacture panels—we help build dreams, safeguard reputations, and stand beside you as your partner in every square foot.</p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
-              <img src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
             </div>
           </div>
 
         </div>
       </Container>
+{/*  */}
+<CircleSlider/>
 {/*  */}
           <Container fluid className="about-stats-section">
       <div className="about-banner-overlay"></div> {/* Black Overlay */}
@@ -170,7 +167,7 @@ const About = () => {
         </div>
       </Container>
     </Container>
-    
+
       {/* Slider Section */}
       <div className="about-slider-container">
           <div className='d-flex justify-content-center align-items-center mb-5 '>
@@ -185,22 +182,10 @@ const About = () => {
         </Slider>
       </div>
       {/*  */}
-      <Container fluid className='about-us-section'>
-            <Container className='about-us-content-div'>
-      
-      <div className='about-us-text-div'>
-        <p>About US</p>
-        <p>We Build Our Projects With Your <br/>
-      Dreams And Ideas.</p>
-      <p>Elitsed do eiusimod tempor incididunt ut labore et dolore magna aliqua Utnim ad minim veniam, quis nostrixercitation ullamco laboris.</p>
-      <p>Consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusimod tempor incididunt ut labor e et dolore magna aliqua. Ut enimere ad minim veerernireeam qureesgiis nostrixercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure doerlor in repreheinderit tate velit eesse cillum dolore eu fugiat nulla parereiatur. Excepteur sint occerewaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-      <p>Ut enim ad minim veniam quis nostrixercitation ullamco laboris nisi ut aliquip eerex earer commodo consequat. Duis aute irure dolor in repreheinderit tate.</p>
-      <button className='pink-button'>Purchase</button>
-      </div>
-      
-      <img className='about-us-img' src ={require("../assets/about02.jpeg")} alt=""/>
-            </Container>
-          </Container>
+
+  <Container fluid className='d-flex justify-content-center align-items-center g-0'>
+<img style={{maxWidth:"100%"}} src={require("../assets/makein-new-alutiff.png")} alt=""/>
+  </Container>
       {/*  */}
 
 

@@ -3,6 +3,10 @@ import { Container } from 'react-bootstrap';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import './About.css';
@@ -14,6 +18,11 @@ const stats = [
   { id: 2, image: require('../assets/index2_count_icon1.png'), count: 25, suffix: '+', label: 'Countries Exported To' },
   { id: 3, image: require('../assets/index2_count_icon1.png'), count: 500, suffix: '+', label: ' Projects Completed' },
   { id: 4, image: require('../assets/index2_count_icon1.png'), count: 45, suffix: '+', label: ' Years Market Trust' },
+];
+const aboutImage = [
+  require("../assets/about02.jpeg"),
+   require("../assets/about02.jpeg"),
+   require("../assets/about02.jpeg"),
 ];
 const About = () => {
     const sectionRef = useRef(null);
@@ -28,17 +37,38 @@ const About = () => {
     require('../assets/map.png'),
   ];
 
-  const settings = {
-    infinite: true,
-    speed: 5000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: false,
-  };
+const settings = {
+  infinite: true,
+  speed: 5000,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: 'linear',
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: false,
+  pauseOnHover: false,
+  responsive: [
+    {
+      breakpoint: 1200, // below 1200px
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 992, // below 992px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 576, // below 576px
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
 
   return (
     <>
@@ -66,7 +96,21 @@ const About = () => {
       <button className='pink-button'>Purchase</button>
       </div>
       
-      <img className='about-us-img' src ={require("../assets/about02.jpeg")} alt=""/>
+     <div className='about-us-img-slider'>
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
+            slidesPerView={1}
+            className="about-swiper"
+          >
+            {aboutImage.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img className='about-us-img' src={img} alt={`slide-${index}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
             </Container>
           </Container>
 

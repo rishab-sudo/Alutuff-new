@@ -4,25 +4,22 @@ import './FaqSection.css';
 
 const faqs = [
   {
-    question: 'What is Alutuff?',
-    answer: 'Alutuff is a trusted name for Aluminium Composite Panels and Wall Panels across India.'
+    question: ' Where can Alutuff panels be used?',
+    answer: 'Alutuff panels are ideal for both interior and exterior use—like facades, signage, ceilings, partitions, and wall cladding in homes, offices, and commercial spaces.'
   },
   {
-    question: 'Where are Alutuff panels used?',
-    answer: 'Alutuff panels are widely used in both interior and exterior applications due to their durability and modern look.'
+    question: 'Are Alutuff panels fire and weather resistant?',
+    answer: 'Yes, Alutuff panels are engineered to be fire-retardant and weather-resistant, offering long-term durability in all environmental conditions.'
   },
   {
-    question: 'What sizes are available?',
-    answer: 'Alutuff panels are available in various sizes and thicknesses to suit different project requirements.'
+    question: ' What finishes and textures are available?',
+    answer: 'Alutuff panels come in a wide variety of textures and looks, including wooden, metallic, matte, gloss, marble, and custom 3D decorative finishes.'
   },
     {
-    question: 'What sizes are available?',
-    answer: 'Alutuff panels are available in various sizes and thicknesses to suit different project requirements.'
+    question: 'What sizes and thicknesses do Alutuff panels come in?',
+    answer: 'Panels are available in multiple sizes like 1220×2440mm, 1220×3050mm, and thicknesses from 3mm to 6mm, with custom sizes available on request.'
   },
-    {
-    question: 'What sizes are available?',
-    answer: 'Alutuff panels are available in various sizes and thicknesses to suit different project requirements.'
-  }
+
 ];
 
 const FaqSection = () => {

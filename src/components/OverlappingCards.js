@@ -39,8 +39,13 @@ const OverlappingCards = () => {
         <div className='overlap-card-content'>
           <img className='overlap-card-img' src={require("../assets/map.png")} alt=""/>
           <div className='overlap-card-text'>
-        <h2>Card 1</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+        <h2> Here's why Alutuff is the premier choice for your needs
+</h2>
+        <ul>
+          <li>We Listen, You Succeed.</li>
+          <li>Tailored Design Versatility.</li>
+          <li>Solutions That Reflect Your Vision.</li>
+          </ul>
           <div>
             </div>
       </div>
@@ -50,8 +55,12 @@ const OverlappingCards = () => {
         <div className='overlap-card-content'>
            <img  className='overlap-card-img' src={require("../assets/map.png")} alt=""/>
            <div className='overlap-card-text'>
-        <h2>Card 2</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+        <h2> Alutuff ACP Panels — Made in India, Trusted Nationwide</h2>
+           <ul>
+          <li>Proven Performance, Preferred in All 28 States.</li>
+          <li>Resilience Engineered, Beauty That Endures.</li>
+          <li>Proudly Indian, Globally Trusted Quality.</li>
+          </ul>
       </div>
       </div>
       </div>
@@ -59,8 +68,12 @@ const OverlappingCards = () => {
        <div className='overlap-card-content'>
          <img  className='overlap-card-img' src={require("../assets/map.png")} alt=""/>
          <div className='overlap-card-text'>
-        <h2>Card 3</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+        <h2> Alutuff ACP Cross-Section: Unveiling Our Core Strength</h2>
+           <ul>
+          <li>Engineered for Extreme Durability.</li>
+          <li>Superior Core, Lasting Finish.</li>
+          <li>Built to Withstand, Designed to Impress.</li>
+          </ul>
         </div>
       </div>
       </div>

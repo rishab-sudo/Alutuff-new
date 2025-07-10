@@ -1,77 +1,82 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './HomeProducts.css';
 
 const productData = [
-  { id: 1, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 1', description: 'Architecture Design' },
-  { id: 2, category: 'Marble&Stone', image: require('../assets/home-about1.jpeg'), title: 'Project 2', description: 'Interior Design' },
-  { id: 3, category: 'SandSeries', image: require('../assets/home-about1.jpeg'), title: 'Project 3', description: 'Creative Design' },
-  { id: 4, category: 'RusticSeries', image: require('../assets/home-about1.jpeg'), title: 'Project 4', description: 'Construction Site' },
-  { id: 5, category: 'Bold&Solid', image: require('../assets/home-about1.jpeg'), title: 'Project 5', description: 'Architecture Masterpiece' },
-  { id: 6, category: 'Partitions', image: require('../assets/home-about1.jpeg'), title: 'Project 6', description: 'Elegant Interior' },
-  { id: 7, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 7', description: 'Premium Look' },
-  { id: 8, category: 'WoodenPrime', image: require('../assets/home-about1.jpeg'), title: 'Project 8', description: 'Cozy Feel' },
+  { id: 1, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF-107-WALNUT.jpg'), title: 'Project 1', description: 'Architecture Design' },
+  { id: 2, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF119-RUSTIC-WOOD.jpg'), title: 'Project 2', description: 'Interior Design' },
+  { id: 3, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF123-ROYAL-TEAK.jpg'), title: 'Project 3', description: 'Creative Design' },
+  { id: 4, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF124-NATURAL-TEAK.jpg'),title: 'Project 4', description: 'Construction Site' },
+  { id: 5, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF128-DARK-WANGY.jpg'), title: 'Project 5', description: 'Architecture Masterpiece' },
+  { id: 6, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF132-AMAZONIAN-FOREST.jpg'), title: 'Project 6', description: 'Elegant Interior' },
+  { id: 7, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF-142-BALINESE-TEAK.jpg'), title: 'Project 7', description: 'Premium Look' },
+  { id: 8, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF-144-OAK-PINE.jpg'), title: 'Project 8', description: 'Cozy Feel' },
+    { id: 9, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF-145-PREMIUM-MAGHONY.jpg'), title: 'Project 9', description: 'Cozy Feel' },
+     { id: 10, category: 'WoodenPrime', image: require('../assets/SubProducts/ATF101-ROSE-WOOD.jpg'), title: 'Project 10', description: 'Cozy Feel' },
 ];
 
 export default function HomeProducts() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [startIndex, setStartIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState('forward');
+  const [showSecondRow, setShowSecondRow] = useState(false);
+  const [secondRowAnimation, setSecondRowAnimation] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
-  const [animationClass, setAnimationClass] = useState('');
 
   const categories = ['All', 'Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series', 'Bold & Solid', 'Partitions'];
 
   const filteredProducts = selectedCategory === 'All'
     ? productData
-    : productData.filter(product => product.category.replace(/\s|&/g, '') === selectedCategory.replace(/\s|&/g, ''));
+    : productData.filter(product =>
+        product.category.replace(/\s|&/g, '') === selectedCategory.replace(/\s|&/g, '')
+      );
 
-  const currentProducts = filteredProducts.slice(startIndex, startIndex + 4);
+  const firstRow = filteredProducts.slice(0, 4);
+  const secondRow = filteredProducts.slice(4, 8);
 
-  const handleSlide = () => {
-    if (startIndex + 4 < filteredProducts.length) {
-      setSlideDirection('forward');
-      setAnimationClass('forward');
-      setStartIndex(prev => prev + 4);
-    } else {
-      setSlideDirection('backward');
-      setAnimationClass('backward');
-      setStartIndex(prev => Math.max(prev - 4, 0));
-    }
+const handleToggleRow = () => {
+  if (!showSecondRow) {
+    setSecondRowAnimation('slide-in'); // View More = from left
+    setShowSecondRow(true);
+  } else {
+    setSecondRowAnimation('slide-out-left'); // View Less = exit to left
+    setTimeout(() => {
+      setShowSecondRow(false);
+      setSecondRowAnimation('');
+    }, 500); // Matches animation duration
+  }
+};
+
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setShowSecondRow(false);
+    setSecondRowAnimation('');
   };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setAnimationClass(''), 500);
-    return () => clearTimeout(timeout);
-  }, [animationClass]);
 
   return (
     <div className="homeproduct-section">
       <h2>Our Project</h2>
       <p>Our Last Projects</p>
 
-<div className="filter-buttons">
-  {categories.map(category => (
-    <button
-      key={category}
-      className={selectedCategory === category ? 'active' : ''}
-      onClick={() => {
-        setSelectedCategory(category);
-        setStartIndex(0);
-        setSlideDirection('forward');
-      }}
-    >
-      {category}
-    </button>
-  ))}
-</div>
-<div className="swipe-indicator">
-  <svg viewBox="0 0 24 24">
-    <path d="M10 6L16 12L10 18" />
-  </svg>
-</div>
+      <div className="filter-buttons">
+        {categories.map(category => (
+          <button
+            key={category}
+            className={selectedCategory === category ? 'active' : ''}
+            onClick={() => handleCategoryChange(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
 
-      <div className={`product-cards ${animationClass}`}>
-        {currentProducts.map(product => (
+      <div className="swipe-indicator">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 6L16 12L10 18" />
+        </svg>
+      </div>
+
+      {/* First Row (Always visible) */}
+      <div className="product-cards">
+        {firstRow.map(product => (
           <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
             <img src={product.image} alt={product.title} />
             <div className="overlay">
@@ -82,10 +87,26 @@ export default function HomeProducts() {
         ))}
       </div>
 
+      {/* Second Row (conditionally visible and animated) */}
+      {showSecondRow && (
+        <div className={`product-cards second-row ${secondRowAnimation}`}>
+          {secondRow.map(product => (
+            <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
+              <img src={product.image} alt={product.title} />
+              <div className="overlay">
+                <h4>{product.title}</h4>
+                <p>{product.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* View More / View Less */}
       {filteredProducts.length > 4 && (
         <div className="view-more">
-          <button onClick={handleSlide}>
-            {startIndex + 4 < filteredProducts.length ? 'View More' : 'Back'}
+          <button onClick={handleToggleRow}>
+            {showSecondRow ? 'View Less' : 'View More'}
           </button>
         </div>
       )}

@@ -16,10 +16,10 @@ const StickySection = () => {
   ];
 
   const paragraphs = [
-    'Paragraph 1, I started my triathlon journey struggling with balance and technique. Now, I guide others to achieve their full potential.',
-    'Paragraph 2, I started my triathlon journey struggling with balance and technique. Now, I guide others to achieve their full potential.',
-    'Paragraph 3, I started my triathlon journey struggling with balance and technique. Now, I guide others to achieve their full potential.',
-    'Paragraph 4, I started my triathlon journey struggling with balance and technique. Now, I guide others to achieve their full potential.',
+    'At Alutuff, every panel is crafted using advanced technology and strict quality controls, ensuring unmatched durability, flawless finishes, and performance that stands strong in every climate.',
+    'We believe one size doesn’t fit all. From textures to thickness, Alutuff panels offer flexible options tailored to match your design intent, project needs, and creative aspirations.',
+    'With over a decade of experience and a nationwide footprint, Alutuff combines global standards with Indian innovation, serving architects and developers who demand excellence, reliability, and value.',
+    'We don’t just manufacture materials, we enable possibilities. Our commitment to safety, sustainability, and customer-first thinking helps us deliver more than panels; we deliver project confidence.',
   ];
 
   useEffect(() => {

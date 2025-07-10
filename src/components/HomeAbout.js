@@ -8,9 +8,15 @@ export default function HomeAbout() {
       <Container className="home-about-content-div">
        <div className='home-about-text-div'>
         <p>About US</p>
-        <p>We Build Our Projects With Your<br/> Dreams Project And Ideas.</p>
-        <p>Consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusimod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrixercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehei voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.Uerert enim ad minim veniam, quis nostrixercitation.</p>
+        <p>Turning Your Ideas Into Timeless <br/> Architectural Reality</p>
+        <p>
+        At Alutuff, we transform your vision into built reality. With over a decade of expertise, cutting-edge facilities in Bareilly spanning 5 lakh sq ft, and a fully‑integrated, ISO‑certified manufacturing setup, our fire‑retardant, weather‑resistant ACPs are precision‑engineered for safety, style, and durability.
+        </p>
+        <p> 
+          Whether it's residential exteriors or large commercial façades, each panel reflects your ideas—crafted with global standards and proud Indian-made excellence.
+</p>
+<p>Because we don’t just build panels—we build your trust.
+</p>
         <button className='pink-button'>View More</button>
         </div>
 

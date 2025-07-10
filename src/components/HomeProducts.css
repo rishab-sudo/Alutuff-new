@@ -24,10 +24,11 @@
 
 .filter-buttons button {
   margin: 0 10px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border: none;
   background: #ddd;
-  height: 75px;
+  color: #000;
+  height: 62px;
   width: auto;
   cursor: pointer;
   transition: background 0.3s;
@@ -38,7 +39,7 @@
 .filter-buttons button.active,
 .filter-buttons button:hover {
   background: #000;
-  color: #fff;
+  color: #ffffffe6;
 }
 
 /* === Swipe Indicator Arrow (right side, mobile only) */
@@ -76,25 +77,21 @@
 }
 
 .product-cards.forward {
-  animation: slideInRight 0.5s forwards;
-}
-
-.product-cards.backward {
   animation: slideInLeft 0.5s forwards;
 }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+/* === Second Row Animation === */
+/* === Second Row Animation === */
+.product-cards.second-row {
+  margin-top: 20px;
 }
 
-@keyframes slideInLeft {
+/* Slide In from Left (View More) */
+.product-cards.second-row.slide-in {
+  animation: slideInSecondRow 0.5s ease-in-out;
+}
+
+@keyframes slideInSecondRow {
   from {
     transform: translateX(-100%);
     opacity: 0;
@@ -102,6 +99,22 @@
   to {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+/* Slide Out to Left (View Less) */
+.product-cards.second-row.slide-out-left {
+  animation: slideOutToLeft 0.5s ease-in-out;
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 }
 

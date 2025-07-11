@@ -105,14 +105,16 @@
 }
 /*  */
 .product-section-container {
+  width: 100%;
+ background-color: #666666cd;
+}
+.product-section-content-div{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center !important;
+  justify-content: space-between !important;
   gap: 20px;
   padding: 20px;
-  background-color: #666;
 }
-
 /* Sidebar */
 .product-sidebar {
   min-width: 220px;
@@ -146,9 +148,10 @@
 
 /* Product Cards */
 .product-grid {
-  margin: auto;
-  max-width: 75%;
+    max-width: 75%;
   display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
   grid-template-columns: repeat(3, 1fr);
   padding: 0px;
   gap: 25px;

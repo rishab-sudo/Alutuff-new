@@ -112,7 +112,8 @@ const ProductPage = () => {
 </Container>
 </Container>
 {/*  */}
-  <div className="product-section-container">
+  <Container fluid className="product-section-container">
+    <Container className='product-section-content-div'>
       {/* Sidebar */}
       <div className="product-sidebar">
         {categories.map((cat) => (
@@ -136,8 +137,8 @@ const ProductPage = () => {
           </div>
         ))}
       </div>
-    </div>
-
+    </Container>
+</Container>
 
 {/*  */}
 <HomeProducts/>

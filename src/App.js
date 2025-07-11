@@ -16,6 +16,7 @@ import News from "./Pages/News"
 import Contact from './Pages/Contact';
 import Established from './Pages/Established';
 import Projects from './Pages/Projects';
+import Certificates from './Pages/Certificates';
 import Career from './Pages/Career';
 
 
@@ -37,6 +38,7 @@ function App() {
                          <Route path="/career" element={<Career />} />
                           <Route path="/news" element={<News />} />
                           <Route path="/testReport" element={<TestReport />} />
+                          <Route path="/certificates" element={<Certificates/>}/>
           <Route path="/contact" element={<Contact />} />
                   <Route path="/established" element={<Established />} />
         </Routes>

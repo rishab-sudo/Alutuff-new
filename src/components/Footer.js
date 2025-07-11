@@ -8,20 +8,22 @@ const Footer = () => {
     <Container fluid className="footer-section">
       <div className="footer-overlay">
         <div className="footer-text-box">
-          <h2>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
+          <h2>Building Trust with Innovation, Quality Panels, and Global Manufacturing Excellence
+</h2>
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />
-            Excepteur sint occaecat cupidatat non proident.
+           Alutuff delivers world-class aluminium panel solutions with trusted quality, modern design, and sustainable innovation.
+            Backed by global presence and decades of expertise, we serve architects, developers, and industries with durable, fire-rated, and aesthetic 
+            cladding solutions across India and beyond.
+
           </p>
-          <button className="footer-button">Purchase Now</button>
+          <button className="footer-button">Become a Dealer</button>
           <div className="footer-links">
-            <a href="#">home</a>
-            <a href="#">about us</a>
-            <a href="#">portfolio</a>
-            <a href="#">services</a>
-            <a href="#">blog</a>
-            <a href="#">contact us</a>
+            <a href="/home">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/product">Products</a>
+            <a href="/career">Career</a>
+            <a href="/contact">Contact</a>
+           
           </div>
         </div>
 

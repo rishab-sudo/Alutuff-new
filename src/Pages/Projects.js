@@ -87,20 +87,26 @@ const ProjectCarousel = () => {
 
   return (
     <>
-      <Container fluid className="project-banner-section">
-        <Container className="project-banner-content-div">
-          <div>
-            <h2>Our <br /> Signature <br /> Projects </h2>
-            <p>dkedmewnknfkenknekenvnenkvnkfnvenvnr</p>
-            <div>
-              <button className="pink-button"> Our Products</button>
-            </div>
-          </div>
-          <div>
-            <img className="project-banner-img" src={require("../assets/Image2.png")} alt="" />
-          </div>
-        </Container>
-      </Container>
+<Container fluid className="projects-banner-section">
+<Container className="projects-banner-content-div">
+    <div>
+<h1>mmmmmmmmmmmm</h1>
+<p>kkkkkkkkk</p>
+<p>ddddddddddddddd</p>
+</div>
+
+ <div className="image-layout-wrapper">
+      <div className="top-section">
+        <div className="left-images">
+          <img src={require  ("../assets/Image2.png")} alt="Image 1" className="img img1 from-left" />
+          <img src={require  ("../assets/Image2.png")} alt="Image 2" className="img img2 from-left" />
+        </div>
+        <img src={require  ("../assets/Image2.png")} alt="Image 3" className="img img3 from-right" />
+      </div>
+      <img src={require  ("../assets/Image2.png")} alt="Image 4" className="img img4 from-bottom" />
+    </div>
+</Container>
+</Container>
 
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap'
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Slider from 'react-slick';
@@ -80,11 +81,17 @@ const Career = () => {
       const [expanded, setExpanded] = useState(false);
   return (
     <>
-   <Container fluid className='career-banner-section'>
-<Container className='career-banner-content-div'>
-
-   </Container>
-   </Container>
+      {/* Banner Section */}
+  <Container fluid className="about-banner-bg-section">
+       <Container className="about-banner-content">
+        <p>Career At Alutuff</p>
+        <p className="about-bottom-breadcrumb">
+   <Link style={{ textDecoration: "none", color: "#000" }} to="/home">Home</Link> / <span style={{ color: "red" }}>Career At Alutuff</span>
+ </p>
+ 
+       </Container>
+     </Container>
+     {/*  */}
 
   <Container fluid className="career-message-section">
       <Container className="career-message-content-div">

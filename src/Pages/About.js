@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Link } from 'react-router-dom';
@@ -43,7 +44,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
-  slidesToShow: 4,
+  slidesToShow: 6,
   slidesToScroll: 1,
   arrows: false,
   pauseOnHover: false,
@@ -88,28 +89,33 @@ const settings = {
       
       <div className='about-us-text-div'>
         <p>About US</p>
-        <p>We Build Our Projects With Your <br/>
-      Dreams And Ideas.</p>
-      <p>Elitsed do eiusimod tempor incididunt ut labore et dolore magna aliqua Utnim ad minim veniam, quis nostrixercitation ullamco laboris.</p>
-      <p>Consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusimod tempor incididunt ut labor e et dolore magna aliqua. Ut enimere ad minim veerernireeam qureesgiis nostrixercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure doerlor in repreheinderit tate velit eesse cillum dolore eu fugiat nulla parereiatur. Excepteur sint occerewaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-      <p>Ut enim ad minim veniam quis nostrixercitation ullamco laboris nisi ut aliquip eerex earer commodo consequat. Duis aute irure dolor in repreheinderit tate.</p>
+        <p>Where Strong ACP Panels Meet Timeless Aesthetic Design</p>
+      <p>Alutuff is India’s premier manufacturer of Aluminium Composite Panels (ACPs), delivering innovation, durability, and design excellence for over a decade. </p>
+      <p
+      >Our state-of-the-art manufacturing facility spans 5 lakh square feet in Bareilly, where advanced technology and strict quality standards ensure the production of premium-grade panels for both interior and exterior use. Alutuff panels are fire-retardant, weather-resistant, and available in a wide range of finishes, from wood to metallic to marble. 
+</p>
+      <p>
+        Trusted by architects, developers, and designers across all 28 Indian states, our products are proudly made in India and meet international standards. With Alutuff, every project reflects strength, sophistication, and a deep understanding of design possibilities.
+</p>
       <button className='pink-button'>Purchase</button>
       </div>
       
-     <div className='about-us-img-slider'>
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            loop={true}
-            slidesPerView={1}
-            className="about-swiper"
-          >
-            {aboutImage.map((img, index) => (
-              <SwiperSlide key={index}>
-                <img className='about-us-img' src={img} alt={`slide-${index}`} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+  <div className='about-us-img-slider'>
+<Swiper
+  modules={[Autoplay, Navigation]} // Add Navigation here
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  loop={true}
+  slidesPerView={1}
+  navigation={true} // Enable arrows
+  className="about-swiper"
+>
+
+        {aboutImage.map((img, index) => (
+          <SwiperSlide key={index}>
+            <img className='about-us-img' src={img} alt={`slide-${index}`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
         </div>
             </Container>
           </Container>
@@ -122,9 +128,9 @@ const settings = {
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box">Point 1</div>
-            <div className="point-box">Point 2</div>
-            <div className="point-box">Point 3</div>
+            <div className="point-box">5lac+ sq.ft.	 Industrial Campus</div>
+            <div className="point-box"> $168M+ Total Investment  </div>
+            <div className="point-box">24/7 Power  In-House Plant </div>
           </div>
 
           {/* Center Image */}
@@ -134,9 +140,9 @@ const settings = {
 
           {/* Right Points */}
           <div className="glance-points glance-right">
-            <div className="point-box">Point 4</div>
-            <div className="point-box">Point 5</div>
-            <div className="point-box">Point 6</div>
+            <div className="point-box">6 Units Manufacturing Plants </div>
+            <div className="point-box">1200+ Skilled Employees</div>
+            <div className="point-box">India + UAE Operational Presence</div>
           </div>
 
           {/* Connecting Lines */}
@@ -158,8 +164,9 @@ const settings = {
           <div className='zigzag-card zigzag-card-1'>
             <div className='zigzag-card-div'>
               <h3>Our Mission</h3>
-              <p>To transform spaces with world-class Metal Composite Panels by ensuring superior quality, on-time service, and exceptional reliability—empowering customers, dealers, and stakeholders to build with trust, pride,
-and confidence in every project we touch every partnership we honor, and every innovation we bring to the surface of modern construction.</p>
+              <p className='zigzag-card-descp mt-3'>
+               To transform spaces with premium Metal Composite Panels, delivering unmatched quality, timely service, and trust-driven partnerships that empower dealers, customers, and stakeholders across every project.
+               </p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
               <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
@@ -173,8 +180,9 @@ and confidence in every project we touch every partnership we honor, and every i
             </div>
             <div className='zigzag-card-div' style={{marginLeft:"auto",marginRight:"0px"}}>
               <h3>OUR VISION</h3>
-              <p>To be India’s most trusted and preferred ACP brand, recognized globally for innovation, consistency, and integrity—by building lasting relationships with customers, channel partners, and communities.
-We dream of a future where every architect, builder, or homeowner confidently chooses Alutuff as their first choice—because they know we stand not just for panels, but for promise, precision, and partnership</p>
+              <p className='zigzag-card-descp mt-3'>
+              To be India’s most trusted ACP brand, globally recognized for innovation, integrity, and reliability, by building strong relationships with architects, builders, homeowners, and channel partners everywhere.
+              </p>
             </div>
           </div>
 
@@ -182,7 +190,8 @@ We dream of a future where every architect, builder, or homeowner confidently ch
           <div className='zigzag-card zigzag-card-3'>
             <div className='zigzag-card-div'>
               <h3 className='zigzag-card-heading'>OUR PROMISE</h3>
-              <p className='zigzag-card-descp'>At Alutuff, we don’t just manufacture panels—we help build dreams, safeguard reputations, and stand beside you as your partner in every square foot.</p>
+              <p className='zigzag-card-descp mt-3'>At Alutuff, we create more than panels. We build dreams, protect reputations, and stand beside every partner, offering strength, style, and unwavering support in every square foot.
+</p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
               <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />

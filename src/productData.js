@@ -1,0 +1,101 @@
+const productData = [
+  // wooden Prime
+{ id: 1, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF101-ROSE-WOOD.jpg'), title: 'WOODEN PRIME', description: 'ATF 101 Rose Wood', text: 'High Quality | Long Lasting | Durable' },
+{ id: 2, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF119-RUSTIC-WOOD.jpg'), title: 'WOODEN PRIME', description: 'ATF 119 Rustic Wood', text: 'High Quality | Long Lasting | Durable' },
+{ id: 3, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF123-ROYAL-TEAK.jpg'), title: 'WOODEN PRIME', description: 'ATF 123 Royal Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 4, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF124-NATURAL-TEAK.jpg'), title: 'WOODEN PRIME', description: 'ATF 124 Natural Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 5, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF128-DARK-WANGY.jpg'), title: 'WOODEN PRIME', description: 'ATF 128 Dark Wangy', text: 'High Quality | Long Lasting | Durable' },
+{ id: 6, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF132-AMAZONIAN-FOREST.jpg'), title: 'WOODEN PRIME', description: 'ATF 132 Amazonian Forest', text: 'High Quality | Long Lasting | Durable' },
+{ id: 7, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF-142-BALINESE-TEAK.jpg'), title: 'WOODEN PRIME', description: 'ATF 142 Balinese Teak', text: 'High Quality | Long Lasting | Durable' },
+{ id: 8, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF-144-OAK-PINE.jpg'), title: 'WOODEN PRIME', description: 'ATF 144 Oak Pine', text: 'High Quality | Long Lasting | Durable' },
+{ id: 9, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF-145-PREMIUM-MAGHONY.jpg'), title: 'WOODEN PRIME', description: 'ATF 145 Premium Mahogany', text: 'High Quality | Long Lasting | Durable' },
+{ id: 10, category: 'Wooden Prime', image: require('./assets/HomeProducts-Wooden/ATF101-ROSE-WOOD.jpg'), title: 'WOODEN PRIME', description: 'ATF 101 Rose Wood', text: 'High Quality | Long Lasting | Durable' },
+
+
+ // Marble & Stone
+{ id: 11, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF109-ITALIAN-MARBLE.jpg'), title: 'MARBLE & STONE', description: 'ATF109-ITALIAN-MARBLE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 12, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF110-BROWN-MARBLE.jpg'), title: 'MARBLE & STONE', description: 'ATF110-BROWN-MARBLE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 13, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF112-WHITE-GRANITE.jpg'), title: 'MARBLE & STONE', description: 'ATF112-WHITE-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 14, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF113-BLACK-GRANITE.jpg'), title: 'MARBLE & STONE', description: 'ATF113-BLACK-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 15, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF122-ANGOLA-BLACK-GRANITE.jpg'), title: 'MARBLE & STONE', description: 'ATF122-ANGOLA-BLACK-GRANITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 16, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF-131-MARBLE-WHITE.jpg'), title: 'MARBLE & STONE', description: 'ATF-131-MARBLE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 17, category: 'Marble & Stone', image: require('./assets/HomeProduct-Marble/ATF143-STONE-FIRE.jpg'), title: 'MARBLE & STONE', description: 'ATF143-STONE-FIRE', text: 'High Quality | Long Lasting | Durable' },
+
+// Sand Series
+{ id: 18, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-01-NIGHT-GREY-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-01-NIGHT-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 19, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-02-DARK-GREY-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-02-DARK-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 20, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-03-LIGHT-MOON-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-03-LIGHT-MOON-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 21, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-04-BROWN-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-04-BROWN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 22, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-05-RED-WINE-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-05-RED-WINE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 23, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-06-GREEN-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-06-GREEN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 24, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-07-MULTAAN-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-07-MULTAAN-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 25, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-08-OFF-WHITE-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-08-OFF-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 26, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-09-PURE-WHITE-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-09-PURE-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 27, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-10-MILKY-WHITE-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-10-MILKY-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 28, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/ATE-11-VOLCANO-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATE-11-VOLCANO-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 29, category: 'Sand Series', image: require('./assets/HomeProducts-Sand/SAMPLE.jpg'), title: 'MARBLE & STONE', description: 'SAMPLE', text: 'High Quality | Long Lasting | Durable' },
+
+
+  // Rustic Series
+{ id: 30, category: 'Rustic Series', image: require('./assets/HomeProduct-Rustic/ATS01-LUNAR-GREY-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATS01-LUNAR-GREY-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 31, category: 'Rustic Series', image: require('./assets/HomeProduct-Rustic/ATS02-TULA-ROSA-WHITE-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATS02-TULA-ROSA-WHITE-SAND', text: 'High Quality | Long Lasting | Durable' },
+{ id: 32, category: 'Rustic Series', image: require('./assets/HomeProduct-Rustic/ATS03-BASKA-BEACH-SAND.jpg'), title: 'MARBLE & STONE', description: 'ATS03-BASKA-BEACH-SAND', text: 'High Quality | Long Lasting | Durable' },
+
+// Bold Solid
+{ id: 33, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-01-BRIGHT-SILVER.jpg'), title: 'MARBLE & STONE', description: 'AT-01-BRIGHT-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 34, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-02-METALLIC-SILVER.jpg'), title: 'MARBLE & STONE', description: 'AT-02-METALLIC-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 35, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-04-CHAMPAGNE-GOLD.jpg'), title: 'MARBLE & STONE', description: 'AT-04-CHAMPAGNE-GOLD', text: 'High Quality | Long Lasting | Durable' },
+{ id: 36, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-05-PURE-WHITE.jpg'), title: 'MARBLE & STONE', description: 'AT-05-PURE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 37, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-07-CLASSIC-GOLD.jpg'), title: 'MARBLE & STONE', description: 'AT-07-CLASSIC-GOLD', text: 'High Quality | Long Lasting | Durable' },
+{ id: 38, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-08-BRIGHT-RED.jpg'), title: 'MARBLE & STONE', description: 'AT-08-BRIGHT-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 39, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-10-SIGNAL-BLUE.jpg'), title: 'MARBLE & STONE', description: 'AT-10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 40, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-11-COPPER-METALLIC.jpg'), title: 'MARBLE & STONE', description: 'AT-11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 41, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-12-BLACK.jpg'), title: 'MARBLE & STONE', description: 'AT-12-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 42, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-15-PEARL-COPPER.jpg'), title: 'MARBLE & STONE', description: 'AT-15-PEARL-COPPER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 43, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-18-NAVY-BLUE.jpg'), title: 'MARBLE & STONE', description: 'AT-18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 44, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-19-TRAFFIC-YELLOW.jpg'), title: 'MARBLE & STONE', description: 'AT-19-TRAFFIC-YELLOW', text: 'High Quality | Long Lasting | Durable' },
+{ id: 45, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-20-PURE-YELLOW.jpg'), title: 'MARBLE & STONE', description: 'AT-20-PURE-YELLOW', text: 'High Quality | Long Lasting | Durable' },
+{ id: 46, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-22-BURGUNDY.jpg'), title: 'MARBLE & STONE', description: 'AT-22-BURGUNDY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 47, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-25-REFRESHING-ORANGE.jpg'), title: 'MARBLE & STONE', description: 'AT-25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 48, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-26-SILVER-BLACK.jpg'), title: 'MARBLE & STONE', description: 'AT-26-SILVER-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 49, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-28-METALLIC-BLUE.jpg'), title: 'MARBLE & STONE', description: 'AT-28-METALLIC-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 50, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-31-OFF-WHITE.jpg'), title: 'MARBLE & STONE', description: 'AT-31-OFF-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 51, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-32-COPPER-BRONZE.jpg'), title: 'MARBLE & STONE', description: 'AT-32-COPPER-BRONZE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 52, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-35-GLOSSY-WHITE.jpg'), title: 'MARBLE & STONE', description: 'AT-35-GLOSSY-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 53, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-41-BRIGHT-GREEN.jpg'), title: 'MARBLE & STONE', description: 'AT-41-BRIGHT-GREEN', text: 'High Quality | Long Lasting | Durable' },
+{ id: 54, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-42-LILAC.jpg'), title: 'MARBLE & STONE', description: 'AT-42-LILAC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 55, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-46-GLOSSY-BLACK.jpg'), title: 'MARBLE & STONE', description: 'AT-46-GLOSSY-BLACK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 56, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-50-SILVER-MIRROR.jpg'), title: 'MARBLE & STONE', description: 'AT-50-SILVER-MIRROR', text: 'High Quality | Long Lasting | Durable' },
+{ id: 57, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-51-GOLD-MIRROR.jpg'), title: 'MARBLE & STONE', description: 'AT-51-GOLD-MIRROR', text: 'High Quality | Long Lasting | Durable' },
+{ id: 58, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-53-DARK-BRONZE.jpg'), title: 'MARBLE & STONE', description: 'AT-53-DARK-BRONZE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 59, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-54-GLOSSY-RED.jpg'), title: 'MARBLE & STONE', description: 'AT-54-GLOSSY-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 60, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/AT-60-BRUSH-SILVER.jpg'), title: 'MARBLE & STONE', description: 'AT-60-BRUSH-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 61, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At08-RED.jpg'), title: 'MARBLE & STONE', description: 'At08-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 62, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At10-SIGNAL-BLUE.jpg'), title: 'MARBLE & STONE', description: 'At10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 63, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At11-COPPER-METALLIC.jpg'), title: 'MARBLE & STONE', description: 'At11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 64, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At18-NAVY-BLUE.jpg'), title: 'MARBLE & STONE', description: 'At18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 65, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At25-REFRESHING-ORANGE.jpg'), title: 'MARBLE & STONE', description: 'At25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 66, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At31-IVORY.jpg'), title: 'MARBLE & STONE', description: 'At31-IVORY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 67, category: 'Bold & Solid', image: require('./assets/HomeProduct-Bold/At33-CHOCOLATE-BROWN.jpg'), title: 'MARBLE & STONE', description: 'At33-CHOCOLATE-BROWN', text: 'High Quality | Long Lasting | Durable' },
+
+// { id: 68, category: 'Partitions', image: require('./assets/HomeProduct-Bold/ATB36.jpg'), title: 'Bold Project 36', description: 'Premium Stone Look' },
+
+// partiton
+{ id: 68, category: 'Partitions', image: require('./assets/HomeProduct-parti/ATF-123-ROYAL-TEAK.jpg'), title: 'MARBLE & STONE', description: 'ATF-123-ROYAL-TEAK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 69, category: 'Partitions', image: require('./assets/HomeProduct-parti/ATF-131-MARBLE-WHITE.jpg'), title: 'MARBLE & STONE', description: 'ATF-131-MARBLE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 70, category: 'Partitions', image: require('./assets/HomeProduct-parti/ATF107-WALNUT.jpg'), title: 'MARBLE & STONE', description: 'ATF107-WALNUT', text: 'High Quality | Long Lasting | Durable' },
+{ id: 71, category: 'Partitions', image: require('./assets/HomeProduct-parti/ATF132-AMAZONIAN-FOREST.jpg'), title: 'MARBLE & STONE', description: 'ATF132-AMAZONIAN-FOREST', text: 'High Quality | Long Lasting | Durable' },
+{ id: 72, category: 'Partitions', image: require('./assets/HomeProduct-parti/ATF138-PEACON-TEAK.jpg'), title: 'MARBLE & STONE', description: 'ATF138-PEACON-TEAK', text: 'High Quality | Long Lasting | Durable' },
+{ id: 73, category: 'Partitions', image: require('./assets/HomeProduct-parti/At01-BRIGHT-SILVER.jpg'), title: 'MARBLE & STONE', description: 'At01-BRIGHT-SILVER', text: 'High Quality | Long Lasting | Durable' },
+{ id: 74, category: 'Partitions', image: require('./assets/HomeProduct-parti/At05-PURE-WHITE.jpg'), title: 'MARBLE & STONE', description: 'At05-PURE-WHITE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 75, category: 'Partitions', image: require('./assets/HomeProduct-parti/At08-RED.jpg'), title: 'MARBLE & STONE', description: 'At08-RED', text: 'High Quality | Long Lasting | Durable' },
+{ id: 76, category: 'Partitions', image: require('./assets/HomeProduct-parti/At10-SIGNAL-BLUE.jpg'), title: 'MARBLE & STONE', description: 'At10-SIGNAL-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 77, category: 'Partitions', image: require('./assets/HomeProduct-parti/At11-COPPER-METALLIC.jpg'), title: 'MARBLE & STONE', description: 'At11-COPPER-METALLIC', text: 'High Quality | Long Lasting | Durable' },
+{ id: 78, category: 'Partitions', image: require('./assets/HomeProduct-parti/At18-NAVY-BLUE.jpg'), title: 'MARBLE & STONE', description: 'At18-NAVY-BLUE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 79, category: 'Partitions', image: require('./assets/HomeProduct-parti/At25-REFRESHING-ORANGE.jpg'), title: 'MARBLE & STONE', description: 'At25-REFRESHING-ORANGE', text: 'High Quality | Long Lasting | Durable' },
+{ id: 80, category: 'Partitions', image: require('./assets/HomeProduct-parti/At31-IVORY.jpg'), title: 'MARBLE & STONE', description: 'At31-IVORY', text: 'High Quality | Long Lasting | Durable' },
+{ id: 81, category: 'Partitions', image: require('./assets/HomeProduct-parti/At33-CHOCOLATE-BROWN.jpg'), title: 'MARBLE & STONE', description: 'At33-CHOCOLATE-BROWN', text: 'High Quality | Long Lasting | Durable' },
+
+
+];
+export default productData;

@@ -1,15 +1,107 @@
-.project-banner-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-margin-top: auto;
-
-}
-.project-banner-content-div{
+.projects-banner-content-div{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px 0px;
+}
+.image-layout-wrapper {
+  width: 420px;
+  max-width: 450px;
+  margin: 0px;
+  }
+
+.top-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.left-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Image Styles */
+.img {
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.img1 {
+  width: 230px;
+  height: 235px;
+}
+
+.img2 {
+  width: 230px;
+  height: 115px;
+}
+
+.img3 {
+  width: 230px;
+  height: 360px;
+}
+
+.img4 {
+  min-width: 100%;
+  height: 200px;
+  margin-top: 10px !important;
+}
+
+/* Animations */
+.from-left {
+  animation-name: fadeInLeft;
+}
+
+.from-right {
+  animation-name: fadeInRight;
+}
+
+.from-bottom {
+  animation-name: fadeInBottom;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .project-carousel-container {
@@ -128,6 +220,35 @@ margin-top: auto;
   color: #444;
 }
 @media (max-width: 768px) {
+    .projects-banner-content-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0px;
+  display: none;
+}
+.img1 {
+  max-width: 230px !important;
+  height: 235px;
+}
+
+.img2 {
+  max-width: 230px !important ;
+  height: 115px;
+}
+
+.img3 {
+  max-width: 230px !important;
+  height: 360px;
+}
+
+.img4 {
+  min-width: 100%;
+  height: 200px;
+  margin-top: 10px !important;
+}
+  /*  */
   .project-banner-content-div{
   display: flex;
   flex-direction: column-reverse;

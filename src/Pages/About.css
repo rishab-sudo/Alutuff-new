@@ -2,7 +2,8 @@
 .about-banner-bg-section {
   background: url('../assets/about-banner-bg.jpg') no-repeat center center;
   background-size: cover;
-  min-height: 500px; /* You can adjust height as per your design */
+  min-height: 345px; 
+  max-height: 350px;/* You can adjust height as per your design */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,6 +40,21 @@
   border-radius: 8px;
   object-fit: cover;
 }
+/* Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
 
 /*  */
 .about-stats-section {
@@ -387,6 +403,10 @@ gap: 35px;
   align-items: flex-start;
   min-width: 100%;
 }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* hide arrows on mobile if needed */
+  }
   /*  */
   .about-stats-wrapper {
     flex-direction: column;

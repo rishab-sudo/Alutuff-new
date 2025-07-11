@@ -7,35 +7,49 @@ import "./CircleSlider.css";
 const circlesData = [
   {
     id: 1,
-    icon: <FaBeer size={50} />,
-    title: "Beer",
-    description: "A refreshing cold beer brewed to perfection.",
+    icon: require('../assets/core-icons/continuity (1).png'),
+    title: "Consistency & Quality",
+    description:""
+
   },
   {
     id: 2,
-    icon: <FaCoffee size={50} />,
-    title: "Coffee",
-    description: "Hot coffee that keeps you going all day long.",
+    icon: require('../assets/core-icons/idea (1).png'),
+    title: "Customer First, Always",
+    description:""
   },
   {
     id: 3,
-    icon: <FaApple size={50} />,
-    title: "Apple",
-    description: "A healthy apple a day keeps the doctor away.",
+    icon: require('../assets/core-icons/promise (1).png'),
+    title: "Innovation with Purpose",
+   description:""
   },
   {
     id: 4,
-    icon: <FaAnchor size={50} />,
-    title: "Anchor",
-    description: "Strong and reliable anchor for ships.",
+    icon: require('../assets/core-icons/respect-core (1).png'),
+    title: "Respect for People",
+   description:""
   },
   {
     id: 5,
-    icon: <FaBicycle size={50} />,
-    title: "Bicycle",
-    description: "Eco-friendly transport that keeps you fit.",
+    icon: require('../assets/core-icons/social-responsibility (1).png'),
+    title: "Responsibility to Society",
+    description:""
+  },
+    {
+    id: 6,
+    icon: require('../assets/core-icons/technical-service (1).png'),
+    title: "Service Is Our Strength",
+    description:""
+  },
+    {
+    id: 7,
+    icon: require('../assets/core-icons/trustworthiness (1).png'),
+    title: "Transarency & Trust",
+    description:""
   },
 ];
+
 
 const CircleSlider = () => {
   const [hovered, setHovered] = useState(null);
@@ -43,7 +57,7 @@ const CircleSlider = () => {
   const settings = {
     infinite: true,
     speed: 3000,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -74,8 +88,8 @@ const CircleSlider = () => {
             onMouseLeave={() => setHovered(null)}
           >
             <div className="circle">
-              {circle.icon}
-              <h4>{circle.title}</h4>
+              <img className="core-icons" src={circle.icon}/>
+              <p className="core-circle-descp">{circle.title}</p>
             </div>
           </div>
           </Container>

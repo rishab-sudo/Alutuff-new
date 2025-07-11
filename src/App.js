@@ -11,6 +11,8 @@ import Home from './Pages/Home';
 import Footer from './components/Footer';
 import About from './Pages/About';
 import ProductPage from './Pages/ProductPage';
+import TestReport from "./Pages/TestReport"
+import News from "./Pages/News"
 import Contact from './Pages/Contact';
 import Established from './Pages/Established';
 import Projects from './Pages/Projects';
@@ -33,6 +35,8 @@ function App() {
             <Route path="/product" element={<ProductPage />} />
                <Route path="/projects" element={<Projects />} />
                          <Route path="/career" element={<Career />} />
+                          <Route path="/news" element={<News />} />
+                          <Route path="/testReport" element={<TestReport />} />
           <Route path="/contact" element={<Contact />} />
                   <Route path="/established" element={<Established />} />
         </Routes>

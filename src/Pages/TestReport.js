@@ -1,4 +1,6 @@
 import React from "react";
+import bannerImage from "../assets/banner-bg.jpeg"
+import Banner from "../components/Banner";
 import "./TestReport.css";
 
 const table1Data = {
@@ -82,10 +84,20 @@ const TestTable = ({ data }) => (
 
 const TestReportSection = () => {
   return (
+    <>
+      <div className='w-100' >
+              <Banner
+                image={bannerImage}
+                heading="Test Report "
+                subheading="Welcome to our website"
+              />
+            </div>
+  
     <section className="test-report-section">
       <TestTable data={table1Data} />
       <TestTable data={table2Data} />
     </section>
+      </>
   );
 };
 

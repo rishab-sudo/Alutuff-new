@@ -2,10 +2,22 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import "./Established.css"
 import  PieChart  from '../components/PieChart'
+import bannerImage from "../assets/banner-bg.jpeg"
+import Banner from '../components/Banner'
 
 const Established = () => {
   return (
     <>
+
+     <div className='w-100' >
+          <Banner
+            image={bannerImage}
+            heading="ESTABLISHED EXELLENCE "
+            subheading="Welcome to our website"
+          />
+        </div>
+
+
 <Container fluid className='legacy-section '>
   <div className='d-flex justify-content-center align-items-center mb-5 '>
 <p>ESTABLISHED EXCELLENCE</p>

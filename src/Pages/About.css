@@ -1,13 +1,4 @@
 
-.about-banner-bg-section {
-  background: url('../assets/about-banner-bg.jpg') no-repeat center center;
-  background-size: cover;
-  min-height: 345px; 
-  max-height: 350px;/* You can adjust height as per your design */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /*  */
 
 .about-us-section {

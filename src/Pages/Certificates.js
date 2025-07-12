@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Certificates.css';
 import { Container } from 'react-bootstrap';
+import bannerImage from "../assets/banner-bg.jpeg"
+import Banner from '../components/Banner';
 
 const images = [
   {
@@ -35,6 +37,14 @@ const Certificates = () => {
   console.log("hello...!");
 
   return (
+<>
+     <div className='w-100' >
+              <Banner
+                image={bannerImage}
+                heading="Certificates "
+                subheading="Welcome to our website"
+              />
+            </div>
     <Container fluid className='certificates-wrapper'>
       <div className='d-flex justify-content-center align-items-center mb-5'>
         <p>Alutuff - Completion & Appreciation Certificates</p>
@@ -57,6 +67,7 @@ const Certificates = () => {
         </div>
       )}
     </Container>
+    </>
   );
 };
 

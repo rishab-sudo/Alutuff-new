@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import "./ProductPage.css";
 import HomeProducts from '../components/HomeProducts';
 import { FaCheck } from "react-icons/fa";
+import Banner from '../components/Banner';
+import bannerImage from"../assets/banner-bg.jpeg"
 import ProductPageData from "../ProductPageData";
 
 const ProductPage = () => {
@@ -32,6 +34,15 @@ const ProductPage = () => {
 
   return (
     <>
+
+       <div className='w-100' >
+              <Banner
+                image={bannerImage}
+                heading="Our Products "
+                subheading="Welcome to our website"
+              />
+            </div>
+
       <Container fluid className="product-section-container">
 
         {/* ✅ Mobile Top Bar */}

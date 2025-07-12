@@ -4,7 +4,8 @@ import { Container } from 'react-bootstrap'
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Slider from 'react-slick';
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
-
+import Banner from '../components/Banner';
+import  bannerImage from "../assets/banner-bg.jpeg"
 import "./Career.css"
 
 const values = [
@@ -82,15 +83,14 @@ const Career = () => {
   return (
     <>
       {/* Banner Section */}
-  <Container fluid className="about-banner-bg-section">
-       <Container className="about-banner-content">
-        <p>Career At Alutuff</p>
-        <p className="about-bottom-breadcrumb">
-   <Link style={{ textDecoration: "none", color: "#000" }} to="/home">Home</Link> / <span style={{ color: "red" }}>Career At Alutuff</span>
- </p>
- 
-       </Container>
-     </Container>
+  <div className='w-100' >
+          <Banner
+            image={bannerImage}
+            heading="Career At Alutuff "
+            subheading="Welcome to our website"
+          />
+        </div>
+
      {/*  */}
 
   <Container fluid className="career-message-section">

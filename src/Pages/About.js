@@ -5,11 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
-
+import Banner from "../components/Banner"
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
+import bannerImage from '../assets/banner-bg.jpeg'
 import './About.css';
 import CircleSlider from '../components/CircleSlider';
 
@@ -73,18 +74,15 @@ const settings = {
 
   return (
     <>
-      {/* Banner Section */}
-  <Container fluid className="about-banner-bg-section">
-       <Container className="about-banner-content">
-        <p>About Alutuff</p>
-        <p className="about-bottom-breadcrumb">
-   <Link style={{ textDecoration: "none", color: "#000" }} to="/home">Home</Link> / <span style={{ color: "red" }}>About</span>
- </p>
- 
-       </Container>
-     </Container>
+ <div className='w-100' >
+      <Banner
+        image={bannerImage}
+        heading="About Us"
+        subheading="Welcome to our website"
+      />
+    </div>
      {/*  */}
-           <Container fluid className='about-us-section'>
+ <Container fluid className='about-us-section'>
             <Container className='about-us-content-div'>
       
       <div className='about-us-text-div'>

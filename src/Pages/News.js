@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
+import Banner from '../components/Banner';
+import bannerImage from "../assets/banner-bg.jpeg"
 import "./News.css"
 
 const News = () => {
@@ -24,6 +26,16 @@ const News = () => {
   }, []);
 
   return (
+
+    <>
+      <div className='w-100' >
+              <Banner
+                image={bannerImage}
+                heading="News & Event "
+                subheading="Welcome to our website"
+              />
+            </div>
+   
     <Container fluid>
      <div className='d-flex justify-content-center align-items-center mb-5 '>
         <p>A Breif History</p>
@@ -50,6 +62,7 @@ const News = () => {
       </div>
     </div>
      </Container>
+      </>
   );
 };
 

@@ -74,6 +74,12 @@
   gap: 20px;
   position: relative;
   margin-top: 5%;
+  overflow-x: hidden;
+}
+@media (max-width: 991px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .product-cards.forward {

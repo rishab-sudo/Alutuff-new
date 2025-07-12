@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import "./ProductPage.css";
 import HomeProducts from '../components/HomeProducts';
+import { FaCheck } from "react-icons/fa";
 import ProductPageData from "../ProductPageData";
 
 const ProductPage = () => {
@@ -48,40 +49,65 @@ const ProductPage = () => {
             <h3>{selectedCategory}</h3>
 
             {/* Product Cards First */}
-            <div className="product-grid">
-              {productsToShow.map((product) => (
-                <div className="product-card" key={product.id}>
-                  <img src={product.image} alt={product.title} />
-                  <h4>{product.title}</h4>
-                  <p>{product.description}</p>
-                </div>
-              ))}
-            </div>
+           {/* Product Cards First */}
+<div className="product-grid">
+  {productsToShow.map((product) => (
+    <div
+      className="product-card"
+      key={product.id}
+      onClick={() => {
+        if (selectedCategory === "All") {
+          setSelectedCategory(product.category);
+        }
+      }}
+      style={{ cursor: selectedCategory === "All" ? "pointer" : "default" }}
+    >
+      <img src={product.image} alt={product.title} />
+      <h4>{product.title}</h4>
+      <p>{product.description}</p>
+    </div>
+  ))}
+</div>
+
 
             {/* Description for selected category (not All) */}
-            {selectedCategory !== "All" && selectedCategoryData && (
-              <div className="product-details mt-4">
-                <h5>Material/Core:</h5>
-                <p>{selectedCategoryData.details.material}</p>
+           {selectedCategory !== "All" && selectedCategoryData && (
+  <div className="product-descp mt-4">
 
-                <h5>Category Type:</h5>
-                <p>{selectedCategoryData.details.categoryType}</p>
+    <div className="desc-box">
+      <h5>Material/Core:</h5>
+      <p>{selectedCategoryData.details.material}</p>
+    </div>
 
-                <h5>Applications:</h5>
-                <ul>
-                  {selectedCategoryData.details.applications.map((app, idx) => (
-                    <li key={idx}>{app}</li>
-                  ))}
-                </ul>
+    <div className="desc-box">
+      <h5>Category Type:</h5>
+      <p>{selectedCategoryData.details.categoryType}</p>
+    </div>
 
-                <h5>Key Features:</h5>
-                <ul>
-                  {selectedCategoryData.details.keyFeatures.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+    <div className="desc-box">
+      <h5>Applications:</h5>
+       <ul className='' style={{paddingLeft:"25px" }} >
+        {selectedCategoryData.details.applications.map((app, idx) => (
+          <li key={idx}>{app}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div className="desc-box">
+      <h5>Key Features:</h5>
+      <ul className='d-flex flex-column justify-content-start text-left ' style={{paddingLeft:"5px"
+      }} >
+        {selectedCategoryData.details.keyFeatures.map((feature, idx) => (
+          <div key={idx}>
+            <FaCheck style={{ color: "green", marginRight: "8px" }} />
+            {feature}
+          </div>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+)}
           </div>
         </Container>
       </Container>

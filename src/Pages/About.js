@@ -56,6 +56,7 @@ const settings = {
         slidesToShow: 3,
       },
     },
+    
     {
       breakpoint: 992, // below 992px
       settings: {

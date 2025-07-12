@@ -17,6 +17,7 @@ import Contact from './Pages/Contact';
 import Established from './Pages/Established';
 import Projects from './Pages/Projects';
 import Certificates from './Pages/Certificates';
+import Catalogues from './Pages/Catalogues';
 import Career from './Pages/Career';
 
 
@@ -40,7 +41,9 @@ function App() {
                           <Route path="/testReport" element={<TestReport />} />
                           <Route path="/certificates" element={<Certificates/>}/>
           <Route path="/contact" element={<Contact />} />
+             <Route path="/catalogues" element={<Catalogues />} />
                   <Route path="/established" element={<Established />} />
+                  
         </Routes>
         <Footer/>
       </div>

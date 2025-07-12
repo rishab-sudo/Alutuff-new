@@ -126,9 +126,9 @@ const settings = {
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box">5lac+ sq.ft.	 Industrial Campus</div>
-            <div className="point-box"> $168M+ Total Investment  </div>
-            <div className="point-box">24/7 Power  In-House Plant </div>
+            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>5lac+ sq.ft.</span>	 Industrial Campus</div>
+            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>$168M+ </span>Total Investment  </div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>24/7 Power</span>  In-House Plant </div>
           </div>
 
           {/* Center Image */}
@@ -138,9 +138,9 @@ const settings = {
 
           {/* Right Points */}
           <div className="glance-points glance-right">
-            <div className="point-box">6 Units Manufacturing Plants </div>
-            <div className="point-box">1200+ Skilled Employees</div>
-            <div className="point-box">India + UAE Operational Presence</div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>6 Units </span> Manufacturing Plants </div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>1200+</span> Skilled Employees</div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}></span>India + UAE Operational Presence</div>
           </div>
 
           {/* Connecting Lines */}

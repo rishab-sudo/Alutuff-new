@@ -438,30 +438,26 @@ gap: 35px;
   }
   /* zig-zag */
 
-   .zigzag-card {
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    .zigzag-card {
+    flex-direction: column !important; /* Stack image and text */
+    width: 100% !important;            /* Full width */
+    padding: 20px !important;
   }
-.zigzag-card-div{
-  margin-right: auto;
- max-width: 45% !important;
- background-color: black;
-}
-  .zigzag-card-2 {
-    justify-content: center;
-  }
-  .zigzag-img{
-    max-width: 70px;
-    max-height: 70px;
 
+  .zigzag-img-div {
+    display: none !important;          /* Hide image on small screens */
   }
-  .zigzag-card-heading{
-    font-size: 17px;
+
+  .zigzag-card-div {
+    width: 100% !important;            /* Full width text box */
+    max-width: 100% !important;
+    text-align: center !important;
   }
-  .zigzag-card-descp{
-    font-size: 15px;
+
+  .zigzag-card h3,
+  .zigzag-card p {
+    width: 100%;
+    margin: auto;
   }
 }
 

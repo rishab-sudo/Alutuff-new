@@ -45,7 +45,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
-  slidesToShow: 6,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: false,
   pauseOnHover: false,

@@ -175,38 +175,38 @@
 .line-left-1 {
   top: 20%;
   right: calc(50% + 200px); 
- width: 225px; 
+ width: 155px; 
 }
 
 .line-left-2 {
   top: 50%;
   right: calc(50% + 200px);
- width: 225px;
+ width: 155px; 
 }
 
 .line-left-3 {
   top: 80%;
   right: calc(50% + 200px);
- width: 225px;
+ width: 155px; 
 }
 
 /* Lines to the Right */
 .line-right-1 {
   top: 20%;
   left: calc(50% + 200px);
- width: 225px;
+ max-width: 125px; 
 }
 
 .line-right-2 {
   top: 50%;
   left: calc(50% + 200px);
- width: 225px;
+ max-width: 125px; 
 }
 
 .line-right-3 {
   top: 80%;
   left: calc(50% + 200px);
-  width: 225px;
+   max-width: 125px; 
 }
 /* ==== Animation Keyframes ===== */
 
@@ -228,7 +228,7 @@
     width: 0;
   }
   100% {
-    width: 225px; 
+    width: 155px;  
   }
 }
 

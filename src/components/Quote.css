@@ -1,0 +1,89 @@
+.quote-section {
+  background-image: require("../"); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.quote-box {
+    height: 35vh;
+  background-color: white;
+  width: 70%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quote-left {
+  flex: 1;
+  max-width: 250px;
+}
+
+.quote-left h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #333;
+}
+
+.quote-left p {
+  color: #666;
+  font-size: 16px;
+}
+
+.quote-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.icon-circle {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  margin-top: 10px;
+  text-align: center;
+ 
+}
+
+.say-hello {
+  font-weight: bold;
+  color: #333;
+}
+
+.phone-number {
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quote-left,
+  .quote-right {
+    width: 100%;
+  }
+}

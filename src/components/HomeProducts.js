@@ -1,8 +1,7 @@
+// HomeProducts.js
 import React, { useState } from 'react';
-import productData from "../productData"
+import productData from "../productData";
 import './HomeProducts.css';
-
-
 
 export default function HomeProducts() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -23,28 +22,39 @@ export default function HomeProducts() {
     productRows.push(filteredProducts.slice(i, i + 4));
   }
 
- const handleToggleRow = () => {
-  const totalRows = productRows.length;
+  const isMobile = window.innerWidth <= 576;
 
-  if (visibleRowCount < totalRows) {
-    setRowAnimations({ [visibleRowCount]: 'slide-in' });
-    setVisibleRowCount(visibleRowCount + 1);
-  } else {
-    // Animate all rows except the first
-    const animations = {};
-    for (let i = 1; i < totalRows; i++) {
-      animations[i] = 'slide-out-left';
+  const handleToggleRow = () => {
+    const totalRows = productRows.length;
+
+    if (isMobile) {
+      const rowContainer = document.querySelector('.mobile-slider');
+      if (visibleRowCount < productRows.length) {
+        setVisibleRowCount(visibleRowCount + 1);
+        setTimeout(() => {
+          rowContainer.scrollBy({ left: rowContainer.offsetWidth, behavior: 'smooth' });
+        }, 50);
+      } else {
+        setVisibleRowCount(1);
+        rowContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    } else {
+      if (visibleRowCount < totalRows) {
+        setRowAnimations({ [visibleRowCount]: 'slide-in' });
+        setVisibleRowCount(visibleRowCount + 1);
+      } else {
+        const animations = {};
+        for (let i = 1; i < totalRows; i++) {
+          animations[i] = 'slide-out-left';
+        }
+        setRowAnimations(animations);
+        setTimeout(() => {
+          setVisibleRowCount(1);
+          setRowAnimations({});
+        }, 500);
+      }
     }
-    setRowAnimations(animations);
-
-    // After animation, reset to show only first row
-    setTimeout(() => {
-      setVisibleRowCount(1);
-      setRowAnimations({});
-    }, 500); // match your animation duration
-  }
-};
-
+  };
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -54,7 +64,6 @@ export default function HomeProducts() {
 
   return (
     <div className="homeproduct-section">
-      <h2></h2>
       <p>OUR LATEST PRODUCTS</p>
 
       <div className="filter-buttons">
@@ -75,13 +84,27 @@ export default function HomeProducts() {
         </svg>
       </div>
 
-      {/* Render product rows dynamically with animations */}
-      {productRows.slice(0, visibleRowCount).map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className={`product-cards ${rowIndex > 0 ? 'second-row' : ''} ${rowAnimations[rowIndex] || ''}`}
-        >
-          {row.map(product => (
+      {!isMobile ? (
+        productRows.slice(0, visibleRowCount).map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className={`product-cards ${rowIndex > 0 ? 'second-row' : ''} ${rowAnimations[rowIndex] || ''}`}
+          >
+            {row.map(product => (
+              <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
+                <img src={product.image} alt={product.title} />
+                <div className="overlay">
+                  <h4>{product.title}</h4>
+                  <p>{product.description}</p>
+                  <p>{product.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))
+      ) : (
+        <div className="mobile-slider">
+          {filteredProducts.map(product => (
             <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
               <img src={product.image} alt={product.title} />
               <div className="overlay">
@@ -92,18 +115,16 @@ export default function HomeProducts() {
             </div>
           ))}
         </div>
-      ))}
+      )}
 
-      {/* View More / View Less */}
-{filteredProducts.length > 4 && (
-  <div className="view-more">
-    <button onClick={handleToggleRow}>
-      {visibleRowCount === productRows.length ? 'View Less' : 'View More'}
-    </button>
-  </div>
-)}
+      {filteredProducts.length > 4 && (
+        <div className="view-more">
+          <button onClick={handleToggleRow}>
+            {visibleRowCount === productRows.length ? 'View Less' : 'View More'}
+          </button>
+        </div>
+      )}
 
- {/* Image Preview */}
       {selectedImage && (
         <div className="image-popup" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Full View" />

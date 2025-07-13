@@ -23,6 +23,8 @@ import Career from './Pages/Career';
 
 
 
+
+
 function App() {
   return (
     <Router>
@@ -43,6 +45,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
              <Route path="/catalogues" element={<Catalogues />} />
                   <Route path="/established" element={<Established />} />
+               
                   
         </Routes>
         <Footer/>

@@ -106,7 +106,7 @@ color: #ffffff;
   left: -100%;
   width: 80%;
   height: 100vh;
-  background-color: #fff;
+  background-color: #000;
   z-index: 1100;
   transition: left 0.3s ease;
   padding: 20px;
@@ -147,14 +147,14 @@ color: #ffffff;
 
 .side-nav-links a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
   font-size: 20px;
 }
 
 /* Side Dropdown */
 .side-dropdown span.side-about-title {
   font-size: 20px;
-  color: black; /* Ensure About is visible */
+  color: #ffffff; /* Ensure About is visible */
 }
 
 .side-dropdown-menu {
@@ -168,8 +168,40 @@ color: #ffffff;
 
 .side-dropdown-menu li a {
   text-decoration: none;
-  color: black;
+   color: #ffffff;
   font-size: 18px;
+}
+/* Dropdown arrows icon adjustment */
+.dropdown-toggle::after {
+  content: '';
+}
+
+/* Ensure side dropdown menus only show when open */
+.side-dropdown-menu {
+  padding-left: 15px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-dropdown-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.side-about-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Add icon spacing */
+.side-about-title svg {
+  margin-left: 10px;
 }
 
 /* Responsive */

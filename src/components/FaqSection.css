@@ -49,3 +49,11 @@
   margin: 0;
   color: #555;
 }
+@media screen and (max-width: 768px) {
+  .faq-section {
+  min-width: 95%;
+  margin:  auto;
+  padding: 20px;
+}
+
+}

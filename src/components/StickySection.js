@@ -86,8 +86,8 @@ const StickySection = () => {
       <div className="mobile-scroll-wrapper">
         {images.map((img, index) => (
           <div className="mobile-item" key={index}>
-            <img src={img} alt={`Mobile ${index}`} />
             <p>{paragraphs[index]}</p>
+            <img src={img} alt={`Mobile ${index}`} />
           </div>
         ))}
       </div>

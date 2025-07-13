@@ -31,7 +31,7 @@ const OverlappingCards = () => {
   }, []);
 
   return (
-    <Container className='stack-section'>
+    <Container fluid className='stack-section'>
       <div className='text-center'> 
         <p className='overlap-cards-heading'>Why Alutuff</p>
         </div>

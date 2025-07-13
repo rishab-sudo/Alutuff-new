@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
+
+  // Mobile dropdowns
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,14 +18,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <img className="logo" src={require("../assets/footer_logo.png")} alt="Logo" />
 
-        {/* Nav Links */}
         <ul className="nav-links">
           <li><a href="/home">Home</a></li>
 
-          {/* Dropdown About */}
           <li
             className="dropdown"
             onMouseEnter={() => setAboutDropdownOpen(true)}
@@ -38,7 +39,6 @@ const Navbar = () => {
           <li><a href="/projects" onClick={toggleMenu}>Projects</a></li>
           <li><a href="/career" onClick={toggleMenu}>Career</a></li>
 
-          {/* Dropdown More */}
           <li
             className="dropdown"
             onMouseEnter={() => setMoreDropdownOpen(true)}
@@ -47,22 +47,20 @@ const Navbar = () => {
             <span className="dropdown-toggle">More</span>
             <ul className={`dropdown-menu ${moreDropdownOpen ? 'show' : ''}`}>
               <li><a href="/News">News & Events</a></li>
-              <li><a href="/testReport">Test Report</a></li> 
+              <li><a href="/testReport">Test Report</a></li>
               <li><a href="/certificates">Certificates</a></li>
             </ul>
           </li>
 
- <li><a href="/catalogues">Catalogues</a></li>
+          <li><a href="/catalogues">Catalogues</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
 
-        {/* Hamburger Icon */}
         <div className="hamburger" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
-      {/* Side Menu */}
       <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
         <div className="side-menu-header">
           <img className="side-logo" src={require("../assets/footer_logo.png")} alt="Logo" />
@@ -71,26 +69,42 @@ const Navbar = () => {
         <ul className="side-nav-links">
           <li><a href="/home" onClick={toggleMenu}>Home</a></li>
 
-          {/* About in Mobile */}
+          {/* Mobile About Dropdown */}
           <li className="side-dropdown">
-            <span className="side-about-title">About</span>
-            <ul className="side-dropdown-menu">
-              <li><a href="/about" onClick={toggleMenu}>About Us</a></li>
-              <li><a href="/established" onClick={toggleMenu}>Established Excellence</a></li>
-            </ul>
+            <span
+              className="side-about-title"
+              onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+            >
+              About {mobileAboutOpen ? <FaChevronUp /> : <FaChevronDown />}
+            </span>
+            {mobileAboutOpen && (
+              <ul className="side-dropdown-menu">
+                <li><a href="/about" onClick={toggleMenu}>About Us</a></li>
+                <li><a href="/established" onClick={toggleMenu}>Established Excellence</a></li>
+              </ul>
+            )}
           </li>
 
           <li><a href="/product" onClick={toggleMenu}>Product</a></li>
 
-          {/* More in Mobile */}
+          {/* Mobile More Dropdown */}
           <li className="side-dropdown">
-            <span className="side-about-title">More</span>
-            <ul className="side-dropdown-menu">
-              <li><a href="/news" onClick={toggleMenu}>News & Event</a></li>
-              <li><a href="/testReport" onClick={toggleMenu}>Test Report</a></li>
-            </ul>
+            <span
+              className="side-about-title"
+              onClick={() => setMobileMoreOpen(!mobileMoreOpen)}
+            >
+              More {mobileMoreOpen ? <FaChevronUp /> : <FaChevronDown />}
+            </span>
+            {mobileMoreOpen && (
+              <ul className="side-dropdown-menu">
+                <li><a href="/news" onClick={toggleMenu}>News & Event</a></li>
+                <li><a href="/testReport" onClick={toggleMenu}>Test Report</a></li>
+                <li><a href="/certificates" onClick={toggleMenu}>Certificates</a></li>
+              </ul>
+            )}
           </li>
 
+          <li><a href="/catalogues" onClick={toggleMenu}>Catalogues</a></li>
           <li><a href="/contact" onClick={toggleMenu}>Contact</a></li>
         </ul>
       </div>

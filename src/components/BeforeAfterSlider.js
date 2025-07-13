@@ -3,6 +3,7 @@ import "./BeforeAfterSlider.css";
 
 import beforeImage from "../assets/img-2.jpeg"; // Same scene, original color
 import afterImage from "../assets/img-3.jpeg"; // Same scene, modified color
+import { Container } from "react-bootstrap";
 
 const BeforeAfterSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -19,7 +20,7 @@ const BeforeAfterSlider = () => {
   };
 
   return (
-    <div className="Before-after-section">
+    <Container fluid className="Before-after-section">
       <h1>Before & After Color Change</h1>
 
       <div
@@ -48,7 +49,7 @@ const BeforeAfterSlider = () => {
           onTouchStart={(e) => handleDrag(e.touches[0])}
         />
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -44,8 +44,12 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.overlap-cards-heading{
+  font-size: 1.6rem;
+}
 .overlap-card-text{
   width: 50%;
+  font-size: 20px;
 }
 .card1 {
   background-color: #ffffff;

@@ -86,7 +86,7 @@ const Navbar = () => {
           </li>
 
           <li><a href="/product" onClick={toggleMenu}>Product</a></li>
-
+          <li><a href="/projects" onClick={toggleMenu}>projects</a></li>
           {/* Mobile More Dropdown */}
           <li className="side-dropdown">
             <span

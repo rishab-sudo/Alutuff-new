@@ -74,7 +74,7 @@ const ProductPage = () => {
 
         {/* Section Title */}
         <div className='d-flex justify-content-center align-items-center mt-5 mb-2'>
-          <p>OUR PRODUCT</p>
+          <p className='page-heading'>OUR PRODUCT</p>
         </div>
 
         <Container fluid className='product-section-content-div'>

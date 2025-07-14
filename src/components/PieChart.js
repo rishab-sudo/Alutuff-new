@@ -30,7 +30,7 @@ const FancyPieChart = () => {
 
   return (
     <div className="pie-chart-container">
-      <h2 className="chart-heading">Ashoka Foam Group Brands</h2>
+      <h2 className="page-heading">Ashoka Foam Group Brands</h2>
       <ResponsiveContainer width="100%" height={isMobile ? 350 : 400}>
         <PieChart>
           <Pie

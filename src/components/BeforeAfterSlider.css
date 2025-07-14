@@ -4,11 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-
+  padding: 0px !important;
 }
 
 .slider-container {
+  margin: auto;
+  margin-top: 0px !important;
+  padding: 0 !important;
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -17,6 +19,7 @@
   cursor: ew-resize;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 .slider-image {
@@ -25,6 +28,8 @@
   object-fit: cover;
   user-select: none;
   pointer-events: none;
+  padding: 0;
+  margin: 0;
 }
 
 .slider-top {

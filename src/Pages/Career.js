@@ -100,7 +100,7 @@ const Career = () => {
             <h2 className="career-heading">Message from the Director's Desk</h2>
             <div className="heading-bar"></div>
           </div>
-          <p className="career-description">
+          <p className="page-text">
             At Alutuff ACP, our journey goes far beyond manufacturing Metal Composite Panels — it's about innovation, trust, and driving progress across the architectural and construction industries. With a solid foundation rooted in strong values and a vision to be a global leader, we champion quality, sustainability, and people-focused growth.
             <br /><br />
             {expanded && (
@@ -123,7 +123,7 @@ const Career = () => {
             <h2 className="career-heading">Message from the HR Desk</h2>
             <div className="heading-bar"></div>
           </div>
-          <p className="career-description">
+          <p className="page-text">
           At Alutuff, we believe our people are the true catalysts of our success. The HR vision is simple — to cultivate a workplace that is professionally rewarding and personally meaningful.<br/> <br/>
           We invest in our team through continuous learning, open communication, and leadership development, ensuring that every individual is empowered to grow and thrive.
           {expanded && (
@@ -145,8 +145,8 @@ const Career = () => {
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
      <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
-        <h2 className="card-heading">Build The Future with Us</h2>
-        <p className="card-description">
+        <h2 className="page-heading text-center" >Build The Future with Us</h2>
+        <p className="page-text">
           At the core of Alutuff is a commitment to cutting-edge innovation and responsible practices. 
           Our premium ACP panels are crafted using world-class technologies that ensure exceptional 
           durability, weather resistance, and aesthetic appeal.
@@ -164,7 +164,7 @@ const Career = () => {
 
         <Container fluid className="values-career-section">
           <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p>OUR CORE VALUES</p>
+        <p className="page-heading">OUR CORE VALUES</p>
       </div>
       <Slider {...settings} >
         {values.map((value, idx) => (
@@ -181,9 +181,9 @@ const Career = () => {
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
          <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
-        <h2 className="card-heading">Life at Alutuff</h2>
-        <p className='text-center'>Where People Drive Progress</p>
-        <p className="card-description">
+        <h2 className="page-heading text-center">Life at Alutuff</h2>
+        <p className='text-center page-text'>Where People Drive Progress</p>
+        <p className="page-text">
          At Alutuff, our people are at the heart of everything we do. We believe in fostering a collaborative, vibrant, and inclusive workplace where innovation thrives and every contribution matters.
           <br /><br />
          From meaningful projects to team celebrations, we ensure your journey with us is filled with growth, purpose, and recognition. Together, we build more than products — we build careers, communities, and a better tomorrow.

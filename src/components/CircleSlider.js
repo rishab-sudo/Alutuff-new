@@ -9,44 +9,44 @@ const circlesData = [
     id: 1,
     icon: require('../assets/core-icons/continuity (1).png'),
     title: "Consistency & Quality",
-    description:""
+     description: "We deliver consistent and high-quality products and services."
 
   },
   {
     id: 2,
     icon: require('../assets/core-icons/idea (1).png'),
     title: "Customer First, Always",
-    description:""
+     description: "We deliver consistent and high-quality products and services."
   },
   {
     id: 3,
     icon: require('../assets/core-icons/promise (1).png'),
     title: "Innovation with Purpose",
-   description:""
+    description: "We deliver consistent and high-quality products and services."
   },
   {
     id: 4,
     icon: require('../assets/core-icons/respect-core (1).png'),
     title: "Respect for People",
-   description:""
+    description: "We deliver consistent and high-quality products and services."
   },
   {
     id: 5,
     icon: require('../assets/core-icons/social-responsibility (1).png'),
     title: "Responsibility to Society",
-    description:""
+     description: "We deliver consistent and high-quality products and services."
   },
     {
     id: 6,
     icon: require('../assets/core-icons/technical-service (1).png'),
     title: "Service Is Our Strength",
-    description:""
+     description: "We deliver consistent and high-quality products and services."
   },
     {
     id: 7,
     icon: require('../assets/core-icons/trustworthiness (1).png'),
     title: "Transarency & Trust",
-    description:""
+     description: "We deliver consistent and high-quality products and services."
   },
 ];
 
@@ -77,31 +77,33 @@ const CircleSlider = () => {
   };
 
   return (
-    <div className="circle-slider-wrapper">
-      <Slider {...settings} className="circle-slider">
-        {circlesData.map((circle) => (
-            <Container>
-          <div
-            key={circle.id}
-            className={`circle-item ${hovered === circle.id ? "active" : ""}`}
-            onMouseEnter={() => setHovered(circle.id)}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <div className="circle">
-              <img className="core-icons" src={circle.icon}/>
-              <p className="core-circle-descp">{circle.title}</p>
-            </div>
-          </div>
-          </Container>
-        ))}
-      </Slider>
+    <Container fluid className="circle-slider-wrapper">
+        <div className='d-flex justify-content-center align-items-center mb-5 '>
+<p className="page-heading">OUR CORE VALUE</p>
+  </div>
+<Slider {...settings} className="circle-slider">
+  {circlesData.map((circle) => (
+    <div
+      key={circle.id}
+      className={`circle-item ${hovered === circle.id ? "active" : ""}`}
+      onMouseEnter={() => setHovered(circle.id)}
+      onMouseLeave={() => setHovered(null)}
+    >
+      <div className="circle">
+        <img className="core-icons" src={circle.icon} alt={circle.title} />
+        <p className="core-circle-descp">{circle.title}</p>
+      </div>
+    </div>
+  ))}
+</Slider>
+
 
       {hovered && (
         <div className="below-description red-border">
           <p>{circlesData.find((item) => item.id === hovered).description}</p>
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 

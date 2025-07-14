@@ -221,10 +221,10 @@
 
   .product-grid {
     grid-template-columns: 1fr;
-    width: 95% !important;
+    width: 100% !important;
     margin: auto;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
   }
 
   .product-card {

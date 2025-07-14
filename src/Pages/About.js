@@ -87,13 +87,12 @@ const settings = {
             <Container className='about-us-content-div'>
       
       <div className='about-us-text-div'>
-        <p>About US</p>
-        <p>Where Strong ACP Panels Meet Timeless Aesthetic Design</p>
-      <p>Alutuff is India’s premier manufacturer of Aluminium Composite Panels (ACPs), delivering innovation, durability, and design excellence for over a decade. </p>
-      <p
-      >Our state-of-the-art manufacturing facility spans 5 lakh square feet in Bareilly, where advanced technology and strict quality standards ensure the production of premium-grade panels for both interior and exterior use. Alutuff panels are fire-retardant, weather-resistant, and available in a wide range of finishes, from wood to metallic to marble. 
+        <p className='section-heading'>About US</p>
+        <p className='page-text'>Where Strong ACP Panels Meet Timeless Aesthetic Design</p>
+      <p className='page-text'>Alutuff is India’s premier manufacturer of Aluminium Composite Panels (ACPs), delivering innovation, durability, and design excellence for over a decade. </p>
+      <p className='page-text' >Our state-of-the-art manufacturing facility spans 5 lakh square feet in Bareilly, where advanced technology and strict quality standards ensure the production of premium-grade panels for both interior and exterior use. Alutuff panels are fire-retardant, weather-resistant, and available in a wide range of finishes, from wood to metallic to marble. 
 </p>
-      <p>
+      <p className='page-text'>
         Trusted by architects, developers, and designers across all 28 Indian states, our products are proudly made in India and meet international standards. With Alutuff, every project reflects strength, sophistication, and a deep understanding of design possibilities.
 </p>
       <button className='pink-button'>Purchase</button>
@@ -121,15 +120,15 @@ const settings = {
 
       {/* Glance Section */}
   <div ref={sectionRef} className={`glance ${isVisible ? "visible" : ""}`}>
-        <h2>At a Glance</h2>
-        <p>Here's a quick look at what we offer and stand for.</p>
+        <h2 className='page-heading' style={{marginBottom:"0rem "}}>At a Glance</h2>
+        <p className='section-heading' style={{marginTop:"-3rem", marginBottom:"5rem"}}>Here's a quick look at what we offer and stand for.</p>
 
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>5lac+ sq.ft.</span>	 Industrial Campus</div>
-            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>$168M+ </span>Total Investment  </div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>24/7 Power</span>  In-House Plant </div>
+            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>5lac+ sq.ft.</span>	 Industrial Campus</div>
+            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>$168M+ </span>Total Investment  </div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>24/7 Power</span>  In-House Plant </div>
           </div>
 
           {/* Center Image */}
@@ -139,9 +138,9 @@ const settings = {
 
           {/* Right Points */}
           <div className="glance-points glance-right">
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>6 Units </span> Manufacturing Plants </div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}>1200+</span> Skilled Employees</div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"15px",marginRight:"20px"}}></span>India + UAE Operational Presence</div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>6 Units </span> Manufacturing Plants </div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>1200+</span> Skilled Employees</div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>India</span> + UAE Operational Presence</div>
           </div>
 
           {/* Connecting Lines */}
@@ -221,9 +220,9 @@ const settings = {
     </Container>
 
       {/* Slider Section */}
-      <div className="about-slider-container">
+      <Container fluid className="about-slider-container">
           <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p>Manufacturing Unit</p>
+        <p className="page-heading">Manufacturing Unit</p>
       </div>
         <Slider {...settings}>
           {images.map((img, index) => (
@@ -232,10 +231,10 @@ const settings = {
             </div>
           ))}
         </Slider>
-      </div>
+      </Container>
       {/*  */}
 
-  <Container fluid className='d-flex justify-content-center align-items-center g-0'>
+  <Container fluid className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%"}}>
 <img style={{maxWidth:"100%"}} src={require("../assets/makein-new-alutiff.png")} alt=""/>
   </Container>
       {/*  */}

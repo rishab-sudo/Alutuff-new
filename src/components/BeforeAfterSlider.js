@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./BeforeAfterSlider.css";
 
-import beforeImage from "../assets/img-2.jpeg"; // Same scene, original color
-import afterImage from "../assets/img-3.jpeg"; // Same scene, modified color
+import beforeImage from "../assets/alutuff-demo-img1.jpeg"; // Same scene, original color
+import afterImage from "../assets/alutuff-demo-img2.jpeg"; // Same scene, modified color
 import { Container } from "react-bootstrap";
 
 const BeforeAfterSlider = () => {
@@ -21,7 +21,7 @@ const BeforeAfterSlider = () => {
 
   return (
     <Container fluid className="Before-after-section">
-      <h1>Before & After Color Change</h1>
+      <h1 className="page-heading">Before & After Color Change</h1>
 
       <div
         className="slider-container"

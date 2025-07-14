@@ -20,10 +20,10 @@ const Established = () => {
 
 <Container fluid className='legacy-section '>
   <div className='d-flex justify-content-center align-items-center mb-5 '>
-<p>ESTABLISHED EXCELLENCE</p>
+<p className='page-heading'>ESTABLISHED EXCELLENCE</p>
   </div>
 <Container className='legacy-content-div'>
-<div>
+<div className='page-text'>
   <p>
     Ashoka foam is one of the leading groups of companies in the field of Home Furnishing since 1978. An ISO 9001:2000 and 
     ISO 140001 certified group, we deliver unparalleled quality in Rubberized Coir Mattresses, Polyurethane foam, HDPE/PP woven bags,
@@ -47,7 +47,7 @@ const Established = () => {
 </p>
 </div>
 
-<div className='business-entity-wrapper'>
+<div className='business-entity-wrapper '>
   <p>Alutuff Composite Panels</p>
   <p>Alutuff Wood Plastic Composite Panels</p>
   <p>Himalaya Plastics & Molded Furniture</p>
@@ -60,7 +60,7 @@ const Established = () => {
 
  <Container className='busniss-unit-card-section'>
       <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p>ESTABLISHED EXCELLENCE</p>
+        <p className='page-heading'>ESTABLISHED EXCELLENCE</p>
       </div>
       <Container className='busniss-unit-card-wrapper'>
         <div className="business-unit-card">
@@ -100,7 +100,7 @@ const Established = () => {
 
     <Container className='road-map-section'>
         <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p>A Breif History</p>
+        <p className='page-heading'>A Breif History</p>
       </div>
       <Container className='road-map-content-div'>
          <img className='road-map-img' src={require("../assets/road-map-alutuff (1).jpeg")} alt=""/>

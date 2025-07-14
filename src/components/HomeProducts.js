@@ -64,7 +64,7 @@ export default function HomeProducts() {
 
   return (
     <div className="homeproduct-section">
-      <p>OUR LATEST PRODUCTS</p>
+      <p className='page-heading'>OUR LATEST PRODUCTS</p>
 
       <div className="filter-buttons">
         {categories.map(category => (

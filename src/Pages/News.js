@@ -38,7 +38,7 @@ const News = () => {
    
     <Container fluid>
      <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p>A Breif History</p>
+        <p className='page-heading'>A Breif History</p>
       </div>
    
     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>

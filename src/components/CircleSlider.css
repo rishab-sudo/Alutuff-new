@@ -2,15 +2,13 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .circle-slider-wrapper {
+  margin-top: 6.2%;
   position: relative;
-  padding: 50px 20px;
+  padding: 10px;
   background: #ffffff;
   overflow: hidden;
   height: 425px;
-  margin-top: 6%;
-}
-
-
+  }
 .circle {
   padding: 15px;
   width: 170px;
@@ -72,15 +70,27 @@
 }
 
 @media (max-width: 768px) {
+  .circle-slider-wrapper {
+  margin-top: 6.5%;
+height: 100%;
+}
+.circle-slider{
+  padding: 0px;
+  margin: 0;
+}
   .below-description {
-    margin: 20px auto 0;
-    font-size: 16px;
-    padding: 15px;
-    max-width: 90%;
+display: none;
   }
 
   .circle {
     width: 160px;
     height: 160px;
   }
+  .core-icons{
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  
+}
 }

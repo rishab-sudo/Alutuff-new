@@ -58,3 +58,15 @@
   cursor: pointer;
   z-index: 1000;
 }
+@media screen and (max-width: 768px) {
+  .certificates-wrapper {
+  max-height: 100% !important;
+  padding: 25px 0;
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Show 2 cards per row */
+  gap: 30px;
+  justify-content: center;
+}
+}

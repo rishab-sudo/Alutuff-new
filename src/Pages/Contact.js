@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Banner from '../components/Banner';
+import bannerImage from "../assets/banner-bg.jpeg"
 import './Contact.css';
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
@@ -44,14 +46,13 @@ const Contact = () => {
 
   return (
     <>
-      <Container fluid className="about-banner-bg-section">
-        <Container className="about-banner-content">
-          <p>Contact Us</p>
-          <p className="about-bottom-breadcrumb">
-            <Link style={{ textDecoration: "none", color: "#000" }} to="/home">Home</Link> / <span style={{ color: "red" }}>Contact Us</span>
-          </p>
-        </Container>
-      </Container>
+      <div className='w-100' >
+              <Banner
+                image={bannerImage}
+                heading="Certificates "
+                subheading="Welcome to our website"
+              />
+            </div>
 
       {/* Contact Cards */}
       <div className="contact-cards">
@@ -88,7 +89,7 @@ const Contact = () => {
         ></iframe>
 
         <div className="contact-form-container">
-          <h2>Get In Touch</h2>
+          <h2 className='page-heading'>Get In Touch</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-row">
               <input type="text" name="firstName" placeholder="First Name" required value={formData.firstName} onChange={handleChange} />

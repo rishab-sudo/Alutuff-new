@@ -110,7 +110,7 @@ const ProjectCarousel = () => {
 
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>
-          <p>GOVERNMENT PROJECTS</p>
+          <p className="page-heading">GOVERNMENT PROJECTS</p>
         </div>
       <Swiper
   modules={[Autoplay]}
@@ -146,7 +146,7 @@ const ProjectCarousel = () => {
       </Container>
 
       <Container className="clients-section">
-        <h2>Few of Our Esteemed Clients</h2>
+        <h2 className="page-heading">Few of Our Esteemed Clients</h2>
         <div className="clients-grid">
           {governmentClients.slice(0, visibleClients).map((client, index) => (
             <div className="client-box" key={index}>
@@ -165,7 +165,7 @@ const ProjectCarousel = () => {
 
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>
-          <p>PRIVATE PROJECTS</p>
+          <p className="page-heading">PRIVATE PROJECTS</p>
         </div>
           <Swiper
   modules={[Autoplay]}

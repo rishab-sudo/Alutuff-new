@@ -21,10 +21,6 @@ import Catalogues from './Pages/Catalogues';
 import Career from './Pages/Career';
 
 
-
-
-
-
 function App() {
   return (
     <Router>

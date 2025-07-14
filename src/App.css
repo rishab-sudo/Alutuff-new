@@ -6,21 +6,32 @@ body {
   font-family: 'Raleway', sans-serif;;
 }
 
-.about-bottom-breadcrumb {
-  position: absolute;
-  bottom: 20px;
-  right: 20px; /* Move to right */
-  margin: 0;
-  font-size: 16px;
-  z-index: 2;
-  color: #000;
+.page-heading{
+  text-align: center;
+  font-size: 2rem !important;
+  font-weight: 600;
+  margin-bottom: 5rem !important;
 }
-
-.about-bottom-breadcrumb a {
-  text-decoration: none;
-  color: #000;
+.section-heading{
+font-size: 1.5rem;
+font-weight: 600;
 }
-
-.about-bottom-breadcrumb span {
-  color: red;
+.page-text{
+font-size: 18px;
+}
+/*  */
+@media screen and (max-width: 768px) {
+.page-heading{
+  text-align: center;
+  font-size: 2rem !important;
+  font-weight: 600;
+  margin-bottom: 5rem !important;
+}
+.section-heading{
+font-size: 1.5rem;
+font-weight: 600;
+}
+.page-text{
+font-size: 16px;
+}
 }

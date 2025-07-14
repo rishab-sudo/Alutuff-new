@@ -1,6 +1,7 @@
 import React from 'react';
 import './Quote.css';
 import { FaPhoneAlt } from 'react-icons/fa';
+import cataloguePDF from "../assets/pdf/Shade Card (1).pdf"
 
 const QuoteBox = () => {
   return (
@@ -19,9 +20,17 @@ const QuoteBox = () => {
 >
       <div className="quote-box">
         <div className="quote-left">
-          <h3 style={{fontSize:"2vw"}}>3 Million client choose us</h3>
+          <h3 style={{fontSize:"2vw",textTransform:"uppercase"}}>Get A Free <br/>
+   Quotation Today!</h3>
           <p>We are here to help. Reach out to us with any questions or inquiries.</p>
-         
+<a style={{textDecoration:"none",width:"auto", backgroundColor:"#fff"}}
+  href={cataloguePDF}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="pink-button"
+>
+<button className='pink-button mt-2'>Download Catalouge</button>
+</a> 
         </div>
         <div className="quote-right">
           <div className="icon-circle">

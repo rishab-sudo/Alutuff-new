@@ -35,7 +35,7 @@ const FaqSection = () => {
 
   return (
     <Container className="faq-section">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
+      <h2 className="page-heading">Frequently Asked Questions</h2>
       {faqs.map((faq, index) => (
         <div key={index} className="faq-item">
           <div className="faq-question" onClick={() => toggleFaq(index)}>

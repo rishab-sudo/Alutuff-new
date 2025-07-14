@@ -47,7 +47,7 @@ const Certificates = () => {
             </div>
     <Container fluid className='certificates-wrapper'>
       <div className='d-flex justify-content-center align-items-center mb-5'>
-        <p>Alutuff - Completion & Appreciation Certificates</p>
+        <p className='page-heading'>Alutuff - Completion & Appreciation Certificates</p>
       </div>
 
       <Container>
@@ -58,7 +58,6 @@ const Certificates = () => {
             </div>
           ))}
         </div>
-      </Container>
 
       {popupImg && (
         <div className='popup-overlay'>
@@ -66,6 +65,7 @@ const Certificates = () => {
           <img src={popupImg} alt='Popup' className='popup-image' />
         </div>
       )}
+      </Container>
     </Container>
     </>
   );

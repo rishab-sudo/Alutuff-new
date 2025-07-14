@@ -26,7 +26,7 @@
 
 .quote-left {
   flex: 1;
-  max-width: 250px;
+  max-width: 45%;
 }
 
 .quote-left h2 {
@@ -37,20 +37,21 @@
 
 .quote-left p {
   color: #666;
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: 1rem;
 }
 
 .quote-right {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 25px;
 }
 
 .icon-circle {
   background-color: red;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -67,13 +68,14 @@
 }
 
 .say-hello {
+  text-align: left;
   font-weight: bold;
   color: #333;
 }
 
 .phone-number {
   color: #555;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {

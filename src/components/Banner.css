@@ -29,3 +29,8 @@
   font-size: 1.2rem;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+.banner-fluid-section {
+max-height: 250px;
+}
+}

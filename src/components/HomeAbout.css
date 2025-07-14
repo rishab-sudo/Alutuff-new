@@ -17,11 +17,7 @@ align-items: center;
 .home-about-text-div{
     max-width: 45%;
 }
-.pink-button{
-    background-color: pink;
-    padding: 10px 20px;
-    border: none;
-}
+
 .home-about-img1-div{
     display: flex;
     justify-content: flex-end;

@@ -8,8 +8,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import Banner from "../components/Banner"
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { Link } from 'react-router-dom';
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import bannerImage from '../assets/banner-bg.jpeg'
 import './About.css';
 import CircleSlider from '../components/CircleSlider';
@@ -45,7 +45,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   arrows: false,
   pauseOnHover: false,
@@ -53,7 +53,7 @@ const settings = {
     {
       breakpoint: 1200, // below 1200px
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       },
     },
     
@@ -121,7 +121,7 @@ const settings = {
       {/* Glance Section */}
   <div ref={sectionRef} className={`glance ${isVisible ? "visible" : ""}`}>
         <h2 className='page-heading' style={{marginBottom:"0rem "}}>At a Glance</h2>
-        <p className='section-heading' style={{marginTop:"-3rem", marginBottom:"5rem"}}>Here's a quick look at what we offer and stand for.</p>
+        <p className='section-heading sub-heading' >Here's a quick look at what we offer and stand for.</p>
 
         <div className="glance-container">
           {/* Left Points */}
@@ -162,7 +162,7 @@ const settings = {
           <div className='zigzag-card zigzag-card-1'>
             <div className='zigzag-card-div'>
               <h3>Our Mission</h3>
-              <p className='zigzag-card-descp mt-3'>
+              <p className='zigzag-card-descp '>
                To transform spaces with premium Metal Composite Panels, delivering unmatched quality, timely service, and trust-driven partnerships that empower dealers, customers, and stakeholders across every project.
                </p>
             </div>
@@ -178,7 +178,7 @@ const settings = {
             </div>
             <div className='zigzag-card-div' style={{marginLeft:"auto",marginRight:"0px"}}>
               <h3>OUR VISION</h3>
-              <p className='zigzag-card-descp mt-3'>
+              <p className='zigzag-card-descp '>
               To be India’s most trusted ACP brand, globally recognized for innovation, integrity, and reliability, by building strong relationships with architects, builders, homeowners, and channel partners everywhere.
               </p>
             </div>
@@ -188,7 +188,7 @@ const settings = {
           <div className='zigzag-card zigzag-card-3'>
             <div className='zigzag-card-div'>
               <h3 className='zigzag-card-heading'>OUR PROMISE</h3>
-              <p className='zigzag-card-descp mt-3'>At Alutuff, we create more than panels. We build dreams, protect reputations, and stand beside every partner, offering strength, style, and unwavering support in every square foot.
+              <p className='zigzag-card-descp '>At Alutuff, we create more than panels. We build dreams, protect reputations, and stand beside every partner, offering strength, style, and unwavering support in every square foot.
 </p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
@@ -224,7 +224,7 @@ const settings = {
           <div className='d-flex justify-content-center align-items-center mb-5 '>
         <p className="page-heading">Manufacturing Unit</p>
       </div>
-        <Slider {...settings}>
+        <Slider {...settings} className='manufacturing-slider'>
           {images.map((img, index) => (
             <div key={index} className="about-slide-image-wrapper">
               <img src={img} alt={`Slide ${index + 1}`} />

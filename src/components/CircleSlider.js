@@ -57,7 +57,7 @@ const CircleSlider = () => {
   const settings = {
     infinite: true,
     speed: 3000,
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,

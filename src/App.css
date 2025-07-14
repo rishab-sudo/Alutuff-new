@@ -19,6 +19,12 @@ font-weight: 600;
 .page-text{
 font-size: 18px;
 }
+.pink-button{
+    background-color: #ea3138 !important;
+    padding: 10px 20px;
+    border: none;
+}
+
 /*  */
 @media screen and (max-width: 768px) {
 .page-heading{

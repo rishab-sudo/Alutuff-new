@@ -8,7 +8,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 20px;
+  
+}
+.legacy-content{
+  text-align: justify;
 }
 
 .legacy-content-div > div:first-child {
@@ -20,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 
 .business-entity-wrapper p {
@@ -36,30 +41,34 @@
   transform: translateY(-5px);
 }
 /*  */
+/*  */
 .busniss-unit-card-section {
   margin-top: 5%;
   padding: 20px;
 }
 
 .busniss-unit-card-wrapper {
+  margin: auto;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
 }
 
 /* Card Styles */
 .business-unit-card {
-  width: 32%;
+  width: 30%;
   height: 280px;
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px 20px;
+  padding: 5px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+
 }
 
 /* Card heading */
@@ -88,6 +97,7 @@
 /*  */
 .road-map-section{
     margin-top: 5%;
+    padding: 0;
 }
 .road-map-content-div{
 display: flex;
@@ -119,6 +129,10 @@ height: 100%;
   .card-point {
     font-size: 14px;
   }
+  .business-unit-card4 {
+height: 100%;
+
+}
 }
 
 

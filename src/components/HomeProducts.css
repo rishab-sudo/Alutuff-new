@@ -1,6 +1,7 @@
 .homeproduct-section {
   padding: 50px 80px;
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -38,7 +39,7 @@
 
 .filter-buttons button.active,
 .filter-buttons button:hover {
-  background: #000;
+  background: #ea3138;
   color: #ffffffe6;
 }
 
@@ -175,12 +176,15 @@ padding: 5px !important;
 
 .view-more button {
   padding: 10px 20px;
-  background: #000;
+  background: #ea3138;
   color: #fff;
   border: none;
   cursor: pointer;
 }
+.view-more button:hover {
+  background: #ea3137dd;
 
+}
 /* .image-popup {
   position: fixed;
   top: 50px;

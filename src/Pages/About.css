@@ -118,7 +118,9 @@
   font-size: 40px;
   margin-bottom: 20px;
 }
-
+.sub-heading{
+  margin-top: -3rem;
+}
 .glance p {
   font-size: 18px;
   margin-bottom: 60px;
@@ -128,7 +130,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 40px;
+  gap: 20px;
   position: relative; 
 }
 
@@ -142,6 +144,8 @@
 .point-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap:"20px";
   background-color: #f1f1f1;
   padding: 10px ;
   border-radius: 15px;
@@ -332,6 +336,10 @@
   border-radius: 50%;
   object-fit: cover;
 }
+.zigzag-card-descp {
+  margin-top: 2rem;
+
+}
 /* -----------slider-Manufactiring-Unit----------------------------------- */
 .about-slider-container {
   width: 100%;
@@ -340,7 +348,12 @@
   overflow: hidden;
 padding: 0;
 }
+.manufacturing-slider{
 
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
 .about-slide-image-wrapper {
   padding: 15px;
   display: flex;

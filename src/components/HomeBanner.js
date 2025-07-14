@@ -48,7 +48,7 @@ const HomeBanner = () => {
               <div className={`content-box ${activeIndex === index ? 'show-text' : ''}`}>
                 <h2>{slide.heading}</h2>
                 <p>{slide.description}</p>
-                <button>{slide.buttonText}</button>
+                <button className='pink-button'>{slide.buttonText}</button>
               </div>
             </div>
           </SwiperSlide>

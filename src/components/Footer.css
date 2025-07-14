@@ -137,13 +137,17 @@ text-decoration: none;
     gap: 40px;
     align-items: flex-start;
   }
-
+.col-text-div{
+margin-right: auto;
+width: 100%;
+}
   .footer-logo {
     width: 100px;
   }
 
   .trust-text h2 {
     font-size: 18px;
+ 
   }
 
   .trust-text p,

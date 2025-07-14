@@ -7,8 +7,9 @@
   padding: 10px;
   background: #ffffff;
   overflow: hidden;
-  height: 425px;
-  }
+  height: 480px; /* Increased to accommodate description box */
+}
+
 .circle {
   padding: 15px;
   width: 170px;
@@ -24,18 +25,20 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.core-icons{
+
+.core-icons {
   width: 45px;
   height: 45px;
   margin: 0;
   padding: 0;
-  
 }
-.core-circle-descp{
- font-size: 15px;
- font-weight: 600;
- text-align: center;
+
+.core-circle-descp {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
 }
+
 .circle-slider .circle-item {
   display: flex !important;
   justify-content: center;
@@ -55,10 +58,15 @@
   transform: scale(1.05);
 }
 
+/* Hover Description Box Styling */
 .below-description {
-  margin-top: 60px !important;
-  margin: auto;
+  position: absolute;
+ 
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 600px;
+  width: 90%;
   background: white;
   padding: 20px;
   border-left: 6px solid red;
@@ -67,30 +75,35 @@
   font-weight: 500;
   color: #111 !important;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .circle-slider-wrapper {
-  margin-top: 6.5%;
-height: 100%;
-}
-.circle-slider{
-  padding: 0px;
-  margin: 0;
-}
+    margin-top: 6.5%;
+    height: 100%;
+  }
+
+  .circle-slider {
+    padding: 0px;
+    margin: 0;
+  }
+
   .below-description {
-display: none;
+    display: none;
   }
 
   .circle {
     width: 160px;
     height: 160px;
   }
-  .core-icons{
-  width: 35px;
-  height: 35px;
-  margin: 0;
-  padding: 0;
-  
-}
+
+  .core-icons {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+  }
 }

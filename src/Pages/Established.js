@@ -23,7 +23,7 @@ const Established = () => {
 <p className='page-heading'>ESTABLISHED EXCELLENCE</p>
   </div>
 <Container className='legacy-content-div'>
-<div className='page-text'>
+<div className='page-text legacy-content'>
   <p>
     Ashoka foam is one of the leading groups of companies in the field of Home Furnishing since 1978. An ISO 9001:2000 and 
     ISO 140001 certified group, we deliver unparalleled quality in Rubberized Coir Mattresses, Polyurethane foam, HDPE/PP woven bags,
@@ -91,7 +91,7 @@ const Established = () => {
           <p className="card-point">Spring mattresses</p>
         </div>
 
-        <div className="business-unit-card">
+        <div className="business-unit-card business-unit-card4">
           <p className="card-heading">Ashoka Foam Private Limited.</p>
           <p className="card-point">WPC/PVC Panels & Partitions</p>
         </div>
@@ -99,7 +99,7 @@ const Established = () => {
     </Container>
 
     <Container className='road-map-section'>
-        <div className='d-flex justify-content-center align-items-center mb-5 '>
+        <div className='d-flex justify-content-center align-items-center  '>
         <p className='page-heading'>A Breif History</p>
       </div>
       <Container className='road-map-content-div'>

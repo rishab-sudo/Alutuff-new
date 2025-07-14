@@ -1,21 +1,18 @@
-// HomeProducts.js
 import React, { useState } from 'react';
 import productData from "../productData";
 import './HomeProducts.css';
 
 export default function HomeProducts() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [visibleRowCount, setVisibleRowCount] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState('Wooden Prime'); // default other than 'All'
+  const [visibleRowCount, setVisibleRowCount] = useState(2);
   const [rowAnimations, setRowAnimations] = useState({});
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const categories = ['All', 'Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series', 'Bold & Solid', 'Partitions'];
+  const categories = ['Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series', 'Bold & Solid', 'Partitions'];
 
-  const filteredProducts = selectedCategory === 'All'
-    ? productData
-    : productData.filter(product =>
-        product.category.replace(/\s|&/g, '') === selectedCategory.replace(/\s|&/g, '')
-      );
+  const filteredProducts = productData.filter(product =>
+    product.category.replace(/\s|&/g, '') === selectedCategory.replace(/\s|&/g, '')
+  );
 
   const productRows = [];
   for (let i = 0; i < filteredProducts.length; i += 4) {
@@ -29,13 +26,13 @@ export default function HomeProducts() {
 
     if (isMobile) {
       const rowContainer = document.querySelector('.mobile-slider');
-      if (visibleRowCount < productRows.length) {
+      if (visibleRowCount < totalRows) {
         setVisibleRowCount(visibleRowCount + 1);
         setTimeout(() => {
           rowContainer.scrollBy({ left: rowContainer.offsetWidth, behavior: 'smooth' });
         }, 50);
       } else {
-        setVisibleRowCount(1);
+        setVisibleRowCount(2);
         rowContainer.scrollTo({ left: 0, behavior: 'smooth' });
       }
     } else {
@@ -49,7 +46,7 @@ export default function HomeProducts() {
         }
         setRowAnimations(animations);
         setTimeout(() => {
-          setVisibleRowCount(1);
+          setVisibleRowCount(2);
           setRowAnimations({});
         }, 500);
       }
@@ -58,7 +55,7 @@ export default function HomeProducts() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    setVisibleRowCount(1);
+    setVisibleRowCount(2);
     setRowAnimations({});
   };
 
@@ -95,8 +92,8 @@ export default function HomeProducts() {
                 <img src={product.image} alt={product.title} />
                 <div className="overlay">
                   <h4>{product.title}</h4>
-                  <p>{product.description}</p>
-                  <p>{product.text}</p>
+                  <p className='text-white'>{product.description}</p>
+                  <p className='text-white'>{product.text}</p>
                 </div>
               </div>
             ))}
@@ -117,7 +114,7 @@ export default function HomeProducts() {
         </div>
       )}
 
-      {filteredProducts.length > 4 && (
+      {productRows.length > 2 && (
         <div className="view-more">
           <button onClick={handleToggleRow}>
             {visibleRowCount === productRows.length ? 'View Less' : 'View More'}

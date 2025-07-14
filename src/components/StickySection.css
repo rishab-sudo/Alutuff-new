@@ -76,13 +76,16 @@
   }
 
   .mobile-scroll-wrapper {
+    margin-top: 5%;
     display: block; /* Show the mobile layout */
-    padding: 20px;
-    
-  }
+    padding: 25px 20px;
+    background-color: black;
+    color: #fff !important;
+    }
 
   .mobile-item {
     margin-bottom: 40px;
+      color: #fff !important;
   }
 
   .mobile-item img {
@@ -94,6 +97,6 @@
 
   .mobile-item p {
     font-size: 18px;
-    color: black;
+    color: #ffffff !important;
   }
 }

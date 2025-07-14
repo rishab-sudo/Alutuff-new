@@ -45,11 +45,17 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 0,
   cssEase: 'linear',
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: false,
   pauseOnHover: false,
   responsive: [
+        {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 5,
+      },
+    },
     {
       breakpoint: 1200, // below 1200px
       settings: {

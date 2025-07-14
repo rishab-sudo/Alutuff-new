@@ -21,7 +21,7 @@ export default function HomeAbout() {
         </div>
 
         <div className='home-about-img1-div'>
-            <img className='home-about-img1' src={require("../assets/home-about1.jpeg")} alt="home-about"/>
+            <img className='home-about-img1' src={require("../assets/home-about2.jpg")} alt="home-about"/>
         </div>
       </Container>
     </Container>

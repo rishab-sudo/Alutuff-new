@@ -103,7 +103,7 @@ const ProjectCarousel = () => {
         </div>
         <img src={require  ("../assets/Image2.png")} alt="Image 3" className="img img3 from-right" />
       </div>
-      <img src={require  ("../assets/Image2.png")} alt="Image 4" className="img img4 from-bottom" />
+    
     </div>
 </Container>
 </Container>
@@ -157,7 +157,7 @@ const ProjectCarousel = () => {
         </div>
 
         <div className="d-flex justify-content-end mt-4">
-          <button className="view-more-btn" onClick={handleToggleClients}>
+          <button className="pink-button" onClick={handleToggleClients}>
             {isFullyVisible ? "View Less" : "View More"}
           </button>
         </div>
@@ -211,7 +211,7 @@ const ProjectCarousel = () => {
         </div>
 
         <div className="d-flex justify-content-end mt-4">
-          <button className="view-more-btn" onClick={handleToggleClients}>
+          <button className="view-more-btn pink-button" onClick={handleToggleClients}>
             {isFullyVisible ? "View Less" : "View More"}
           </button>
         </div>

@@ -132,9 +132,9 @@ const settings = {
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>5lac+ sq.ft.</span>	 Industrial Campus</div>
-            <div className="point-box"> <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>$168M+ </span>Total Investment  </div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>24/7 Power</span>  In-House Plant </div>
+            <div className="point-box">  Industrial Campus<span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>5lac+ sq.ft.</span>	</div>
+            <div className="point-box">Total Investment  <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>$168M+ </span> </div>
+            <div className="point-box"> In-House Plant <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>24/7 Power</span>   </div>
           </div>
 
           {/* Center Image */}
@@ -146,7 +146,7 @@ const settings = {
           <div className="glance-points glance-right">
             <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>6 Units </span> Manufacturing Plants </div>
             <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>1200+</span> Skilled Employees</div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>India</span> + UAE Operational Presence</div>
+            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>India + UAE</span>  Operational Presence</div>
           </div>
 
           {/* Connecting Lines */}

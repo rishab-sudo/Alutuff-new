@@ -62,7 +62,7 @@
   height: 280px;
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 5px;
+  padding: 0px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -73,24 +73,34 @@
 
 /* Card heading */
 .card-heading {
+  display: flex;
+  justify-content: flex-start;
+ border-radius: 8px;
+  width: 100%;
+  background-color: rgba(211, 211, 211, 0.16);
   font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 22px !important;
+  margin-bottom: 15px !important;
+  margin: 0 ;
+  padding: 10px ;
 }
 
 /* Bullet Points */
 .card-point {
   position: relative;
-  padding-left: 20px;
+  padding:0 20px !important;
   margin-bottom: 8px;
-  font-size: 15px;
+  margin-left: 15px;
+  font-size: 18px !important;
   line-height: 1.5;
+ 
 }
 
 .card-point::before {
   content: '→';
   position: absolute;
   left: 0;
+
   color: hotpink;
   font-weight: bold;
 }

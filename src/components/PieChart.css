@@ -25,6 +25,17 @@
     padding: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+.pie-chart-container path:focus {
+  outline: none;
+}
+.pie-chart-container .recharts-pie-sector {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.pie-chart-container .recharts-pie-sector:hover {
+  transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
     .chart-heading {

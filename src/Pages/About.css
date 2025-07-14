@@ -115,7 +115,6 @@
 }
 
 .glance h2 {
-  font-size: 40px;
   margin-bottom: 20px;
 }
 .sub-heading{
@@ -138,14 +137,14 @@
 .glance-points {
   display: flex;
   flex-direction: column;
-  gap: 110px;
+  gap: 100px;
 }
 
 .point-box {
-  display: flex;
+display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:"20px";
+  gap:"20px"  !important;
   background-color: #f1f1f1;
   padding: 10px ;
   border-radius: 15px;

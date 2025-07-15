@@ -474,6 +474,10 @@ width: 100%;
     width: 100% !important;            /* Full width text box */
     max-width: 100% !important;
     text-align: center !important;
+    
+  }
+  .zigzag-card-descp{
+margin-top: 20px !important;
   }
 
   .zigzag-card h3,

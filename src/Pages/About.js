@@ -174,14 +174,14 @@ const settings = {
                </p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
-              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/mission-img/Mission (1).gif")} alt="" />
             </div>
           </div>
 
           {/* Card 2 */}
           <div className='zigzag-card zigzag-card-2'>
             <div className='zigzag-img-div' style={{ marginRight: "auto" }}>
-              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/mission-img/Growth (1).gif")} alt="" />
             </div>
             <div className='zigzag-card-div' style={{marginLeft:"auto",marginRight:"0px"}}>
               <h3 className='zigzag-card-heading'>OUR VISION</h3>
@@ -199,7 +199,7 @@ const settings = {
 </p>
             </div>
             <div className='zigzag-img-div' style={{ marginLeft: "auto" }}>
-              <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
+              <img className='zigzag-img' src={require("../assets/mission-img/Hand Shake.gif")} />
             </div>
           </div>
 

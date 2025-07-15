@@ -220,9 +220,10 @@ margin-top: 1.5rem;
 }
 
 .client-icon {
-  font-size: 20px;
-  color: #007bff;
-  margin-right: 10px;
+min-height: 20px;
+min-width: 20px;
+color: #ea3138;
+  margin-right: 15px;
 }
 
 .client-box span {

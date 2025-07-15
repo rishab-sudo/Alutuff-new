@@ -1,13 +1,13 @@
-.testimonial-section{
-    margin-top: 5%;
-    margin-bottom: 5%;
+.testimonial-section {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
+
 .testimonial-content-section {
   display: flex;
   gap: 2rem;
   padding: 0 2rem;
   flex-wrap: wrap;
-
 }
 
 .testimonial-left {
@@ -42,14 +42,11 @@
   height: 200px;
   background-color: #fff;
   border-radius: 10px;
-  position: relative; /* Required for absolute positioning inside */
-  padding: 10px 10px 40px 10px; /* bottom padding to prevent overlap */
+  position: relative;
+  padding: 10px 10px 40px 10px;
   box-sizing: border-box;
-
-  /* Modern subtle shadow */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
 
 .testimonial-desc {
   font-size: 1rem;
@@ -70,7 +67,6 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-
 .testimonial-client img {
   width: 35px;
   height: 35px;
@@ -88,11 +84,34 @@
 @media (max-width: 768px) {
   .testimonial-content-section {
     flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
   }
 
   .testimonial-left {
     position: static;
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 1rem;
+  }
+
+  .testimonial-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-box {
+    min-width: 90%;
+    max-width: 90%;
+    height: 200px;
+    padding-top: 15px !important;
+    padding: 10px;
+    margin: auto !important;
+  }
+
+  /* ⭐️ Center the testimonial box inside each slick slide */
+  .testimonial-right .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
   }
 }

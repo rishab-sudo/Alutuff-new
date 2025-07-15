@@ -17,8 +17,8 @@ const ProductPageData = [
     products: [
       {
         id: 1,
-        title: 'Wooden Chair',
-        description: 'Comfortable and stylish wooden chair',
+        title: 'ACP',
+        description: 'Aluminium Composite Panel',
         image: require('./assets/Image2.png'),
       },
       {
@@ -48,8 +48,8 @@ const ProductPageData = [
     products: [
       {
         id: 3,
-        title: 'Marble Table',
-        description: 'Elegant marble table top',
+        title: 'AHPL',
+        description: 'Aluminium High-Pressure Laminate',
         image: require('./assets/Image2.png'),
       },
     ],
@@ -73,7 +73,7 @@ const ProductPageData = [
     products: [
       {
         id: 4,
-        title: 'Fireproof Panel',
+        title: 'FR ACP / FR HPL',
         description: 'Fire-resistant panel for high-rise buildings',
         image: require('./assets/Image2.png'),
       },
@@ -98,8 +98,8 @@ const ProductPageData = [
     products: [
       {
         id: 5,
-        title: 'Honeycomb Ceiling Panel',
-        description: 'Seamless honeycomb panel for ceiling applications',
+        title: 'AHCP ',
+        description: 'Aluminium Honeycomb Composite Panel',
         image: require('./assets/Image2.png'),
       },
     ],
@@ -123,8 +123,8 @@ const ProductPageData = [
     products: [
       {
         id: 6,
-        title: 'Corrugated Panel',
-        description: 'Durable corrugated panel for industrial use',
+        title: 'ACCP',
+        description: 'Aluminium Corrugated Composite Panel',
         image: require('./assets/Image2.png'),
       },
     ],
@@ -148,7 +148,7 @@ const ProductPageData = [
     products: [
       {
         id: 7,
-        title: '3D Wall Texture',
+        title: '3D Decorative Wall Panel',
         description: 'Stylish 3D panel for feature walls',
         image: require('./assets/Image2.png'),
       },
@@ -173,7 +173,7 @@ const ProductPageData = [
     products: [
       {
         id: 8,
-        title: 'WPC Louver',
+        title: 'Louvers – Aluminium / WPC Louvers',
         description: 'Elegant shading solution for facades',
         image: require('./assets/Image2.png'),
       },
@@ -198,7 +198,7 @@ const ProductPageData = [
     products: [
       {
         id: 9,
-        title: 'Premium Gloss Panel',
+        title: 'Premium Series Panels',
         description: 'Luxurious gloss finish for high-end designs',
         image: require('./assets/Image2.png'),
       },

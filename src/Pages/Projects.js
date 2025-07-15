@@ -7,12 +7,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "./Projects.css";
 
-const governmentClients = [
+const privateClient = [
   "Kalyan Jewellers – UAE",
   "Kalyan Jewellers – PAN INDIA",
   "Sardar Vallabh Bhai Patel Airport, Ahmedabad",
   "Ramoji Film City, Hydrabad",
-  "Bangalore Metropolitan Road Transport Corporation, Bangalore",
+  "Transport Corporation, Bangalore",
   "ITC Outlets",
   "Coffee Day Lounge",
   "ONGC",
@@ -75,7 +75,7 @@ const data = [
 
 const ProjectCarousel = () => {
   const [visibleClients, setVisibleClients] = useState(12);
-  const isFullyVisible = visibleClients >= governmentClients.length;
+  const isFullyVisible = visibleClients >= privateClient.length;
 
   const handleToggleClients = () => {
     if (isFullyVisible) {
@@ -88,7 +88,7 @@ const ProjectCarousel = () => {
   return (
     <>
 <Container fluid className="projects-banner-section">
-  Culture, Growth, and Impact: In Their Words
+
 <Container className="projects-banner-content-div">
     <div className="project-banner-text-div">
 <h1 className="project-banner-heading">Transforming Spaces with Durable, Stylish Panel Solutions</h1>
@@ -149,7 +149,7 @@ const ProjectCarousel = () => {
       <Container className="clients-section">
         <h2 className="page-heading">Few of Our Esteemed Clients</h2>
         <div className="clients-grid">
-          {governmentClients.slice(0, visibleClients).map((client, index) => (
+          {privateClient.slice(0, visibleClients).map((client, index) => (
             <div className="client-box" key={index}>
               <FaBuilding className="client-icon" />
               <span>{client}</span>
@@ -203,7 +203,7 @@ const ProjectCarousel = () => {
        <Container className="clients-section">
         <h2>Few of Our Esteemed Clients</h2>
         <div className="clients-grid">
-          {governmentClients.slice(0, visibleClients).map((client, index) => (
+          {privateClient.slice(0, visibleClients).map((client, index) => (
             <div className="client-box" key={index}>
               <FaBuilding className="client-icon" />
               <span>{client}</span>

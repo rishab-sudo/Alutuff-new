@@ -170,8 +170,8 @@ const ProductPage = () => {
                     <ul>
                       {selectedCategoryData.details.keyFeatures.map((feature, idx) => (
                         <li key={idx}>
-                          <FaCheck style={{ color: "green", marginRight: "8px" }} />
                           {feature}
+                          {/* <FaCheck style={{ color: "green", marginLeft: "12px" }} /> */}
                         </li>
                       ))}
                     </ul>

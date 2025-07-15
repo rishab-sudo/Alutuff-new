@@ -222,7 +222,7 @@ const Career = () => {
 
 
 
-      <Testimonial testimonials={customerData} heading="Customer Testimonials" />
+      <Testimonial testimonials={customerData} heading="Read Reviews, Build with Confidence " />
 
    </>
   )

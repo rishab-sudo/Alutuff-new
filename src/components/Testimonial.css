@@ -1,7 +1,11 @@
-.testimonial-section {
+.testimonial-section{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.testimonial-content-section {
   display: flex;
   gap: 2rem;
-  padding: 2rem;
+  padding: 0 2rem;
   flex-wrap: wrap;
 
 }
@@ -34,7 +38,7 @@
 }
 
 .testimonial-box {
-  max-width: 250px;
+  max-width: 275px;
   height: 200px;
   background-color: #fff;
   border-radius: 10px;
@@ -82,7 +86,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .testimonial-section {
+  .testimonial-content-section {
     flex-direction: column;
   }
 

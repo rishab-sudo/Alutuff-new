@@ -23,7 +23,7 @@ body {
   left: 0;
   right: 0;
   height: 1.5px;
-  width: 45%;
+  width: 35%;
   background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 .section-heading{

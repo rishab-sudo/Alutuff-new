@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
 import './Testimonial.css';
+import { Container } from 'react-bootstrap';
 
-const Testimonial = ({ testimonials = [], heading = "What Our Customers Are Saying" }) => {
+const Testimonial = ({ testimonials = [], heading = "Read Reviews, Build with Confidence" }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -16,7 +17,11 @@ const Testimonial = ({ testimonials = [], heading = "What Our Customers Are Sayi
   };
 
   return (
-    <div className="testimonial-section">
+    <Container fluid className='testimonial-section'>
+        <div className='d-flex justify-content-center align-items-center mb-5 '>
+<p className='page-heading'>Decades of Quality, Trusted Across Industries</p>
+  </div>
+      <div className="testimonial-content-section">
       <div className="testimonial-left">
         <img
           src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png"
@@ -40,6 +45,7 @@ const Testimonial = ({ testimonials = [], heading = "What Our Customers Are Sayi
         </Slider>
       </div>
     </div>
+    </Container>
   );
 };
 

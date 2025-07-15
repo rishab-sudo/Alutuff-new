@@ -88,6 +88,7 @@ const ProjectCarousel = () => {
   return (
     <>
 <Container fluid className="projects-banner-section">
+  Culture, Growth, and Impact: In Their Words
 <Container className="projects-banner-content-div">
     <div className="project-banner-text-div">
 <h1 className="project-banner-heading">Transforming Spaces with Durable, Stylish Panel Solutions</h1>

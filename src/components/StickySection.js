@@ -15,12 +15,25 @@ const StickySection = () => {
     require('../assets/img-5.jpeg'),
   ];
 
-  const paragraphs = [
-    'At Alutuff, every panel is crafted using advanced technology and strict quality controls, ensuring unmatched durability, flawless finishes, and performance that stands strong in every climate.',
-    'We believe one size doesn’t fit all. From textures to thickness, Alutuff panels offer flexible options tailored to match your design intent, project needs, and creative aspirations.',
-    'With over a decade of experience and a nationwide footprint, Alutuff combines global standards with Indian innovation, serving architects and developers who demand excellence, reliability, and value.',
-    'We don’t just manufacture materials, we enable possibilities. Our commitment to safety, sustainability, and customer-first thinking helps us deliver more than panels; we deliver project confidence.',
-  ];
+const paragraphs = [
+  {
+    main: 'At Alutuff, every panel is crafted using advanced technology and strict quality controls, ensuring unmatched durability, flawless finishes, and',
+    highlight: ' performance that stands strong in every climate.',
+  },
+  {
+    main: 'We believe one size doesn’t fit all. From textures to thickness, Alutuff panels offer flexible options tailored to match your',
+    highlight: ' design intent, project needs, and creative aspirations.',
+  },
+  {
+    main: 'With over a decade of experience and a nationwide footprint, Alutuff combines global standards with Indian innovation, serving ',
+    highlight: 'architects and developers who demand excellence, reliability, and value.',
+  },
+  {
+    main: 'We don’t just manufacture materials, we enable possibilities. Our commitment to safety, sustainability, and customer-first thinking helps us ',
+    highlight: 'deliver more than panels; we deliver project confidence.',
+  },
+];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,14 +75,18 @@ const StickySection = () => {
         <div className="sticky-scroll-container">
           <div className="text-section" ref={textRef}>
             <div className="para-wrapper">
-              {paragraphs.map((text, index) => (
-                <p
-                  key={index}
-                  ref={(el) => (paraRefs.current[index] = el)}
-                >
-                  {text}
-                </p>
-              ))}
+            {paragraphs.map((para, index) => (
+  <p
+    key={index}
+    className="para-text"
+    ref={(el) => (paraRefs.current[index] = el)}
+  >
+    {para.main}
+    <span className="grey-text">{para.highlight}</span>
+  </p>
+))}
+
+
             </div>
           </div>
           <div className="image-section">
@@ -84,12 +101,16 @@ const StickySection = () => {
 
       {/* Mobile View */}
       <div className="mobile-scroll-wrapper">
-        {images.map((img, index) => (
-          <div className="mobile-item" key={index}>
-            <p>{paragraphs[index]}</p>
-            <img src={img} alt={`Mobile ${index}`} />
-          </div>
-        ))}
+       {images.map((img, index) => (
+  <div className="mobile-item" key={index}>
+    <p className="para-text">
+      {paragraphs[index].main}
+      <span className="grey-text">{paragraphs[index].highlight}</span>
+    </p>
+    <img src={img} alt={`Mobile ${index}`} />
+  </div>
+))}
+
       </div>
     </>
   );

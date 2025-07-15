@@ -1,14 +1,15 @@
 .legacy-section {
   margin-top: 5%;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f900;
 }
 
 .legacy-content-div {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 50px;
+ 
   
 }
 .legacy-content{
@@ -32,7 +33,12 @@
   padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
+    background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -48,6 +54,7 @@
 }
 
 .busniss-unit-card-wrapper {
+  margin-top: -20px !important;
   margin: auto;
   padding: 0;
   display: flex;
@@ -77,18 +84,21 @@
   justify-content: flex-start;
  border-radius: 8px;
   width: 100%;
-  background-color: rgba(211, 211, 211, 0.16);
-  font-weight: bold;
-  font-size: 22px !important;
+ font-size: 22px !important;
   margin-bottom: 15px !important;
+    background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   margin: 0 ;
   padding: 10px ;
+
 }
 
 /* Bullet Points */
 .card-point {
   position: relative;
-  padding:0 20px !important;
+  padding:0 35px !important;
   margin-bottom: 8px;
   margin-left: 15px;
   font-size: 18px !important;

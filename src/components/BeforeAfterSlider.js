@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./BeforeAfterSlider.css";
 
-import beforeImage from "../assets/alutuff-demo-img1.jpeg"; // Same scene, original color
-import afterImage from "../assets/alutuff-demo-img2.jpeg"; // Same scene, modified color
+import beforeImage from "../assets/alutuff-demo-img1.jpeg";
+import afterImage from "../assets/alutuff-demo-img2.jpeg";
 import { Container } from "react-bootstrap";
 
 const BeforeAfterSlider = () => {
@@ -26,14 +26,14 @@ const BeforeAfterSlider = () => {
       <div
         className="slider-container"
         ref={containerRef}
-        onMouseMove={(e) => e.buttons === 1 && handleDrag(e)} // Drag functionality
-        onTouchMove={(e) => handleDrag(e.touches[0])} // Mobile drag
-        onClick={(e) => handleDrag(e)} // ⭐ Click functionality added here
+        onMouseMove={(e) => e.buttons === 1 && handleDrag(e)}
+        onTouchMove={(e) => handleDrag(e.touches[0])}
+        onClick={(e) => handleDrag(e)}
       >
-        {/* After Image fully visible */}
+        {/* After Image */}
         <img src={afterImage} alt="After" className="slider-image" />
 
-        {/* Before Image clipped dynamically */}
+        {/* Before Image */}
         <img
           src={beforeImage}
           alt="Before"
@@ -47,8 +47,10 @@ const BeforeAfterSlider = () => {
           style={{ left: `${sliderPosition}%` }}
           onMouseDown={(e) => handleDrag(e)}
           onTouchStart={(e) => handleDrag(e.touches[0])}
-        />
-      </div>
+        >
+          <div className="slider-icon">⇄</div>
+        </div>
+      </div> {/* ✅ THIS was missing */}
     </Container>
   );
 };

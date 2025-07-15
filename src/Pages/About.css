@@ -328,6 +328,14 @@ display: flex;
   text-align: center;
   
 }
+.zigzag-card-heading{
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 
 .zigzag-img-div img {
   width: 150px;
@@ -337,6 +345,7 @@ display: flex;
 }
 .zigzag-card-descp {
   margin-top: 2rem;
+  font-size: 18px;
 
 }
 /* -----------slider-Manufactiring-Unit----------------------------------- */

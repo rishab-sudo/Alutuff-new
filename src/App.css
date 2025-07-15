@@ -11,6 +11,19 @@ body {
   font-size: 2rem !important;
   font-weight: 600;
   margin-bottom: 5rem !important;
+  position: relative;
+  display: inline-block;
+}
+.page-heading::after {
+  margin: auto !important;
+  content: '';
+  position: absolute;
+  bottom: -8px; /* space below text */
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  width: 45%;
+  background: linear-gradient(90deg, rgba(234, 49, 56, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 .section-heading{
 font-size: 1.5rem;
@@ -27,12 +40,17 @@ font-size: 18px;
 
 /*  */
 @media screen and (max-width: 768px) {
-.page-heading{
+.page-heading {
   text-align: center;
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
   font-weight: 600;
- margin-bottom: 2rem !important;
+  margin-bottom: 2rem !important;
+  position: relative;
+  display: inline-block;
 }
+
+
+
 .section-heading{
  
 font-size: 1.5rem;

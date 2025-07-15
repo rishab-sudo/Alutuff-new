@@ -167,7 +167,7 @@ const settings = {
           {/* Card 1 */}
           <div className='zigzag-card zigzag-card-1'>
             <div className='zigzag-card-div'>
-              <h3>Our Mission</h3>
+              <h3 className='zigzag-card-heading'>Our Mission</h3>
               <p className='zigzag-card-descp '>
                To transform spaces with premium Metal Composite Panels, delivering unmatched quality, timely service, and trust-driven partnerships that empower dealers, customers, and stakeholders across every project.
                </p>
@@ -183,7 +183,7 @@ const settings = {
               <img className='zigzag-img' src={require("../assets/img-3.jpeg")} alt="" />
             </div>
             <div className='zigzag-card-div' style={{marginLeft:"auto",marginRight:"0px"}}>
-              <h3>OUR VISION</h3>
+              <h3 className='zigzag-card-heading'>OUR VISION</h3>
               <p className='zigzag-card-descp '>
               To be India’s most trusted ACP brand, globally recognized for innovation, integrity, and reliability, by building strong relationships with architects, builders, homeowners, and channel partners everywhere.
               </p>

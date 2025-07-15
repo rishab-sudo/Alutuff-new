@@ -46,6 +46,16 @@
 .text-section p {
   font-size: 24px;
 }
+.para-text {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.grey-text {
+  color: lightgrey; /* grey */
+}
 
 .image-section {
   flex: 0 0 425px;

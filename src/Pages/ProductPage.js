@@ -1,5 +1,4 @@
-// ProductPage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import "./ProductPage.css";
 import HomeProducts from '../components/HomeProducts';
@@ -11,6 +10,7 @@ import ProductPageData from "../ProductPageData";
 const ProductPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const categories = ["All", ...ProductPageData.map(item => item.category)];
   const selectedCategoryData = ProductPageData.find(cat => cat.category === selectedCategory);
@@ -26,6 +26,18 @@ const ProductPage = () => {
         category: selectedCategory,
       })) || [];
 
+  // Grab images from products of selected category (for flip)
+  const flipImages = selectedCategoryData?.products.map(p => p.image) || [];
+
+  useEffect(() => {
+    if (selectedCategory !== "All" && flipImages.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex(prev => (prev + 1) % flipImages.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [selectedCategory, flipImages]);
+
   return (
     <>
       <div className='w-100'>
@@ -37,32 +49,36 @@ const ProductPage = () => {
       </div>
 
       <Container fluid className="product-section-container">
-        {/* Mobile Top Bar */}
-        <div className="product-top-bar">
-          <h4>Categories</h4>
-          <div
-            className="product-hamburger"
-            onClick={() => setShowMobileSidebar(prev => !prev)}
-          >
-            ☰
-          </div>
-        </div>
+        {/* Mobile Top Wrapper */}
+   {/* === Mobile Top Wrapper === */}
+<div className="mobile-top-wrapper">
+  <div className="product-top-bar">
+    <h4>Categories</h4>
+    <div
+      className="product-hamburger"
+      onClick={() => setShowMobileSidebar(prev => !prev)}
+    >
+      ☰
+    </div>
+  </div>
 
-        {/* Mobile Sidebar */}
-        <div className={`product-mobile-sidebar ${showMobileSidebar ? "show" : ""}`}>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`product-category-button ${selectedCategory === cat ? 'product-active' : ''}`}
-              onClick={() => {
-                setSelectedCategory(cat);
-                setShowMobileSidebar(false);
-              }}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+  {/* Sidebar Drops Just Below This Wrapper */}
+  <div className={`product-mobile-sidebar ${showMobileSidebar ? "show" : ""}`}>
+    {categories.map((cat) => (
+      <button
+        key={cat}
+        className={`product-category-button ${selectedCategory === cat ? 'product-active' : ''}`}
+        onClick={() => {
+          setSelectedCategory(cat);
+          setCurrentImageIndex(0);
+          setShowMobileSidebar(false);
+        }}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+</div>
 
         {/* Section Title */}
         <div className='d-flex justify-content-center align-items-center mt-5 mb-2'>
@@ -76,7 +92,10 @@ const ProductPage = () => {
               <button
                 key={cat}
                 className={`product-category-button ${selectedCategory === cat ? 'product-active' : ''}`}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setCurrentImageIndex(0);
+                }}
               >
                 {cat}
               </button>
@@ -87,7 +106,7 @@ const ProductPage = () => {
           <div className="product-content">
             <h3>{selectedCategory}</h3>
 
-            {/* ✅ Show cards only if "All" is selected */}
+            {/* Grid View for All */}
             {selectedCategory === "All" && (
               <div className="product-grid">
                 {productsToShow.map((product) => (
@@ -96,6 +115,7 @@ const ProductPage = () => {
                     key={`${product.category}-${product.id}`}
                     onClick={() => {
                       setSelectedCategory(product.category);
+                      setCurrentImageIndex(0);
                     }}
                     style={{ cursor: "pointer" }}
                   >
@@ -107,12 +127,24 @@ const ProductPage = () => {
               </div>
             )}
 
-            {/* Clean Category Detail Layout */}
+            {/* Product Detail Layout */}
             {selectedCategory !== "All" && selectedCategoryData && (
               <div className="product-detail-layout mt-4">
+                {/* Left Image with Flip Animation */}
                 <div className="product-detail-image">
-                  <img src={selectedCategoryData.products[0].image} alt="Detail" />
+                  <div className="image-slider-overlay">
+                    {flipImages.map((imgSrc, idx) => (
+                      <img
+                        key={idx}
+                        src={imgSrc}
+                        alt={`Product ${idx}`}
+                        className={`slider-image ${idx === currentImageIndex ? "active" : ""}`}
+                      />
+                    ))}
+                  </div>
                 </div>
+
+                {/* Right Detail Info */}
                 <div className="product-detail-info">
                   <div className="detail-block">
                     <h5>Material/Core:</h5>

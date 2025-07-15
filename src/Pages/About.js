@@ -149,9 +149,9 @@ const settings = {
 
           {/* Right Points */}
           <div className="glance-points glance-right">
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>6 Units </span> Manufacturing Plants </div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>1200+</span> Skilled Employees</div>
-            <div className="point-box"><span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>India + UAE</span>  Operational Presence</div>
+            <div className="point-box"><span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>6 Units </span> Manufacturing Plants </div>
+            <div className="point-box"><span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>1200+</span> Skilled Employees</div>
+            <div className="point-box"><span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginRight:"auto"}}>India + UAE</span>  Operational Presence</div>
           </div>
 
           {/* Connecting Lines */}

@@ -1,8 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
 import "./HomeAbout.css";
 
 export default function HomeAbout() {
+  const navigate = useNavigate();
+
   return (
     <Container fluid className="home-about-section">
       <Container className="home-about-content-div">
@@ -17,7 +21,7 @@ export default function HomeAbout() {
 </p>
 <p className='page-text'>Because we don’t just build panels—we build your trust.
 </p>
-        <button className='pink-button'>View More</button>
+        <button className='pink-button' onClick={() => navigate('/about')} >View More</button>
         </div>
 
         <div className='home-about-img1-div'>

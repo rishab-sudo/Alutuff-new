@@ -13,6 +13,8 @@ import { useInView } from "react-intersection-observer";
 import bannerImage from '../assets/banner-bg.jpeg'
 import './About.css';
 import CircleSlider from '../components/CircleSlider';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const stats = [
@@ -29,6 +31,8 @@ const aboutImage = [
 const About = () => {
     const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
+
 
   const images = [
     require('../assets/map.png'),
@@ -101,7 +105,7 @@ const settings = {
       <p className='page-text'>
         Trusted by architects, developers, and designers across all 28 Indian states, our products are proudly made in India and meet international standards. With Alutuff, every project reflects strength, sophistication, and a deep understanding of design possibilities.
 </p>
-      <button className='pink-button'>Purchase</button>
+      {/* <button className='pink-button'  onClick={() => navigate('/about')} >Purchase</button> */}
       </div>
       
   <div className='about-us-img-slider'>

@@ -36,32 +36,34 @@ const News = () => {
               />
             </div>
    
-    <Container fluid>
-     <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p className='page-heading'>A Breif History</p>
-      </div>
-   
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-      <div
-        className="fb-page"
-        data-href="https://www.facebook.com/alutuffpanels"
-        data-tabs="timeline"
-        data-width="500"
-        data-height="700"
-        data-small-header="false"
-        data-adapt-container-width="true"
-        data-hide-cover="false"
-        data-show-facepile="true"
+<Container fluid className='news-section'>
+  <div className='d-flex justify-content-center align-items-center'>
+    <p className='page-heading'>A Breif History</p>
+  </div>
+
+  {/* FB Page Embed */}
+  <div className='news-container'>
+    <div
+      className="fb-page"
+      data-href="https://www.facebook.com/alutuffpanels"
+      data-tabs="timeline"
+      data-width="500"
+      data-height="700"
+      data-small-header="false"
+      data-adapt-container-width="true"
+      data-hide-cover="false"
+      data-show-facepile="true"
+    >
+      <blockquote
+        cite="https://www.facebook.com/alutuffpanels"
+        className="fb-xfbml-parse-ignore"
       >
-        <blockquote
-          cite="https://www.facebook.com/alutuffpanels"
-          className="fb-xfbml-parse-ignore"
-        >
-          <a href="https://www.facebook.com/alutuffpanels">Alutuff Panels</a>
-        </blockquote>
-      </div>
+        <a href="https://www.facebook.com/alutuffpanels">Alutuff Panels</a>
+      </blockquote>
     </div>
-     </Container>
+  </div>
+</Container>
+
       </>
   );
 };

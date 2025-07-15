@@ -13,6 +13,7 @@ body {
   margin-bottom: 5rem !important;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
 }
 .page-heading::after {
   margin: auto !important;

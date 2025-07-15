@@ -3,6 +3,7 @@ import './Certificates.css';
 import { Container } from 'react-bootstrap';
 import bannerImage from "../assets/banner-bg.jpeg"
 import Banner from '../components/Banner';
+import Testing from '../components/Testing';
 
 const images = [
   {
@@ -67,6 +68,10 @@ const Certificates = () => {
       )}
       </Container>
     </Container>
+
+    <div className='w-100'>
+<Testing/>
+    </div>
     </>
   );
 };

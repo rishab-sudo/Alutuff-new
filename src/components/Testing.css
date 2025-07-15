@@ -1,0 +1,18 @@
+.testing-slider-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.testing-slider-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.testing-icon-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}

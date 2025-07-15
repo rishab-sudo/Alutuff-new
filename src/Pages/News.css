@@ -1,19 +1,25 @@
+.news-section {
+  padding: 20px 0;
+}
+
 .news-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   padding: 0 20px;
+  margin: 50px auto 0 auto;
+  max-width: 100%;
 }
 
 .fb-page {
   width: 100%;
-  max-width: 100%;
+  max-width: 700px;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
   .fb-page {
-    width: 50%;     /* 50% width on large screens */
-    max-width: 500px; /* Optional: limit maximum width */
+    width: 100%;
+    max-width: 500px;
   }
 }

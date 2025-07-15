@@ -15,6 +15,12 @@ const Testimonial = ({ testimonials = [], heading = "Read Reviews, Build with Co
     vertical: false,
     arrows: false,
     responsive: [
+            {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
       {
         breakpoint: 1200,
         settings: {

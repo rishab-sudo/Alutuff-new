@@ -80,12 +80,56 @@
 
 @media (max-width: 768px) {
   .quote-box {
+    width: 100%;
     flex-direction: column;
     text-align: center;
+    padding: 30px 20px;
+    height: auto;
   }
 
   .quote-left,
   .quote-right {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .quote-left h3 {
+    font-size: 6vw !important; /* More readable on mobile */
+  }
+
+  .quote-left p {
+    font-size: 4.2vw;
+    margin: 1rem 0;
+  }
+
+  .catalogue-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    font-size: 4vw;
+    margin-top: 0;
+  }
+
+  .quote-right {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-text {
+    margin-top: 5px;
+  }
+
+  .say-hello,
+  .phone-number {
+    font-size: 4vw;
   }
 }
+

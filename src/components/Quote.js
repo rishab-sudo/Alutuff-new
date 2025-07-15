@@ -22,15 +22,17 @@ const QuoteBox = () => {
         <div className="quote-left">
           <h3 style={{fontSize:"2vw",textTransform:"uppercase"}}>Get A Free <br/>
    Quotation Today!</h3>
-          <p>We are here to help. Reach out to us with any questions or inquiries.</p>
-<a style={{textDecoration:"none",width:"auto", backgroundColor:"#fff"}}
+          <p className='mb-3'>We are here to help. Reach out to us with any questions or inquiries.</p>
+<a
+style={{marginTop:"15px", textDecoration:"none"}}
   href={cataloguePDF}
   target="_blank"
   rel="noopener noreferrer"
-  className="pink-button"
+  className="pink-button  catalogue-link"
 >
-<button className='pink-button mt-2'>Download Catalouge</button>
-</a> 
+  Download Catalogue
+</a>
+
         </div>
         <div className="quote-right">
           <div className="icon-circle">

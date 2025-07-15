@@ -21,7 +21,7 @@ const BeforeAfterSlider = () => {
 
   return (
     <Container fluid className="Before-after-section">
-      <h1 className="page-heading">Before & After Color Change</h1>
+      <h1 className="page-heading"> Basic to Bold, The Alutuff Effect</h1>
 
       <div
         className="slider-container"

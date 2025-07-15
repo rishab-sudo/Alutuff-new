@@ -20,7 +20,7 @@ function Home() {
     <HomeAbout/>
     <HomeProducts/>
     {/* <WhyDifferent/> */}
-      <SlidingImage/>
+      {/* <SlidingImage/> */}
    <OverlappingCards/>
    <Separate/>
    <BeforeAfterSlider/>

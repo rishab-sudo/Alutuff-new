@@ -260,6 +260,7 @@ height: 100%;
     scroll-snap-type: x mandatory;
     gap: 15px;
     padding-bottom: 10px;
+    margin-top: 2rem;
   }
 
   .mobile-slider .product-card {

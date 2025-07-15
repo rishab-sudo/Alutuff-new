@@ -75,11 +75,11 @@ export default function HomeProducts() {
         ))}
       </div>
 
-      <div className="swipe-indicator">
+      {/* <div className="swipe-indicator">
         <svg viewBox="0 0 24 24">
           <path d="M10 6L16 12L10 18" />
         </svg>
-      </div>
+      </div> */}
 
       {!isMobile ? (
         productRows.slice(0, visibleRowCount).map((row, rowIndex) => (

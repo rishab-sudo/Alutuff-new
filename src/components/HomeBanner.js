@@ -9,7 +9,7 @@ const slides = [
     image: require('../assets/index2_slider_banner.jpg'),
     heading: 'India’s Leading ACP',
     description: ' Trusted for premium aluminium panels across India’s skyline.',
-    buttonText: 'Learn More',
+    buttonText: 'Explore Now',
   },
   {
     image: require('../assets/index2_slider_banner2.jpg'),
@@ -21,7 +21,7 @@ const slides = [
     image: require('../assets/index2_slider_banner.jpg'),
     heading: 'Made in India, Trusted Globally',
     description: ' Decade of expertise with standards backed by global trust.',
-    buttonText: 'Get Started',
+    buttonText: 'Explore Now',
   },
 ];
 

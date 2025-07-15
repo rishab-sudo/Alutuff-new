@@ -168,7 +168,7 @@ const settings = {
           {/* Card 1 */}
           <div className='zigzag-card zigzag-card-1'>
             <div className='zigzag-card-div'>
-              <h3 className='zigzag-card-heading'>Our Mission</h3>
+              <h3 className='zigzag-card-heading'>Our MISSION</h3>
               <p className='zigzag-card-descp '>
                To transform spaces with premium Metal Composite Panels, delivering unmatched quality, timely service, and trust-driven partnerships that empower dealers, customers, and stakeholders across every project.
                </p>

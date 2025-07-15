@@ -118,7 +118,7 @@
   margin-bottom: 20px;
 }
 .sub-heading{
-  margin-top: .5rem;
+  margin-top: -2rem;
 }
 .glance p {
   font-size: 18px;
@@ -458,6 +458,9 @@ width: 100%;
   .glance-image img {
     width: 100%;
    }
+   .sub-heading{
+  margin-top: 0rem;
+}
   /* zig-zag */
 
     .zigzag-card {

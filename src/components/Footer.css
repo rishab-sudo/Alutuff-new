@@ -84,11 +84,12 @@ text-decoration: none;
 .footer-column h4 {
   font-size: 20px;
   margin-bottom: 15px;
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */  /* ← Remove or comment this */
   display: inline-block;
   padding-bottom: 5px;
   text-align: left;
 }
+
 
 .footer-links-column {
   display: flex;

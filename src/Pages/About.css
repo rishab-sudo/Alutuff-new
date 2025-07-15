@@ -137,7 +137,7 @@
 .glance-points {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 90px;
 }
 
 .point-box {
@@ -178,44 +178,44 @@ display: flex;
 .line-left-1 {
   top: 20%;
   right: calc(50% + 200px); 
-  width: 155px;
- max-width: 155px; 
+  width: 155px !important;
+ max-width: 155px !important;
 }
 
 .line-left-2 {
   top: 50%;
   right: calc(50% + 200px);
-  width: 155px;
- max-width: 155px;
+  width: 155px !important;
+ max-width: 155px !important;
 }
 
 .line-left-3 {
   top: 80%;
   right: calc(50% + 200px);
-  width: 155px;
- max-width: 155px;
+  width: 155px !important;
+ max-width: 155px !important;
 }
 
 /* Lines to the Right */
 .line-right-1 {
   top: 20%;
   left: calc(50% + 200px);
-  width: 125px;
- max-width: 125px; 
+  width: 120px !important;
+   max-width: 120px !important; 
 }
 
 .line-right-2 {
   top: 50%;
   left: calc(50% + 200px);
-   width: 125px;
- max-width: 125px; 
+  width: 120px !important;
+   max-width: 120px !important; 
 }
 
 .line-right-3 {
   top: 80%;
   left: calc(50% + 200px);
-   width: 125px;
-   max-width: 125px; 
+   width: 120px !important;
+   max-width: 120px !important; 
 }
 /* ==== Animation Keyframes ===== */
 

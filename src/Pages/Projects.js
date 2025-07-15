@@ -89,10 +89,10 @@ const ProjectCarousel = () => {
     <>
 <Container fluid className="projects-banner-section">
 <Container className="projects-banner-content-div">
-    <div>
-<h1>mmmmmmmmmmmm</h1>
-<p>kkkkkkkkk</p>
-<p>ddddddddddddddd</p>
+    <div className="project-banner-text-div">
+<h1 className="project-banner-heading">Transforming Spaces with Durable, Stylish Panel Solutions</h1>
+<p className="project-banner-descp">At Alutuff, our panels are trusted by architects, builders, and developers across industries. From commercial landmarks to modern residential spaces, Alutuff products are featured in a wide range of prestigious projects across India and abroad. Whether it’s high-rise facades, interiors, lobbies, or industrial campuses, our ACP, HPL, Honeycomb, and specialty panels deliver durability, elegance, and performance. Explore our diverse project portfolio to see how Alutuff enhances structures with 
+  quality craftsmanship, premium finishes, and long-lasting protection, making every project a lasting statement.</p>
 </div>
 
  <div className="image-layout-wrapper">

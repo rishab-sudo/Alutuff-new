@@ -20,7 +20,7 @@ const Established = () => {
 
 <Container fluid className='legacy-section '>
   <div className='d-flex justify-content-center align-items-center mb-5 '>
-<p className='page-heading'>ESTABLISHED EXCELLENCE</p>
+<p className='page-heading'>Decades of Quality, Trusted Across Industries</p>
   </div>
 <Container className='legacy-content-div'>
 <div className='page-text legacy-content'>
@@ -60,7 +60,8 @@ const Established = () => {
 
  <Container className='busniss-unit-card-section'>
       <div className='d-flex justify-content-center align-items-center mb-5 '>
-        <p className='page-heading'>ESTABLISHED EXCELLENCE</p>
+        <p className='page-heading'>Diverse Brands, Unified Excellence
+</p>
       </div>
       <Container className='busniss-unit-card-wrapper'>
         <div className="business-unit-card">

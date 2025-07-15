@@ -118,7 +118,7 @@
   margin-bottom: 20px;
 }
 .sub-heading{
-  margin-top: -3rem;
+  margin-top: .5rem;
 }
 .glance p {
   font-size: 18px;
@@ -430,8 +430,12 @@ gap: 35px;
   }
 
   .glance-points {
+    width: 100%;
     flex-direction: column;
     gap: 20px;
+  }
+  .point-box{
+width: 100%;
   }
 
   .glance-left {

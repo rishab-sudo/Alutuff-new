@@ -41,7 +41,11 @@
   position: relative; /* Required for absolute positioning inside */
   padding: 10px 10px 40px 10px; /* bottom padding to prevent overlap */
   box-sizing: border-box;
+
+  /* Modern subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+
 
 .testimonial-desc {
   font-size: 1rem;
@@ -51,8 +55,8 @@
 
 .testimonial-client {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0px;
+  left: 0px;
   background-color: #f5f5f5;
   padding: 6px 10px;
   border-top-right-radius: 12px;

@@ -4,6 +4,16 @@
   align-items: center;
   padding: 25px 0px;
 }
+.project-banner-heading{
+
+}
+.project-banner-text-div{
+  width: 45%;
+  text-align: left;
+}
+.project-banner-descp{
+margin-top: 1.5rem;
+}
 .image-layout-wrapper {
   width: 420px;
   max-width: 450px;
@@ -111,7 +121,7 @@
   width: 100%;
   max-width: 100%;/* 3 cards * ~300px + spacing */
   margin: auto;
-  padding: 3.5% 20px;
+  padding: 80px 20px;
   perspective: 1200px;
   overflow: hidden; /* prevents left cut-off */
 }
@@ -229,6 +239,7 @@
   padding: 25px 0px;
   display: none;
 }
+
 .img1 {
   max-width: 230px !important;
   height: 235px;
@@ -260,6 +271,19 @@
 .project-banner-img{
   min-width: 100%;
 }
+/*  */
+.project-carousel-container {
+  margin-top: 5% !important;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  max-width: 100%;/* 3 cards * ~300px + spacing */
+  margin: auto;
+  padding: 80px 20px;
+  perspective: 1200px;
+  overflow: hidden; /* prevents left cut-off */
+}
+/*  */
   .clients-section {
   padding: 60px 20px;
   background: #f9f9f9;

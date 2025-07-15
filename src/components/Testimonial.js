@@ -7,22 +7,12 @@ const Testimonial = ({ testimonials = [], heading = "What Our Customers Are Sayi
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 800,
-    slidesToShow: 3,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: false,
-    rtl: true, // slide right to left
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 }
-      }
-    ]
+    vertical: false,
+    arrows: false
   };
 
   return (
@@ -41,9 +31,9 @@ const Testimonial = ({ testimonials = [], heading = "What Our Customers Are Sayi
           {testimonials.map((item, index) => (
             <div key={index} className="testimonial-box">
               <p className="testimonial-desc">{item.review}</p>
-              <div className="testimonial-footer">
-                <img src={item.image} alt={item.name} className="client-img" />
-                <span className="client-name">{item.name}</span>
+              <div className="testimonial-client">
+                <img src={item.image} alt={item.name} />
+                <span>{item.name}</span>
               </div>
             </div>
           ))}

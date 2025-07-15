@@ -6,7 +6,31 @@ import Slider from 'react-slick';
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import  bannerImage from "../assets/banner-bg.jpeg"
+import Testimonial from '../components/Testimonial';
 import "./Career.css"
+
+const customerData = [
+  {
+    review: "This product is amazing! I’ve seen great results in just a week.",
+    name: "Amit Sharma",
+    image: "https://via.placeholder.com/35",
+  },
+  {
+    review: "Super smooth experience and excellent customer service.",
+    name: "Riya Kapoor",
+    image: "https://via.placeholder.com/35",
+  },
+  {
+    review: "Highly recommended for anyone looking for quality and reliability.",
+    name: "John Doe",
+    image: "https://via.placeholder.com/35",
+  },
+  {
+    review: "Affordable and effective. I’m a regular customer now.",
+    name: "Neha Verma",
+    image: "https://via.placeholder.com/35",
+  }
+];
 
 const values = [
 {
@@ -145,7 +169,10 @@ const Career = () => {
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
      <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
-        <h2 className="page-heading text-center" >Build The Future with Us</h2>
+        <div className='text-center mx-auto'>
+            <h2 className="page-heading text-center mx-auto" >Build The Future with Us</h2>
+        </div>
+      
         <p className="page-text">
           At the core of Alutuff is a commitment to cutting-edge innovation and responsible practices. 
           Our premium ACP panels are crafted using world-class technologies that ensure exceptional 
@@ -181,7 +208,9 @@ const Career = () => {
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
          <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
-        <h2 className="page-heading text-center">Life at Alutuff</h2>
+          <div className='text-center mx-auto'>
+        <h2 className="page-heading text-center mx-auto" >Life at Alutuff</h2>
+        </div>
         <p className='text-center page-text'>Where People Drive Progress</p>
         <p className="page-text">
          At Alutuff, our people are at the heart of everything we do. We believe in fostering a collaborative, vibrant, and inclusive workplace where innovation thrives and every contribution matters.
@@ -190,6 +219,10 @@ const Career = () => {
   </p>
       </Container>
     </Container>
+
+
+
+      <Testimonial testimonials={customerData} heading="Customer Testimonials" />
 
    </>
   )

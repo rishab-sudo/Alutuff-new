@@ -126,8 +126,9 @@ const settings = {
 
       {/* Glance Section */}
   <div ref={sectionRef} className={`glance ${isVisible ? "visible" : ""}`}>
-        <h2 className='page-heading' style={{marginBottom:"0rem "}}>At a Glance</h2>
-        <p className='section-heading sub-heading' >Here's a quick look at what we offer and stand for.</p>
+        <h2 className='page-heading' style={{marginBottom:"0rem "}}>Alutuff World-Class Campus at a Glance
+</h2>
+        <p className='section-heading sub-heading' >Built on scale, driven by innovation, a powerhouse of precision manufacturing, skilled talent, and world-class infrastructure excellence.</p>
 
         <div className="glance-container">
           {/* Left Points */}

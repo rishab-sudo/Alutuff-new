@@ -137,9 +137,9 @@ const settings = {
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box">  Industrial Campus<span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>5lac+ sq.ft.</span>	</div>
-            <div className="point-box">Total Investment  <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>$168M+ </span> </div>
-            <div className="point-box"> In-House Plant <span style={{backgroundColor:"gray",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>24/7 Power</span>   </div>
+            <div className="point-box">  Industrial Campus<span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>5lac+ sq.ft.</span>	</div>
+            <div className="point-box">Total Investment  <span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>$168M+ </span> </div>
+            <div className="point-box"> In-House Plant <span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>24/7 Power</span>   </div>
           </div>
 
           {/* Center Image */}

@@ -11,7 +11,7 @@ export default function HomeAbout() {
     <Container fluid className="home-about-section">
       <Container className="home-about-content-div">
        <div className='home-about-text-div'>
-        <p className='section-heading'>About US</p>
+        <p className='section-heading'>About Alutuff</p>
         <p className='page-text'>Turning Your Ideas Into Timeless <br/> Architectural Reality</p>
         <p className='page-text'>
         At Alutuff, we transform your vision into built reality. With over a decade of expertise, cutting-edge facilities in Bareilly spanning 5 lakh sq ft, and a fully‑integrated, ISO‑certified manufacturing setup, our fire‑retardant, weather‑resistant ACPs are precision‑engineered for safety, style, and durability.

@@ -25,15 +25,35 @@
   display: block;
 }
 @media (max-width: 768px) {
-.testing-slider-wrapper {
+   .testing-slider-wrapper {
 min-width: 100% !important;
-}
+} 
+
 .testing-content-div {
 width: 100%;
 }
 .testing-slide-image {
   width: 100%;
   max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+}
+
+@media screen and (max-width: 992px) {
+  .testing-section{
+    padding: 0px;
+  }
+  .testing-content-div{
+    padding: 0px;
+  }
+   .testing-slider-wrapper {
+     margin: 0 !important;
+min-width: 100% !important;
+}
+.testing-slide-image {
+  max-width: 75%;
   height: auto;
   object-fit: contain;
   display: block;

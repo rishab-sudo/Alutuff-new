@@ -81,7 +81,7 @@ const settings = {
     {
       breakpoint: 992, // below 992px
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
       },
     },
     {
@@ -257,7 +257,7 @@ const settings = {
       </Container>
       {/*  */}
 
-  <Container fluid className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%"}}>
+  <Container fluid className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%",marginBottom:"-5%"}}>
 <img style={{maxWidth:"100%"}} src={require("../assets/makein-new-alutiff.png")} alt=""/>
   </Container>
       {/*  */}

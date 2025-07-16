@@ -106,4 +106,7 @@
     margin: 0;
     padding: 0;
   }
+    .circle-item:hover .core-circle-descp {
+    display: none !important;
+  }
 }

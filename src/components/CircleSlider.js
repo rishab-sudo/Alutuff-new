@@ -54,32 +54,46 @@ const circlesData = [
 const CircleSlider = () => {
   const [hovered, setHovered] = useState(null);
 
-  const settings = {
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    arrows: false,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 },
+ const settings = {
+  infinite: true,
+  speed: 3000,
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: "linear",
+  arrows: false,
+  pauseOnHover: true, 
+  responsive: [
+    {
+      breakpoint: 992, // Tablets
+      settings: {
+        slidesToShow: 3,
+        pauseOnHover: true,
       },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 2 },
+    },
+    {
+      breakpoint: 768, // Mobile
+      settings: {
+        slidesToShow: 2,
+        pauseOnHover: false,
       },
-    ],
-  };
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        pauseOnHover: false,
+      },
+    },
+  ],
+};
+
 
   return (
     <Container fluid className="circle-slider-wrapper">
         <div className='d-flex justify-content-center align-items-center mb-5 '>
-<p className="page-heading">OUR CORE VALUE</p>
+<p className="page-heading">OUR CORE VALUES</p>
   </div>
 <Slider {...settings} className="circle-slider">
   {circlesData.map((circle) => (
@@ -98,11 +112,13 @@ const CircleSlider = () => {
 </Slider>
 
 
-      {hovered && (
-        <div className="below-description red-border">
-          <p>{circlesData.find((item) => item.id === hovered).description}</p>
-        </div>
-      )}
+  {hovered && window.innerWidth > 767 && (
+  <div className="below-description red-border">
+    <p>{circlesData.find((item) => item.id === hovered).description}</p>
+  </div>
+)}
+
+   
     </Container>
   );
 };

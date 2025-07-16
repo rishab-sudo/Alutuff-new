@@ -4,25 +4,44 @@ import "./TestingSlider.css"; // custom CSS with 'testing' in class names
 import { Container } from "react-bootstrap";
 
 const TestingSlider = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    ltr: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-    ]
-  };
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  ltr: true,
+  responsive: [
+    {
+      breakpoint: 1200, // Large tablets & small desktops
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 992, // Tablets
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768, // Large phones
+      settings: {
+        slidesToShow: 1.5,
+      }
+    },
+    {
+      breakpoint: 576, // Mobile phones
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
+};
+
 
 const images = [
   require("../assets/testing-icon/Shri-Ram.png"),

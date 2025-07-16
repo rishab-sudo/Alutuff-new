@@ -11,6 +11,8 @@ const ProductPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+
 
   const categories = ["All", ...ProductPageData.map(item => item.category)];
   const selectedCategoryData = ProductPageData.find(cat => cat.category === selectedCategory);

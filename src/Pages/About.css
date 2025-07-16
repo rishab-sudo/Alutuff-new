@@ -552,3 +552,22 @@ margin-top: 20px !important;
 }
 }
 
+@media (max-width: 992px) {
+  .about-us-text-div{
+    text-align: justify;
+
+  }
+    .point-box{
+  margin: auto;
+width: 90%;
+  }
+  .zigzag-card{
+max-width: 95% !important;
+  }
+    .about-stats-wrapper {
+    display: grid;
+    justify-content: space-between !important;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 35px;
+  }
+}

@@ -164,6 +164,7 @@ const Career = () => {
     </Container>
 
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
+    
      <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
         <div className='text-center mx-auto'>

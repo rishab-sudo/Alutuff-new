@@ -28,6 +28,7 @@
   margin-bottom: 20px;
 }
 .stay-button {
+  margin-top: 2rem;
   position: relative; /* To position the circle inside */
   padding: 10px 40px 10px 20px; /* Extra right padding for the circle */
   background-color: #fff;
@@ -40,7 +41,7 @@
 }
 
 .stay-content button:hover {
-  background-color: #ddd;
+  background-color: #ddd !important;
 }
 
 .stay-button-circle {
@@ -67,6 +68,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .stay-with-section {
+height: 45vh;
+}
   .stay-with-content h1 {
     font-size: 2rem;
   }
@@ -74,9 +78,12 @@
   .stay-with-content h2 {
     font-size: 1.5rem;
   }
-
+.stay-button-circle {
+margin-left: 50px !important;
+}
   .stay-with-content button {
-    padding: 10px 20px;
+    padding: 10px 0px;
     font-size: 0.9rem;
+    min-width: 135px !important;
   }
 }

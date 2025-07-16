@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Container } from 'react-bootstrap';
 import './PieChart.css';
 
 const data = [
@@ -29,8 +30,15 @@ const FancyPieChart = () => {
   }, []);
 
   return (
+    <Container fluid className='pie-fluid-section'>
+
+       <div className='d-flex justify-content-center align-items-center m-auto '>
+        <p className='page-heading'>Ashoka Foam Group Brands
+</p>
+      </div>
+
+    
     <div className="pie-chart-container">
-      <h2 className="page-heading">Ashoka Foam Group Brands</h2>
       <ResponsiveContainer width="100%" height={isMobile ? 350 : 400}>
         <PieChart>
           <Pie
@@ -58,6 +66,7 @@ const FancyPieChart = () => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+       </Container>
   );
 };
 

@@ -1,6 +1,7 @@
 import React,{useState}from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import './HomeBanner.css';
 
@@ -54,7 +55,9 @@ const HomeBanner = () => {
               <div className={`content-box ${activeIndex === index ? 'show-text' : ''}`}>
                 <h2>{slide.heading}</h2>
                 <p>{slide.description}</p>
+                <Link to="/product">
                 <button className='pink-button'>{slide.buttonText}</button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

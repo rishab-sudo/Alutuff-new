@@ -68,13 +68,13 @@ const settings = {
         {
       breakpoint: 1400,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 3,
       },
     },
     {
       breakpoint: 1200, // below 1200px
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 3,
       },
     },
     
@@ -108,7 +108,7 @@ const settings = {
             <Container className='about-us-content-div'>
       
       <div className='about-us-text-div'>
-        <p className='section-heading'>About US</p>
+        <p className='section-heading'>About Us</p>
         <p className='page-text'>Where Strong ACP Panels Meet Timeless Aesthetic Design</p>
       <p className='page-text'>Alutuff is India’s premier manufacturer of Aluminium Composite Panels (ACPs), delivering innovation, durability, and design excellence for over a decade. </p>
       <p className='page-text' >Our state-of-the-art manufacturing facility spans 5 lakh square feet in Bareilly, where advanced technology and strict quality standards ensure the production of premium-grade panels for both interior and exterior use. Alutuff panels are fire-retardant, weather-resistant, and available in a wide range of finishes, from wood to metallic to marble. 

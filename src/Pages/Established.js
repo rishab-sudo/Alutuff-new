@@ -4,7 +4,24 @@ import "./Established.css"
 import  PieChart  from '../components/PieChart'
 import bannerImage from "../assets/banner-bg.jpeg"
 import Banner from '../components/Banner'
+import TestingSlider from '../components/TestingSlider'
 
+
+const brandImages = [
+  require("../assets/brand-img/1 (4).png"),
+  require("../assets/brand-img/10.png"),
+  require("../assets/brand-img/11.png"),
+   require("../assets/brand-img/12.png"),
+  require("../assets/brand-img/2 (1).png"),
+   require("../assets/brand-img/3.png"),
+   require("../assets/brand-img/4 (1).png"),
+  require("../assets/brand-img/5.png"),
+  require("../assets/brand-img/6.png"),
+   require("../assets/brand-img/7.png"),
+  require("../assets/brand-img/8.png"),
+
+
+];
 const Established = () => {
   return (
     <>
@@ -110,6 +127,12 @@ const Established = () => {
 
     <Container fluid>
      <PieChart/>
+    </Container>
+
+    
+    <Container fluid>
+        <TestingSlider testingImages={brandImages} title="Ashoka Foam Group Brands" />
+
     </Container>
 </>
   )

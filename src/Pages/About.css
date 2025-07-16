@@ -561,6 +561,11 @@ margin-top: 20px !important;
   margin: auto;
 width: 90%;
   }
+  .about-slide-image-wrapper img {
+ height: 100%;
+  max-width: 90% !important;
+  object-fit: cover;
+}
   .zigzag-card{
 max-width: 95% !important;
   }

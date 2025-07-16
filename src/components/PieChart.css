@@ -1,5 +1,7 @@
+.pie-fluid-section{
+ margin-top: 5%;
+}
 .pie-chart-container {
-    margin-top: 5%;
     width: 100%;
     padding: 40px 20px;
     background-color: #f9f9f900;
@@ -43,7 +45,8 @@
     }
 
     .pie-chart-container {
-        min-height: 550px; /* Increased height for legend space */
+        min-height: auto !important; 
+        max-height: 100% !important;/* Increased height for legend space */
         padding-bottom: 80px;
         padding: 0px;
     }
@@ -54,7 +57,7 @@
         flex-wrap: wrap !important;
         justify-content: center !important;
         margin-top: 20px !important;
-        gap: 10px !important; /* Add space between points */
+        gap: 20px !important; /* Add space between points */
     }
 }
 
@@ -64,7 +67,8 @@
     }
 
     .pie-chart-container {
-        min-height: 600px; /* More space for very small screens */
+        min-height: 600px; 
+        max-height: 100%;/* More space for very small screens */
         padding-bottom: 100px;
     }
 }

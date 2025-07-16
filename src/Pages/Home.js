@@ -26,7 +26,10 @@ function Home() {
    <BeforeAfterSlider/>
    <StickySection/>
    <FaqSection/>
+   <div style={{marginBottom:"-5%"}}>
+
 <StayWithUs/>
+   </div>
     </div>
   )
 }

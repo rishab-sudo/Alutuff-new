@@ -33,7 +33,7 @@ const OverlappingCards = () => {
   return (
     <Container fluid className='stack-section'>
       <div className='text-center'> 
-        <p className='page-heading text-white'>Why Alutuff</p>
+        <p className='page-heading text-white'>Why Alutuff ?</p>
         </div>
      <Container className="stack-section-card">
       <div className="card card1" ref={el => cardsRef.current[0] = el}>

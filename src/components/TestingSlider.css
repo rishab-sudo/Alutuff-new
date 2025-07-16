@@ -1,0 +1,41 @@
+.testing-section{
+  margin: auto;
+  margin-top: 5% !important;
+}
+.testing-content-div {
+ margin: auto !important;
+  text-align: center;
+}
+.testing-slider-wrapper {
+  padding: 15px 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.testing-slide-item {
+  width: 100%;
+}
+
+.testing-slide-image {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+.testing-slider-wrapper {
+min-width: 100% !important;
+}
+.testing-content-div {
+width: 100%;
+}
+.testing-slide-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+}

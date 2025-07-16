@@ -13,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 import bannerImage from '../assets/banner-bg.jpeg'
 import './About.css';
 import CircleSlider from '../components/CircleSlider';
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -33,7 +34,14 @@ const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
 
-
+const [ref, inView] = useInView({
+  threshold: 0.3, // triggers when 30% visible
+  triggerOnce: true, // only once
+});
+const [zigzagRef, zigzagInView] = useInView({
+  threshold: 0.2,
+  triggerOnce: true,
+});
   const images = [
     require('../assets/map.png'),
     require('../assets/map.png'),
@@ -42,6 +50,9 @@ const About = () => {
     require('../assets/map.png'),
     require('../assets/map.png'),
   ];
+const [card1Ref, card1InView] = useInView({ triggerOnce: true, threshold: 0.2 });
+const [card2Ref, card2InView] = useInView({ triggerOnce: true, threshold: 0.2 });
+const [card3Ref, card3InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
 const settings = {
   infinite: true,
@@ -129,7 +140,8 @@ const settings = {
           </Container>
 
       {/* Glance Section */}
-  <div ref={sectionRef} className={`glance ${isVisible ? "visible" : ""}`}>
+ <div ref={ref} className={`glance ${inView ? 'glance-visible' : ''}`}>
+
         <h2 className='page-heading' style={{marginBottom:"0rem "}}>Alutuff World-Class Campus at a Glance
 </h2>
         <p className='section-heading sub-heading' >Built on scale, driven by innovation, a powerhouse of precision manufacturing, skilled talent, and world-class infrastructure excellence.</p>
@@ -166,13 +178,13 @@ const settings = {
       </div>
 
       {/* Key Values Section */}
-      <Container fluid className="zigzag-card-section">
+  <Container fluid className="zigzag-card-section" ref={zigzagRef}>
         <div className="zigzag-card-content-container">
 
           {/* Card 1 */}
-          <div className='zigzag-card zigzag-card-1'>
+         <div ref={card1Ref} className={`zigzag-card zigzag-card-1 ${card1InView ? 'fade-in-left' : ''}`}>
             <div className='zigzag-card-div'>
-              <h3 className='zigzag-card-heading'>Our MISSION</h3>
+              <h3 className='zigzag-card-heading'>OUR MISSION</h3>
               <p className='zigzag-card-descp '>
                To transform spaces with premium Metal Composite Panels, delivering unmatched quality, timely service, and trust-driven partnerships that empower dealers, customers, and stakeholders across every project.
                </p>
@@ -183,7 +195,7 @@ const settings = {
           </div>
 
           {/* Card 2 */}
-          <div className='zigzag-card zigzag-card-2'>
+         <div ref={card2Ref} className={`zigzag-card zigzag-card-2 ${card2InView ? 'fade-in-right-zigzag' : ''}`}>
             <div className='zigzag-img-div' style={{ marginRight: "auto" }}>
               <img className='zigzag-img' src={require("../assets/mission-img/Growth (1).gif")} alt="" />
             </div>
@@ -196,7 +208,7 @@ const settings = {
           </div>
 
           {/* Card 3 */}
-          <div className='zigzag-card zigzag-card-3'>
+       <div ref={card1Ref} className={`zigzag-card zigzag-card-1 ${card1InView ? 'fade-in-left' : ''}`}>
             <div className='zigzag-card-div'>
               <h3 className='zigzag-card-heading'>OUR PROMISE</h3>
               <p className='zigzag-card-descp '>At Alutuff, we create more than panels. We build dreams, protect reputations, and stand beside every partner, offering strength, style, and unwavering support in every square foot.

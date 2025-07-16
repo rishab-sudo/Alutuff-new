@@ -40,7 +40,7 @@ style={{marginTop:"15px", textDecoration:"none"}}
           </div>
           <div className="icon-text">
             <span className="say-hello">Say Hello</span>
-            <span className="phone-number">+91 98765 43210</span>
+            <span className="phone-number">+91  63968 54974</span>
           </div>
         </div>
       </div>

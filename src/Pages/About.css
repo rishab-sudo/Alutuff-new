@@ -141,17 +141,17 @@
 }
 
 .point-box {
-display: flex;
+  position: relative;
+  z-index: 2; /* Above the image */
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:"20px"  !important;
   background-color: #f1f1f1;
-  padding: 10px ;
+  padding: 10px;
   border-radius: 15px;
   font-size: 18px;
-  position: relative;
- 
 }
+
 
 /* Center Image */
 .glance-image {
@@ -178,45 +178,49 @@ display: flex;
 .line-left-1 {
   top: 20%;
   right: calc(50% + 200px); 
-  width: 155px !important;
- max-width: 155px !important;
+ width: 15% !important;
+ max-width: 15% !important;
 }
 
 .line-left-2 {
   top: 50%;
   right: calc(50% + 200px);
-  width: 155px !important;
- max-width: 155px !important;
+ width: 15% !important;
+ max-width: 15% !important;
 }
 
 .line-left-3 {
   top: 80%;
   right: calc(50% + 200px);
-  width: 155px !important;
- max-width: 155px !important;
+ width: 15% !important;
+ max-width: 15% !important;
 }
 
 /* Lines to the Right */
 .line-right-1 {
   top: 20%;
   left: calc(50% + 200px);
-  width: 120px !important;
-   max-width: 120px !important; 
+margin-left: -20px;
+ width: 15% !important;
+ max-width: 15% !important;
 }
 
 .line-right-2 {
   top: 50%;
   left: calc(50% + 200px);
-  width: 120px !important;
-   max-width: 120px !important; 
+  margin-left: -20px;
+  width: 15% !important;
+ max-width: 15% !important;
 }
 
 .line-right-3 {
   top: 80%;
   left: calc(50% + 200px);
-   width: 120px !important;
-   max-width: 120px !important; 
+  margin-left: -20px;
+ width: 15% !important;
+ max-width: 15% !important;
 }
+
 /* ==== Animation Keyframes ===== */
 
 /* Image Slide Up */
@@ -231,22 +235,63 @@ display: flex;
   }
 }
 
-/* Line Draw Animation */
-@keyframes drawLine {
+/* Updated Line Draw Animation — from center */
+@keyframes drawLineFromCenter {
   0% {
     width: 0;
   }
   100% {
-     width: 155px;
- max-width: 155px; 
+    width: 15%;
+    max-width: 15%;
   }
 }
 
-/* Points Fade In */
-@keyframes fadeIn {
+/* Updated Point Fade-in Animation */
+@keyframes fadeInPoint {
   0% {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Apply Animations ====== */
+
+/* Image Animation */
+/* Apply animations only when .glance-visible is present */
+
+.glance-visible .glance-image {
+  animation: slideUp 1.2s ease forwards;
+}
+
+.glance-visible .line-left-1,
+.glance-visible .line-left-2,
+.glance-visible .line-left-3,
+.glance-visible .line-right-1,
+.glance-visible .line-right-2,
+.glance-visible .line-right-3 {
+  animation: drawLineFromCenter 1.2s ease forwards;
+  animation-delay: 0.2s;
+  width: 0;
+  overflow: hidden;
+}
+
+.glance-visible .glance-points .point-box {
+  opacity: 0;
+  animation: fadeInPoint 1.2s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+/* ------------------------key-values-sec--------------------- */
+/* ====== Zigzag Animation ====== */
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
   100% {
     opacity: 1;
@@ -254,40 +299,31 @@ display: flex;
   }
 }
 
-/* ===== Apply Animations ====== */
-
-/* Image Animation */
-.glance-image {
-  animation: slideUp 1.3s ease forwards;
+@keyframes slideFromRightZigzag {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Left Lines Animation */
-.line-left-1,
-.line-left-2,
-.line-left-3 {
-  animation: drawLine 1s ease forwards;
-  animation-delay: 1s;
-  width: 0; /* Required: Start from 0 */
-  overflow: hidden;
+.fade-in-right-zigzag {
+  animation: slideFromRightZigzag 1s ease forwards;
 }
 
-/* Right Lines Animation */
-.line-right-1,
-.line-right-2,
-.line-right-3 {
-  animation: drawLine 1.5s ease forwards;
-  animation-delay: 1s;
-  width: 0; /* Required: Start from 0 */
-  overflow: hidden;
+.fade-in-left {
+  animation: slideFromLeft 1s ease forwards;
 }
 
-/* Points Animation */
-.glance-points .point-box {
-  opacity: 0; /* Required: Start hidden */
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.2s; /* Points appear after lines */
+.fade-in-right {
+  animation: slideFromRight 1s ease forwards;
 }
-/* ------------------------key-values-sec--------------------- */
+
+
+/* --------------- */
 .zigzag-card-section {
   padding: 0px ;
 }

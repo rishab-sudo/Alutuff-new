@@ -6,29 +6,26 @@ import Slider from 'react-slick';
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import  bannerImage from "../assets/banner-bg.jpeg"
-import Testimonial from '../components/Testimonial';
+
+
 import "./Career.css"
 
-const customerData = [
+const benefitsData = [
   {
-    review: "This product is amazing! I’ve seen great results in just a week.",
-    name: "Amit Sharma",
-    image: "https://via.placeholder.com/35",
+    title: "Medical Insurance",
+    description: "At Alutuff, we prioritize the well-being of our employees because we believe their health is just as important as their performance."
   },
   {
-    review: "Super smooth experience and excellent customer service.",
-    name: "Riya Kapoor",
-    image: "https://via.placeholder.com/35",
+    title: "Training and Development",
+    description: "Our structured programs—led by experts—focus on enhancing communication, sales, and personality development skills."
   },
   {
-    review: "Highly recommended for anyone looking for quality and reliability.",
-    name: "John Doe",
-    image: "https://via.placeholder.com/35",
+    title: "Team Building Activities",
+    description: "We foster camaraderie through team-building games, outings, lunches, and contests to create a collaborative culture."
   },
   {
-    review: "Affordable and effective. I’m a regular customer now.",
-    name: "Neha Verma",
-    image: "https://via.placeholder.com/35",
+    title: "Career Growth Opportunities",
+    description: "We support internal promotions and long-term growth through mentorship and structured development paths."
   }
 ];
 
@@ -206,6 +203,7 @@ const Career = () => {
       </Slider>
     </Container>
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
+      
          <Container fluid className="career-center-card-section">
       <Container className="career-center-card">
           <div className='text-center mx-auto'>
@@ -220,9 +218,26 @@ const Career = () => {
       </Container>
     </Container>
 
+      <section className="benefits-section">
+  
+      <div className="benefits-overlay">
+                     <div style={{margin:"auto"}}>
+        <h2 className="page-heading benefit-heading" >Benefit & Perks</h2>
+        </div>
+        <div className="benefits-wrapper">
+          {benefitsData.map((benefit, index) => (
+            <div key={index} className="benefits-box">
+              <h3 className="benefits-title">{benefit.title}</h3>
+              <p className="benefits-description">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
 
-      <Testimonial testimonials={customerData} heading="Read Reviews, Build with Confidence " />
+
+  
 
    </>
   )

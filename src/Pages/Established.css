@@ -67,6 +67,7 @@
 .business-unit-card {
   width: 30%;
   height: 320px;
+  max-height: 100%;
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 0px;

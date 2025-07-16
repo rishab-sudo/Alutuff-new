@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from "react-bootstrap";
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import "./Footer.css";
 
 const Footer = () => {
@@ -22,9 +22,9 @@ const Footer = () => {
         </p>
       </div>
             <div className="social-icons">
-        <a href="#"><FaFacebook /></a>
-        <a href="#"><FaTwitter /></a>
-        <a href="#"><FaInstagram /></a>
+        <a href="https://www.facebook.com/profile.php?id=61578129710470"><FaFacebook /></a>
+        <a href="https://www.linkedin.com/company/alutuff/"><FaLinkedin /></a>
+        <a href="https://www.instagram.com/alutuff.panels/"><FaInstagram /></a>
       </div>
 
     </div>
@@ -54,8 +54,14 @@ const Footer = () => {
       <h4>Contact Info</h4>
       <div className="footer-contact-info">
         <p><strong>Address:</strong><br />Alutuff International,<br />Choupla Road, Civil Lines, Bareilly.</p>
-        <p><strong>Phone:</strong><br />+91 63968 54974</p>
-        <p><strong>Email:</strong><br />sales@alutuff.in</p>
+  <p><strong>Phone:</strong><br />
+  <a href="tel:+916396854974">+91  63968 54974</a>
+</p>
+
+<p><strong>Email:</strong><br />
+  <a href="mailto:sales@alutuff.in">sales@alutuff.in</a>
+</p>
+
       </div>
       </div>
     </div>
@@ -65,7 +71,7 @@ const Footer = () => {
       </div>
 
       <div className='copyright-div'>
-        Copyright © 2022 <span style={{ color: "hotpink" }}>Alutuff</span>. All Right Reserved.
+        Copyright © 2022 <span style={{ color:"#ea3138"}}>Alutuff</span>. All Right Reserved.
       </div>
     </Container>
   );

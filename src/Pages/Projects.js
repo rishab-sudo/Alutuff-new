@@ -45,6 +45,23 @@ const privateClient = [
   "Gujarat Gas"
 ];
 
+// Split the client data
+const governmentClients = privateClient.filter(name =>
+  [
+    "ONGC",
+    "ONGC,VIZAG",
+    "Nepal Telecom",
+    "Transport Corporation, Bangalore",
+    "Sardar Vallabh Bhai Patel Airport, Ahmedabad",
+    "Chennai Airport",
+    "Sports Stadium, Goa",
+    "Calicut Bus Terminal Project",
+    "Gujarat Gas"
+  ].includes(name)
+);
+
+const privateClients = privateClient.filter(name => !governmentClients.includes(name));
+
 const data = [
   {
     image: require("../assets/Image2.png"),
@@ -75,135 +92,118 @@ const data = [
 
 const ProjectCarousel = () => {
   const [visibleClients, setVisibleClients] = useState(12);
-  const isFullyVisible = visibleClients >= privateClient.length;
+  const isFullyVisible = visibleClients >= privateClients.length;
 
   const handleToggleClients = () => {
     if (isFullyVisible) {
-      setVisibleClients(12); // reset to first 3 rows
+      setVisibleClients(12);
     } else {
-      setVisibleClients(prev => prev + 12); // show 3 more rows
+      setVisibleClients(prev => prev + 12);
     }
   };
 
   return (
     <>
-<Container fluid className="projects-banner-section">
+      {/* Banner Section */}
+      <Container fluid className="projects-banner-section">
+        <Container className="projects-banner-content-div">
+          <div className="project-banner-text-div">
+            <h1 className="project-banner-heading">
+              Transforming Spaces with Durable, Stylish Panel Solutions
+            </h1>
+            <p className="project-banner-descp">
+              At Alutuff, our panels are trusted by architects, builders, and developers across industries. From commercial landmarks to modern residential spaces, Alutuff products are featured in a wide range of prestigious projects across India and abroad. Whether it’s high-rise facades, interiors, lobbies, or industrial campuses, our ACP, HPL, Honeycomb, and specialty panels deliver durability, elegance, and performance. Explore our diverse project portfolio to see how Alutuff enhances structures with quality craftsmanship, premium finishes, and long-lasting protection, making every project a lasting statement.
+            </p>
+          </div>
 
-<Container className="projects-banner-content-div">
-    <div className="project-banner-text-div">
-<h1 className="project-banner-heading">Transforming Spaces with Durable, Stylish Panel Solutions</h1>
-<p className="project-banner-descp">At Alutuff, our panels are trusted by architects, builders, and developers across industries. From commercial landmarks to modern residential spaces, Alutuff products are featured in a wide range of prestigious projects across India and abroad. Whether it’s high-rise facades, interiors, lobbies, or industrial campuses, our ACP, HPL, Honeycomb, and specialty panels deliver durability, elegance, and performance. Explore our diverse project portfolio to see how Alutuff enhances structures with 
-  quality craftsmanship, premium finishes, and long-lasting protection, making every project a lasting statement.</p>
-</div>
+          <div className="image-layout-wrapper">
+            <div className="top-section">
+              <div className="left-images">
+                <img src={require("../assets/Image2.png")} alt="Image 1" className="img img1 from-left" />
+                <img src={require("../assets/Image2.png")} alt="Image 2" className="img img2 from-left" />
+              </div>
+              <img src={require("../assets/Image2.png")} alt="Image 3" className="img img3 from-right" />
+            </div>
+          </div>
+        </Container>
+      </Container>
 
- <div className="image-layout-wrapper">
-      <div className="top-section">
-        <div className="left-images">
-          <img src={require  ("../assets/Image2.png")} alt="Image 1" className="img img1 from-left" />
-          <img src={require  ("../assets/Image2.png")} alt="Image 2" className="img img2 from-left" />
-        </div>
-        <img src={require  ("../assets/Image2.png")} alt="Image 3" className="img img3 from-right" />
-      </div>
-    
-    </div>
-</Container>
-</Container>
-
+      {/* GOVERNMENT PROJECTS */}
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>
           <p className="page-heading">GOVERNMENT PROJECTS</p>
         </div>
-      <Swiper
-  modules={[Autoplay]}
-  loop={true}
-  autoplay={{ delay: 2500 }}
-  className="project-swiper"
-  breakpoints={{
-    0: {
-      slidesPerView: 1,
-      centeredSlides: false,
-    },
-    768: {
-      slidesPerView: 2,
-      centeredSlides: true,
-    },
-    992: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    }
-  }}
->
-  {data.map((item, index) => (
-    <SwiperSlide key={index} className="project-card">
-      <div className="project-inner">
-        <img src={item.image} alt={item.title} />
-        <h3>{item.title}</h3>
-        <p>{item.desc}</p>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
 
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 2500 }}
+          className="project-swiper"
+          breakpoints={{
+            0: { slidesPerView: 1, centeredSlides: false },
+            768: { slidesPerView: 2, centeredSlides: true },
+            992: { slidesPerView: 3, centeredSlides: true },
+          }}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index} className="project-card">
+              <div className="project-inner">
+                <img src={item.image} alt={item.title} />
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Container>
 
+      {/* GOVERNMENT CLIENTS */}
       <Container className="clients-section">
-        <h2 className="page-heading">Few of Our Esteemed Clients</h2>
+        <h2 className="page-heading">Government Clients</h2>
         <div className="clients-grid">
-          {privateClient.slice(0, visibleClients).map((client, index) => (
+          {governmentClients.map((client, index) => (
             <div className="client-box" key={index}>
               <FaBuilding className="client-icon" />
               <span>{client}</span>
             </div>
           ))}
         </div>
-
-        <div className="d-flex justify-content-end mt-4">
-          <button className="pink-button" onClick={handleToggleClients}>
-            {isFullyVisible ? "View Less" : "View More"}
-          </button>
-        </div>
       </Container>
 
+      {/* PRIVATE PROJECTS */}
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>
           <p className="page-heading">PRIVATE PROJECTS</p>
         </div>
-          <Swiper
-  modules={[Autoplay]}
-  loop={true}
-  autoplay={{ delay: 2500 }}
-  className="project-swiper"
-  breakpoints={{
-    0: {
-      slidesPerView: 1,
-      centeredSlides: false,
-    },
-    768: {
-      slidesPerView: 2,
-      centeredSlides: true,
-    },
-    992: {
-      slidesPerView: 3,
-      centeredSlides: true,
-    }
-  }}
->
-  {data.map((item, index) => (
-    <SwiperSlide key={index} className="project-card">
-      <div className="project-inner">
-        <img src={item.image} alt={item.title} />
-        <h3>{item.title}</h3>
-        <p>{item.desc}</p>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 2500 }}
+          className="project-swiper"
+          breakpoints={{
+            0: { slidesPerView: 1, centeredSlides: false },
+            768: { slidesPerView: 2, centeredSlides: true },
+            992: { slidesPerView: 3, centeredSlides: true },
+          }}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index} className="project-card">
+              <div className="project-inner">
+                <img src={item.image} alt={item.title} />
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Container>
 
-       <Container className="clients-section">
-        <h2>Few of Our Esteemed Clients</h2>
+      {/* PRIVATE CLIENTS */}
+      <Container className="clients-section">
+        <h2 className="page-heading">Private Clients</h2>
         <div className="clients-grid">
-          {privateClient.slice(0, visibleClients).map((client, index) => (
+          {privateClients.slice(0, visibleClients).map((client, index) => (
             <div className="client-box" key={index}>
               <FaBuilding className="client-icon" />
               <span>{client}</span>

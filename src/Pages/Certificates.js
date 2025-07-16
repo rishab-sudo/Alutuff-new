@@ -3,7 +3,7 @@ import './Certificates.css';
 import { Container } from 'react-bootstrap';
 import bannerImage from "../assets/banner-bg.jpeg"
 import Banner from '../components/Banner';
-import Testing from '../components/Testing';
+import Testing from '../components/TestingSlider';
 
 const images = [
   {

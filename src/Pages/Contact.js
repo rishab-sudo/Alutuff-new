@@ -49,44 +49,51 @@ const Contact = () => {
       <div className='w-100' >
               <Banner
                 image={bannerImage}
-                heading="Certificates "
-                subheading="Welcome to our website"
-              />
+                heading="Contact  "
+              //   subheading="Welcome to our website"
+               />
             </div>
 
       {/* Contact Cards */}
       <div className="contact-cards">
         <div className="contact-card">
           <FaPhoneAlt className="contact-icon" />
-          <h2>Contact</h2>
-          <p>+1-202-555-0172</p>
-          <p>+1-202-555-0187</p>
+          <h3>Contact</h3>
+          <p>+91 63968 54974
+</p>
+        
         </div>
 
         <div className="contact-card">
           <FaMapMarkerAlt className="contact-icon" />
-          <h2>Address</h2>
-          <p>512 New Hampshire Avenue Northwest</p>
-          <p>#100, Washington, United States</p>
+          <h3>Address</h3>
+          <p>Alutuff International</p>
+     <p style={{marginTop:"-8px"}}> Choupla Road, Civil Lines, Bareilly</p>
+       
         </div>
 
         <div className="contact-card">
           <FaEnvelope className="contact-icon" />
-          <h2>Email</h2>
-          <p>edificeinterior@Example.com</p>
-          <p>edificeinfo@Example.com</p>
+          <h3>Email</h3>
+          <p>sales@alutuff.in</p>
+         
         </div>
       </div>
 
       {/* Google Map and Form */}
       <div className="map-container">
-        <iframe
-          className="google-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.0017257064693!2d-77.04948618464818!3d38.89656557957065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7d1a78a7e0f%3A0x8a5298b6c8f2a577!2s512%20New%20Hampshire%20Ave%20NW%2C%20Washington%2C%20DC%2020037%2C%20USA!5e0!3m2!1sen!2sin!4v1658382000000!5m2!1sen!2sin"
-          allowFullScreen=""
-          loading="lazy"
-          title="Google Map"
-        ></iframe>
+ <iframe
+  className="testing-google-map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0468592592423!2d79.4176986!3d28.3408736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a000d368192bd3%3A0xfdade61c7f684155!2sAlutuff%20Panels!5e0!3m2!1sen!2sin!4v1721111234567"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Alutuff Panels Location"
+/>
+
 
         <div className="contact-form-container">
           <h2 className='page-heading'>Get In Touch</h2>
@@ -103,7 +110,7 @@ const Contact = () => {
 
             <textarea name="message" rows="5" placeholder="Message" required value={formData.message} onChange={handleChange}></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className='pink-button'>Submit</button>
           </form>
         </div>
       </div>

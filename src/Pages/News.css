@@ -13,13 +13,16 @@
 
 .fb-page {
   width: 100%;
-  max-width: 700px;
-  margin: auto;
+  max-width:100%!important;
+  margin: 0 auto;
+  display: block;
 }
 
 @media (min-width: 768px) {
+  .news-container {
+  max-width: 100% !important;
+}
   .fb-page {
-    width: 100%;
-    max-width: 500px;
+    max-width: 300px !important; /* Optional: restrict width on tablet and above */
   }
 }

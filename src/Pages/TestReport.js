@@ -1,8 +1,9 @@
 import React from "react";
-import bannerImage from "../assets/banner-bg.jpeg"
+import bannerImage from "../assets/banner-bg.jpeg";
 import Banner from "../components/Banner";
 import "./TestReport.css";
 
+// Cleaned and merged version of table1Data
 const table1Data = {
   title: "Technical Specification Report - 4.5mm",
   subtitle: "NAME 3MM(0.25mm)",
@@ -19,9 +20,10 @@ const table1Data = {
     ["Impact Resistance", "No Cracking found"],
     ["Acid Resistance", "No Effect"],
     ["Protective Weight", "0.085 Kg/m2"],
-    ["LDPE (Quality)", "0.700 Gram/10min"],
-    ["", "0.967 G/cc"],
-    ["", "-X Batch"],
+    [
+      "LDPE (Quality)",
+      "0.700 Gram/10min / 0.967 G/cc / -X Batch"
+    ],
     ["Coil Thickness (F)", "0.25mm"],
     ["Coil Thickness (B)", "0.25mm"],
     ["Bonding Strength", "6 N/mm"],
@@ -30,6 +32,7 @@ const table1Data = {
   ],
 };
 
+// Cleaned and merged version of table2Data
 const table2Data = {
   title: "Technical Specification Report - 3.25mm",
   subtitle: "NAME 3MM(0.25mm)",
@@ -46,9 +49,10 @@ const table2Data = {
     ["Impact Resistance", "No Cracking found"],
     ["Acid Resistance", "No Effect"],
     ["Protective Weight", "0.085 Kg/m2"],
-    ["LDPE (Quality)", "0.700 Gram/10min"],
-    ["", "0.967 G/cc"],
-    ["", "-X Batch"],
+    [
+      "LDPE (Quality)",
+      "0.700 Gram/10min / 0.967 G/cc / -X Batch"
+    ],
     ["Coil Thickness (F)", "0.50mm"],
     ["Coil Thickness (B)", "0.50mm"],
     ["Bonding Strength", "11.1 N/mm"],
@@ -85,19 +89,15 @@ const TestTable = ({ data }) => (
 const TestReportSection = () => {
   return (
     <>
-      <div className='w-100' >
-              <Banner
-                image={bannerImage}
-                heading="Test Report "
-                subheading="Welcome to our website"
-              />
-            </div>
-  
-    <section className="test-report-section">
-      <TestTable data={table1Data} />
-      <TestTable data={table2Data} />
-    </section>
-      </>
+      <div className="w-100">
+        <Banner image={bannerImage} heading="Test Reports " />
+      </div>
+
+      <section className="test-report-section">
+        <TestTable data={table1Data} />
+        <TestTable data={table2Data} />
+      </section>
+    </>
   );
 };
 

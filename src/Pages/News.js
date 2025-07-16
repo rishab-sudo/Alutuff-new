@@ -38,7 +38,7 @@ const News = () => {
    
 <Container fluid className='news-section'>
   <div className='d-flex justify-content-center align-items-center'>
-    <p className='page-heading'>A Breif History</p>
+    {/* <p className='page-heading'>A Breif History</p> */}
   </div>
 
   {/* FB Page Embed */}

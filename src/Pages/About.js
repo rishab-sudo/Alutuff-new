@@ -256,9 +256,12 @@ const settings = {
         </Slider>
       </Container>
       {/*  */}
-
-  <Container fluid className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%",marginBottom:"-5%"}}>
-<img style={{maxWidth:"100%"}} src={require("../assets/makein-new-alutiff.png")} alt=""/>
+      <Container  style={{marginTop:"6%"}}>
+<img  style={{width:"100%",maxWidth:"100%"}} src={require("../assets/alutuff_process.jpg")} alt=""/>
+      </Container>
+{/*  */}
+  <Container fluid  className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%",marginBottom:"-5%"}}>
+<img  style={{maxWidth:"100%"}} src={require("../assets/makein-new-alutiff.png")} alt=""/>
   </Container>
       {/*  */}
 

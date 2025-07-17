@@ -180,10 +180,10 @@ const ProjectCarousel = () => {
           <div className="image-layout-wrapper">
             <div className="top-section">
               <div className="left-images">
-                <img src={require("../assets/Image2.png")} alt="Image 1" className="img img1 from-left" />
-                <img src={require("../assets/Image2.png")} alt="Image 2" className="img img2 from-left" />
+                <img src={require("../assets/P 2.jpg")} alt="Image 1" className="img img1 from-left" />
+                <img src={require("../assets/P3.jpg")} alt="Image 2" className="img img2 from-left" />
               </div>
-              <img src={require("../assets/Image2.png")} alt="Image 3" className="img img3 from-right" />
+              <img src={require("../assets/p1.jpg")} alt="Image 3" className="img img3 from-right" />
             </div>
           </div>
         </Container>

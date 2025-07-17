@@ -11,7 +11,7 @@ const StayWithUs = () => {
         <h1>Step Into Quality, Step Into Success</h1>
         <Link to="/contact">
           <button className='stay-button'>
-Let's Talk
+Become a Dealer
   <span className="stay-button-circle">
     <i className="fa fa-arrow-up"></i>
   </span>

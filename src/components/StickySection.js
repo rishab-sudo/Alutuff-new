@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './StickySection.css';
+import { Container } from 'react-bootstrap';
 
 const StickySection = () => {
   const sectionRef = useRef(null);
@@ -9,10 +10,10 @@ const StickySection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    require('../assets/sticky1.jpg'),
- require('../assets/sticky2.jpg'),
-  require('../assets/sticky3.jpg'),
-   require('../assets/sticky4.jpg'),
+    require('../assets/INOVATION 1.jpg'),
+ require('../assets/INOVATION 2.jpg'),
+ require('../assets/INOVATION 3.jpg'),
+ require('../assets/INOVATION  4.jpg'),
   ];
 
 const paragraphs = [
@@ -71,33 +72,40 @@ const paragraphs = [
   return (
     <>
       {/* Desktop View */}
-      <div className="sticky-scroll-wrapper" ref={sectionRef}>
-        <div className="sticky-scroll-container">
-          <div className="text-section" ref={textRef}>
-            <div className="para-wrapper">
-            {paragraphs.map((para, index) => (
-  <p
-    key={index}
-    className="para-text"
-    ref={(el) => (paraRefs.current[index] = el)}
-  >
-    {para.main}
-    <span className="grey-text">{para.highlight}</span>
-  </p>
-))}
+   <Container fluid className='' style={{marginTop:"4.5%",background:"#000",color:"#fff",paddingTop:"4.2rem"}}>
 
+   <div className="section-title text-center" style={{marginBottom:"0px " }}>
+    <h2 className="page-heading" style={{marginBottom:"0px " }}>Crafted to Endure</h2>
+  </div>
 
-            </div>
-          </div>
-          <div className="image-section">
-            <img
-              ref={imageRef}
-              src={images[currentImageIndex]}
-              alt="Sticky Example"
-            />
-          </div>
-        </div>
+<div className="sticky-scroll-wrapper" ref={sectionRef}> 
+  {/* ✅ Heading Added */}
+
+  <div className="sticky-scroll-container">
+    <div className="text-section" ref={textRef}>
+      <div className="para-wrapper">
+        {paragraphs.map((para, index) => (
+          <p
+            key={index}
+            className="para-text"
+            ref={(el) => (paraRefs.current[index] = el)}
+          >
+            {para.main}
+            <span className="grey-text">{para.highlight}</span>
+          </p>
+        ))}
       </div>
+    </div>
+    <div className="image-section">
+      <img
+        ref={imageRef}
+        src={images[currentImageIndex]}
+        alt="Sticky Example"
+      />
+    </div>
+  </div>
+</div>
+
 
       {/* Mobile View */}
       <div className="mobile-scroll-wrapper">
@@ -112,6 +120,7 @@ const paragraphs = [
 ))}
 
       </div>
+        </Container>
     </>
   );
 };

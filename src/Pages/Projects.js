@@ -7,7 +7,97 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "./Projects.css";
 
-const privateClient = [
+// All Projects with type field
+const allProjects = [
+  {
+    id: 1,
+    type: "government",
+    image: require("../assets/projects/GOV1.jpg"),
+    title: "Gov Project 1",
+    desc: "Government Building ACP Facade",
+  },
+  {
+    id: 2,
+    type: "government",
+    image: require("../assets/projects/GOV 2.jpg"),
+    title: "Gov Project 2",
+    desc: "Airport Lounge Panels",
+  },
+  {
+    id: 3,
+    type: "government",
+    image: require("../assets/projects/GOV  3.jpg"),
+    title: "Gov Project 3",
+    desc: "Transport Terminal Design",
+  },
+  {
+    id: 4,
+    type: "government",
+    image: require("../assets/projects/GOV  4.jpg"),
+    title: "Gov Project 4",
+    desc: "Gov HQ Front Elevation",
+  },
+  {
+    id: 5,
+    type: "government",
+    image: require("../assets/projects/GOV  5.jpg"),
+    title: "Gov Project 5",
+    desc: "Stadium ACP Work",
+  },
+  {
+    id: 6,
+    type: "government",
+    image: require("../assets/projects/GOV  6.jpg"),
+    title: "Gov Project 6",
+    desc: "Gov Complex Facade",
+  },
+  {
+    id: 7,
+    type: "government",
+    image: require("../assets/projects/GOV  7.jpg"),
+    title: "Gov Project 7",
+    desc: "Utility Service Campus",
+  },
+  {
+    id: 8,
+    type: "private",
+    image: require("../assets/projects/PR 1.jpg"),
+    title: "Private Project 1",
+    desc: "Retail Showroom Panels",
+  },
+  {
+    id: 9,
+    type: "private",
+    image: require("../assets/projects/PR 2.jpg"),
+    title: "Private Project 2",
+    desc: "Luxury Mall Interior",
+  },
+  {
+    id: 10,
+    type: "private",
+    image: require("../assets/projects/PR 3.jpg"),
+    title: "Private Project 3",
+    desc: "Commercial Office Tower",
+  },
+  {
+    id: 11,
+    type: "private",
+    image: require("../assets/projects/PR 4.jpg"),
+    title: "Private Project 4",
+    desc: "Film City Entrance Panels",
+  },
+  {
+    id: 12,
+    type: "private",
+    image: require("../assets/projects/PR 5.jpg"),
+    title: "Private Project 5",
+    desc: "Modern Hospital Elevation",
+  },
+
+];
+
+// Client list
+const allClients = [
   "Kalyan Jewellers – UAE",
   "Kalyan Jewellers – PAN INDIA",
   "Sardar Vallabh Bhai Patel Airport, Ahmedabad",
@@ -45,8 +135,8 @@ const privateClient = [
   "Gujarat Gas"
 ];
 
-// Split the client data
-const governmentClients = privateClient.filter(name =>
+// Classify clients
+const governmentClients = allClients.filter(name =>
   [
     "ONGC",
     "ONGC,VIZAG",
@@ -59,47 +149,18 @@ const governmentClients = privateClient.filter(name =>
     "Gujarat Gas"
   ].includes(name)
 );
+const privateClients = allClients.filter(name => !governmentClients.includes(name));
 
-const privateClients = privateClient.filter(name => !governmentClients.includes(name));
-
-const data = [
-  {
-    image: require("../assets/Image2.png"),
-    title: "Project 1",
-    desc: "Description of Project 1",
-  },
-  {
-    image: require("../assets/Image2.png"),
-    title: "Project 2",
-    desc: "Description of Project 2",
-  },
-  {
-    image: require("../assets/Image2.png"),
-    title: "Project 3",
-    desc: "Description of Project 3",
-  },
-  {
-    image: require("../assets/Image2.png"),
-    title: "Project 4",
-    desc: "Description of Project 4",
-  },
-  {
-    image: require("../assets/Image2.png"),
-    title: "Project 5",
-    desc: "Description of Project 5",
-  },
-];
+// Filter projects by type
+const governmentData = allProjects.filter(project => project.type === "government");
+const privateData = allProjects.filter(project => project.type === "private");
 
 const ProjectCarousel = () => {
   const [visibleClients, setVisibleClients] = useState(12);
   const isFullyVisible = visibleClients >= privateClients.length;
 
   const handleToggleClients = () => {
-    if (isFullyVisible) {
-      setVisibleClients(12);
-    } else {
-      setVisibleClients(prev => prev + 12);
-    }
+    setVisibleClients(prev => isFullyVisible ? 12 : prev + 12);
   };
 
   return (
@@ -112,7 +173,7 @@ const ProjectCarousel = () => {
               Transforming Spaces with Durable, Stylish Panel Solutions
             </h1>
             <p className="project-banner-descp">
-              At Alutuff, our panels are trusted by architects, builders, and developers across industries. From commercial landmarks to modern residential spaces, Alutuff products are featured in a wide range of prestigious projects across India and abroad. Whether it’s high-rise facades, interiors, lobbies, or industrial campuses, our ACP, HPL, Honeycomb, and specialty panels deliver durability, elegance, and performance. Explore our diverse project portfolio to see how Alutuff enhances structures with quality craftsmanship, premium finishes, and long-lasting protection, making every project a lasting statement.
+              At Alutuff, our panels are trusted by architects, builders, and developers across industries. Explore our diverse project portfolio to see how Alutuff enhances structures with quality craftsmanship and long-lasting protection.
             </p>
           </div>
 
@@ -145,12 +206,12 @@ const ProjectCarousel = () => {
             992: { slidesPerView: 3, centeredSlides: true },
           }}
         >
-          {data.map((item, index) => (
-            <SwiperSlide key={index} className="project-card">
+          {governmentData.map((item) => (
+            <SwiperSlide key={item.id} className="project-card">
               <div className="project-inner">
                 <img src={item.image} alt={item.title} />
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+                {/* <h3>{item.title}</h3>
+                <p>{item.desc}</p> */}
               </div>
             </SwiperSlide>
           ))}
@@ -187,12 +248,12 @@ const ProjectCarousel = () => {
             992: { slidesPerView: 3, centeredSlides: true },
           }}
         >
-          {data.map((item, index) => (
-            <SwiperSlide key={index} className="project-card">
+          {privateData.map((item) => (
+            <SwiperSlide key={item.id} className="project-card">
               <div className="project-inner">
                 <img src={item.image} alt={item.title} />
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+                {/* <h3>{item.title}</h3>
+                <p>{item.desc}</p> */}
               </div>
             </SwiperSlide>
           ))}

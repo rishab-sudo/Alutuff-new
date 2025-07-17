@@ -157,17 +157,17 @@ margin-top: 1.5rem;
 }
 
 .project-inner {
-  background: #fff;
+  background: #fffffff4;
   border-radius: 12px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   overflow: hidden !important;
   text-align: left;
-  padding: 20px;
+  padding: 8px;
 }
 
 .project-inner img {
   width: 100%;
-  height: 250px;
+  height: 320px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -236,13 +236,15 @@ color: #ea3138;
   color: #444;
 }
 @media (max-width: 768px) {
+  .projects-banner-section{
+    padding: 0 !important;
+  }
+  .project-carousel-container {
+margin-top:  0px !important;
+
+}
     .projects-banner-content-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 25px 0px;
-  display: none;
+  display: none !important;
 }
 
 .img1 {
@@ -278,15 +280,8 @@ color: #ea3138;
 }
 /*  */
 .project-carousel-container {
-  margin-top: 5% !important;
-  background-color: #000;
-  color: #fff;
-  width: 100%;
-  max-width: 100%;/* 3 cards * ~300px + spacing */
-  margin: auto;
-  padding: 80px 20px;
-  perspective: 1200px;
-  overflow: hidden; /* prevents left cut-off */
+  margin-top: 0% !important;
+
 }
 /*  */
   .clients-section {
@@ -302,6 +297,10 @@ color: #ea3138;
 }
 
 @media (max-width: 480px) {
+  .project-carousel-container {
+  margin-top: 0% !important;
+
+}
   .client-box {
     width: 100%;
   }

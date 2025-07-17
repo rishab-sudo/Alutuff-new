@@ -1,13 +1,12 @@
 .sticky-scroll-wrapper {
-   margin-top: 3.5% !important;
+   /* margin-top: 3.5% !important; */
   width: 100%;
-  /* min-height: 220vh; */
   height: auto;
   padding-top: 50px;
   padding-bottom:  150px;
   display: flex;
   justify-content: center;
-  /* background: #f5f5f5; */
+ background: #f5f5f5; 
   background-color: black;
 }
 

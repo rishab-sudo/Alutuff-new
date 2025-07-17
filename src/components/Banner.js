@@ -14,7 +14,7 @@ const Banner = ({ image, heading, subheading }) => {
       <Container className="banner-content-div">
         <div className="banner-text">
           <p className="banner-heading">{heading}</p>
-          <p className="banner-subheading">{subheading}</p>
+          {/* <p className="banner-subheading">{subheading}</p> */}
         </div>
       </Container>
     </Container>

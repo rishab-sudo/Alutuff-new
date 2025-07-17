@@ -44,29 +44,6 @@
 }
 
 /* === Swipe Indicator Arrow (right side, mobile only) */
-.swipe-indicator {
-  display: none;
-  position: relative;
-  margin-top: -25px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-.swipe-indicator svg {
-  animation: bounceArrow 1.5s infinite;
-  fill: #ff69b4; /* pink */
-  width: 36px;
-  height: 36px;
-}
-
-@keyframes bounceArrow {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(8px);
-  }
-}
 
 /* === Product Cards === */
 .product-cards {
@@ -84,12 +61,6 @@ padding: 5px !important;
 .mobile-slider {
   display: none;
 }
-@media (max-width: 991px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .product-cards.forward {
   animation: slideInLeft 0.5s forwards;
 }
@@ -150,6 +121,7 @@ height: 100%;
 }
 
 .overlay {
+  border-radius: 5px !important;
   position: absolute;
   top: 0;
   left: -100%;
@@ -207,6 +179,11 @@ height: 100%;
 } */
 
 /* === Responsive === */
+@media (max-width: 991px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 992px) {
   .homeproduct-section {
     min-height: 100%!important;

@@ -25,9 +25,8 @@ const stats = [
   { id: 4, image: require('../assets/index2_count_icon1.png'), count: 45, suffix: '+', label: ' Years Market Trust' },
 ];
 const aboutImage = [
-  require("../assets/about02.jpeg"),
-   require("../assets/about02.jpeg"),
-   require("../assets/about02.jpeg"),
+  require("../assets/about us 01.png"),
+   require("../assets/about us 02.png"),
 ];
 const About = () => {
     const sectionRef = useRef(null);
@@ -158,7 +157,7 @@ const settings = {
         <div className="glance-container">
           {/* Left Points */}
           <div className="glance-points glance-left">
-            <div className="point-box">  Industrial Campus<span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>5lac+ sq.ft.</span>	</div>
+            <div className="point-box" >  Industrial Campus <span></span><span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>5lac+ sq.ft.</span>	</div>
             <div className="point-box">Total Investment  <span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>$168M+ </span> </div>
             <div className="point-box"> In-House Plant <span style={{backgroundColor:"#ea3138",color:"#fff", padding:"5px  10px", borderRadius:"11px",marginLeft:"auto"}}>24/7 Power</span>   </div>
           </div>

@@ -413,8 +413,8 @@ padding: 0;
 }
 
 .about-slide-image-wrapper img {
- height: 250px;
-  width: 350px;
+ height: 300px;
+  width: 100%;
   object-fit: cover;
   border-radius: 8px;
   background-color: #fff; /* Optional: adds a clean background */
@@ -547,8 +547,8 @@ padding: 0;
 
 .about-slide-image-wrapper img {
 
- height: 100%;
-  width: 250px;
+height: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 }

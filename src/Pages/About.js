@@ -43,12 +43,15 @@ const [zigzagRef, zigzagInView] = useInView({
   triggerOnce: true,
 });
   const images = [
-    require('../assets/map.png'),
-    require('../assets/map.png'),
-    require('../assets/map.png'),
-    require('../assets/map.png'),
-    require('../assets/map.png'),
-    require('../assets/map.png'),
+    require('../assets/manu-unit/manu-1.jpg'),
+  require('../assets/manu-unit/manu-2.jpg'),
+    require('../assets/manu-unit/manu-3.jpg'),
+      require('../assets/manu-unit/manu-4.jpg'),
+        require('../assets/manu-unit/manu-5.jpg'),
+          require('../assets/manu-unit/manu-6.jpg'),
+            require('../assets/manu-unit/manu-7.jpg'),
+              require('../assets/manu-unit/manu-8.jpg'),
+
   ];
 const [card1Ref, card1InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 const [card2Ref, card2InView] = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -84,10 +87,16 @@ const settings = {
         slidesToShow: 3,
       },
     },
+     {
+      breakpoint: 768, // below 576px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
     {
       breakpoint: 576, // below 576px
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
       },
     },
   ],

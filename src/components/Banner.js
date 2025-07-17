@@ -11,6 +11,9 @@ const Banner = ({ image, heading, subheading }) => {
         backgroundImage: `url(${image})`
       }}
     >
+   <div>
+    
+   </div>
       <Container className="banner-content-div">
         <div className="banner-text">
           <p className="banner-heading">{heading}</p>

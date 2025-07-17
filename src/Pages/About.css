@@ -400,8 +400,7 @@ margin-left: -20px;
 padding: 0;
 }
 .manufacturing-slider{
-
-  margin: 0;
+ margin: 0;
   padding: 0;
   height: auto;
 }
@@ -414,8 +413,8 @@ padding: 0;
 }
 
 .about-slide-image-wrapper img {
- height: 200px;
-  width: 280px;
+ height: 250px;
+  width: 350px;
   object-fit: cover;
   border-radius: 8px;
   background-color: #fff; /* Optional: adds a clean background */
@@ -535,6 +534,7 @@ margin-top: 20px !important;
   /* manufactiring-slider */
   .about-slider-container {
 
+padding: 0;
 }
 
 .about-slide-image-wrapper {
@@ -546,9 +546,10 @@ margin-top: 20px !important;
   }
 
 .about-slide-image-wrapper img {
+
  height: 100%;
-  width: 90%;
-  object-fit: cover;
+  width: 250px;
+  object-fit: contain;
 }
 }
 

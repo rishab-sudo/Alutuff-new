@@ -50,7 +50,7 @@ const Contact = () => {
     <>
       {/* Banner */}
       <div className='w-100'>
-        <Banner image={bannerImage} heading="Contact" />
+        <Banner image={bannerImage} heading="Contact Us" />
       </div>
 
       {/* Contact Info Cards */}

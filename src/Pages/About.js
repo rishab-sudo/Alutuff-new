@@ -164,7 +164,7 @@ const settings = {
 
           {/* Center Image */}
           <div className="glance-image">
-            <img src={require('../assets/img-2.jpeg')} alt="Glance" />
+            <img src={require('../assets/ABOUT 1 (2).jpg')} alt="Glance" />
           </div>
 
           {/* Right Points */}

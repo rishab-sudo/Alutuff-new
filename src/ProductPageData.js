@@ -246,6 +246,37 @@ const ProductPageData = [
       },
     ],
   },
+    {
+    category: 'Alutuff PVC/WPC Decorative Panels',
+    details: {
+      material: ' PVC Celluka or Wood-Plastic Composite (WPC) with rigid polymer base',
+      categoryType: ' Decorative Cladding & Partition Panel',
+      applications: ['Interior partitions, wall cladding, modular furniture, ceilings, kitchens, wet areas, and decorative displays'],
+      keyFeatures: [
+        'Immune to moisture and vapour, ideal for wet areas',
+        'Termite, borer, and fungus-resistant',
+        'Lightweight yet highly durable structure',
+        'Low maintenance with an easy-to-clean surface',
+        'Weatherproof, long-lasting shine and finish',
+       ' Quick and hassle-free installation',
+'Available in multiple finishes, wooden, plain, textured',
+      ],
+    },
+    products: [
+      {
+        id: 15,
+        title: 'Premium Series Panels',
+        description: 'Luxurious gloss finish for high-end designs',
+        // image: require('./assets/product-page/Louvers – Aluminium   WPC Louvers   1.jpg'),
+      },
+        {
+        id: 16,
+        title: 'Premium Series Panels',
+        description: 'Luxurious gloss finish for high-end designs',
+        // image: require('./assets/product-page/Louvers – Aluminium  WPC Louvers  2.jpg'),
+      },
+    ],
+  },
 ];
 
 export default ProductPageData;

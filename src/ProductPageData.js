@@ -264,15 +264,15 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 15,
-        title: 'Premium Series Panels',
-        description: 'Luxurious gloss finish for high-end designs',
+        id: 17,
+        title: 'Alutuff PVC/WPC Decorative Panels',
+        description: 'Moisture-proof panels with versatile stylish finishes',
         // image: require('./assets/product-page/Louvers – Aluminium   WPC Louvers   1.jpg'),
       },
         {
-        id: 16,
-        title: 'Premium Series Panels',
-        description: 'Luxurious gloss finish for high-end designs',
+        id: 18,
+        title: 'Alutuff PVC/WPC Decorative Panels',
+        description: 'Moisture-proof panels with versatile stylish finishes',
         // image: require('./assets/product-page/Louvers – Aluminium  WPC Louvers  2.jpg'),
       },
     ],

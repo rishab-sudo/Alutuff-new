@@ -266,7 +266,7 @@ const settings = {
       </Container>
       {/*  */}
       <Container  style={{marginTop:"6%"}}>
-<img  style={{width:"100%",maxWidth:"100%"}} src={require("../assets/alutuff_process.jpg")} alt=""/>
+<img  style={{width:"100%",maxWidth:"100%"}} src={require("../assets/alutuff-process.png")}/>
       </Container>
 {/*  */}
   <Container fluid  className='d-flex justify-content-center align-items-center g-0' style={{marginTop:"5%",marginBottom:"-5%"}}>

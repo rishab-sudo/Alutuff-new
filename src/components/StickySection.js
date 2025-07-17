@@ -9,10 +9,10 @@ const StickySection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    require('../assets/img-2.jpeg'),
-    require('../assets/img-3.jpeg'),
-    require('../assets/img-4.jpeg'),
-    require('../assets/img-5.jpeg'),
+    require('../assets/sticky1.jpg'),
+ require('../assets/sticky2.jpg'),
+  require('../assets/sticky3.jpg'),
+   require('../assets/sticky4.jpg'),
   ];
 
 const paragraphs = [

@@ -19,13 +19,13 @@ const ProductPageData = [
         id: 1,
         title: 'ACP',
         description: 'Aluminium Composite Panel',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/ACP1.jpg'),
       },
       {
         id: 2,
-        title: 'Wooden Panel',
+        title: 'ACP',
         description: 'Elegant wooden panel for interior walls',
-        image: require('./assets/home-about1.jpeg'),
+        image: require('./assets/product-page/ACP2.jpg'),
       },
     ],
   },
@@ -50,7 +50,13 @@ const ProductPageData = [
         id: 3,
         title: 'AHPL',
         description: 'Aluminium High-Pressure Laminate',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/AHPL 1.jpg'),
+      },
+         {
+        id: 4,
+        title: 'AHPL',
+        description: 'Aluminium High-Pressure Laminate',
+           image: require('./assets/product-page/AHPL 2 .jpg'),
       },
     ],
   },
@@ -72,10 +78,16 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 4,
+        id: 5,
         title: 'FR ACP / FR HPL',
         description: 'Fire-resistant panel for high-rise buildings',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/FR ACP  1 .jpg'),
+      },
+         {
+        id: 6,
+        title: 'FR ACP / FR HPL',
+        description: 'Fire-resistant panel for high-rise buildings',
+        image: require('./assets/product-page/FR ACP  2.jpg'),
       },
     ],
   },
@@ -97,15 +109,21 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 5,
+        id: 7,
         title: 'AHCP ',
         description: 'Aluminium Honeycomb Composite Panel',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/Aluminium Honeycomb Composite Panel 2.jpg'),
+      },
+          {
+        id: 8,
+        title: 'AHCP ',
+        description: 'Aluminium Honeycomb Composite Panel',
+        image: require('./assets/product-page/Aluminium Honeycomb Composite Panel.jpg'),
       },
     ],
   },
 
-  // 5 - ACCP – Aluminium Corrugated Composite Panel
+  // 5 - ACCP – Aluminium Corrugated Composite Panel---------------------------
   {
     category: 'ACCP – Aluminium Corrugated Composite Panel',
     details: {
@@ -122,10 +140,16 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 6,
+        id: 9,
         title: 'ACCP',
         description: 'Aluminium Corrugated Composite Panel',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/ACP1.jpg'),
+      },
+          {
+        id: 10,
+        title: 'ACCP',
+        description: 'Aluminium Corrugated Composite Panel',
+        image: require('./assets/product-page/ACP2.jpg'),
       },
     ],
   },
@@ -147,10 +171,16 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 7,
+        id: 11,
         title: '3D Decorative Wall Panel',
         description: 'Stylish 3D panel for feature walls',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/3D 1 .jpg'),
+      },
+         {
+        id: 12,
+        title: '3D Decorative Wall Panel',
+        description: 'Stylish 3D panel for feature walls',
+        image: require('./assets/product-page/3D Decorative Wall Panel .jpg'),
       },
     ],
   },
@@ -172,10 +202,16 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 8,
+        id: 13,
         title: 'Louvers – Aluminium / WPC Louvers',
         description: 'Elegant shading solution for facades',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/Louvers – Aluminium   WPC Louvers   1.jpg'),
+      },
+        {
+        id: 14,
+        title: 'Louvers – Aluminium / WPC Louvers',
+        description: 'Elegant shading solution for facades',
+        image: require('./assets/product-page/Louvers – Aluminium  WPC Louvers  2.jpg'),
       },
     ],
   },
@@ -197,10 +233,16 @@ const ProductPageData = [
     },
     products: [
       {
-        id: 9,
+        id: 15,
         title: 'Premium Series Panels',
         description: 'Luxurious gloss finish for high-end designs',
-        image: require('./assets/Image2.png'),
+        image: require('./assets/product-page/Louvers – Aluminium   WPC Louvers   1.jpg'),
+      },
+        {
+        id: 16,
+        title: 'Premium Series Panels',
+        description: 'Luxurious gloss finish for high-end designs',
+        image: require('./assets/product-page/Louvers – Aluminium  WPC Louvers  2.jpg'),
       },
     ],
   },

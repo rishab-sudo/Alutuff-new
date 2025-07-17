@@ -25,18 +25,26 @@
   font-weight: bold;
   margin: 0;
 }
-
-.banner-subheading {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
 @media (max-width: 768px) {
   .banner-fluid-section {
-    height: 300px; 
+    height: 135px;
+    min-width: 100% !important; 
     background-size: contain; 
-    background-position: center;
+    background-position: cover !important;
     background-repeat: no-repeat;
     padding: 0 !important;
     margin: 0 !important;
+    margin-top: -5px !important;
   }
+  .banner-heading {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0;
+}
+.banner-text {
+  color: white;
+  max-width: 50%;
+  text-align: left;
+}
+
 }

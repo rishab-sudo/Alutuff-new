@@ -11,9 +11,12 @@ const Navbar = () => {
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+const toggleMenu = () => {
+  if (window.innerWidth < 992) {
+    setMenuOpen(prev => !prev);
+  }
+};
+
 
   return (
     <nav className="navbar">

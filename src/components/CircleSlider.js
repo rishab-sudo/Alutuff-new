@@ -54,7 +54,7 @@ const circlesData = [
 const CircleSlider = () => {
   const [hovered, setHovered] = useState(null);
 
- const settings = {
+const settings = {
   infinite: true,
   speed: 3000,
   slidesToShow: 7,
@@ -63,20 +63,29 @@ const CircleSlider = () => {
   autoplaySpeed: 0,
   cssEase: "linear",
   arrows: false,
-  pauseOnHover: true, 
+  pauseOnHover: true,
+  swipe: false,
+  touchMove: false,
+  draggable: false,
   responsive: [
     {
-      breakpoint: 992, // Tablets
+      breakpoint: 992,
       settings: {
         slidesToShow: 3,
         pauseOnHover: true,
+        swipe: false,
+        touchMove: false,
+        draggable: false,
       },
     },
     {
-      breakpoint: 768, // Mobile
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
         pauseOnHover: false,
+        swipe: false,
+        touchMove: false,
+        draggable: false,
       },
     },
     {
@@ -84,10 +93,14 @@ const CircleSlider = () => {
       settings: {
         slidesToShow: 2,
         pauseOnHover: false,
+        swipe: false,
+        touchMove: false,
+        draggable: false,
       },
     },
   ],
 };
+
 
 
   return (

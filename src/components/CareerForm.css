@@ -1,0 +1,53 @@
+.career-section {
+  background-color: #f8f9fa;
+  margin-top: 0%;
+  padding: 5% 0px;
+}
+.career-section .row {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.info-box h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+}
+
+/* === Increase input and file field height === */
+.career-section input[type="text"],
+.career-section input[type="email"],
+.career-section input[type="tel"],
+.career-section input[type="file"],
+.career-section select {
+  height: 45px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.career-form-button{
+  margin-top: 1.2rem;
+}
+/* === Responsive: Stack Info Boxes First on Mobile === */
+@media (max-width: 767.98px) {
+  .career-section .row {
+    flex-direction: column-reverse;
+  }
+.career-section .form-label {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #333;
+}
+}

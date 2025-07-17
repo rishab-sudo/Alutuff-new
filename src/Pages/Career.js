@@ -9,6 +9,7 @@ import  bannerImage from "../assets/banner-bg.jpeg"
 
 
 import "./Career.css"
+import CareerForm from '../components/CareerForm';
 
 const benefitsData = [
   {
@@ -237,7 +238,7 @@ const Career = () => {
     </section>
 
 
-
+<CareerForm/>
   
 
    </>

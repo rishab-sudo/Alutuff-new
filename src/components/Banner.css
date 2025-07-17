@@ -1,5 +1,5 @@
   .banner-fluid-section {
-    height: 500px; /* or less, adjust for your needs */
+    height: 350px; /* or less, adjust for your needs */
     background-size: cover; /* not 100% 100% */
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   .banner-fluid-section {
     height: 135px;
     min-width: 100% !important; 
-    background-size: contain; 
+    background-size: cover; 
     background-position: cover !important;
     background-repeat: no-repeat;
     padding: 0 !important;

@@ -54,7 +54,7 @@ const OverlappingCards = () => {
       </div>
       <div className="card card2" ref={el => cardsRef.current[1] = el}>
         <div className='overlap-card-content'>
-           <img  className='overlap-card-img' src={require("../assets/map.png")} alt=""/>
+           <img  className='overlap-card-img' src={require("../assets/WHY 2.jpg")} alt=""/>
            <div className='overlap-card-text'>
         <p className='overlap-cards-heading'> Alutuff ACP Panels — Made in India, Trusted Nationwide</p>
            <ul className='overlap-cards-text'>
@@ -67,7 +67,7 @@ const OverlappingCards = () => {
       </div>
       <div className="card card3" ref={el => cardsRef.current[2] = el}>
        <div className='overlap-card-content'>
-         <img  className='overlap-card-img' src={require("../assets/map.png")} alt=""/>
+         <img  className='overlap-card-img' src={require("../assets/WHY3.jpg")} alt=""/>
          <div className='overlap-card-text'>
         <p className='overlap-cards-heading'> Alutuff ACP Cross-Section: Unveiling Our Core Strength</p>
            <ul className='overlap-cards-text'>

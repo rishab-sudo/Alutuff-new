@@ -1,0 +1,84 @@
+/* Dealer General */
+.dealer-container-fluid {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.dealer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section One */
+.section-one {
+  background-color: #fff;
+  color: #000;
+}
+
+.dealer-image img {
+  max-width: 100%;
+  height: 80%;
+  border-radius: 8px;
+}
+
+.dealer-text {
+  padding: 20px 40px;
+  max-width: 600px;
+}
+
+.dealer-text h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Section Two */
+.section-two {
+  background-color: #fff;
+}
+.dealer-list {
+  list-style: none;       
+  padding-left: 0;        
+  margin: 0;            
+}
+.dealer-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dealer-box {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.dealer-box .icon {
+  margin-right: 8px;
+  color: #ea3138;
+}
+.dealer-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.tick-icon {
+  color: #ea3138; /* green tick */
+  margin-top: 4px; /* vertically align with text */
+  flex-shrink: 0;
+}
+
+
+.dealer-table table {
+  width: 100%;
+}
+
+.dealer-table .icon {
+  margin-right: 8px;
+  color: #ea3138;
+}

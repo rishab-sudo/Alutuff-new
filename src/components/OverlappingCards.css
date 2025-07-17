@@ -103,10 +103,12 @@ max-width: 90% !important;
   padding: 10px;
 }
 .overlap-card-img {
-  width: 100%;
+  
+  max-width: 100% !important;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 25px;
 }
 .overlap-card-text{
   width: 100%;

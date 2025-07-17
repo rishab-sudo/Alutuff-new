@@ -57,10 +57,12 @@
 }
 
 .image-section {
-  flex: 0 0 425px;
-  height: 650px;
+  flex: 0 0 500px;
+  height: 700px;
   position: sticky;
-  top: 8%;
+  top: 50px;
+  padding: 25px 0px !important;
+  top: 0px;
   align-self: flex-start;
 }
 

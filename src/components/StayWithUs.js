@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundImage from '../assets/img-2.jpeg'
+import BackgroundImage from '../assets/STRIP 2.jpg'
 import { Link } from 'react-router-dom'
 import "./StayWithUs.css"
 

@@ -70,7 +70,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .stay-with-section {
-height: 45vh;
+height: 42vh;
 }
   .stay-with-content h1 {
     font-size: 2rem;
@@ -80,11 +80,12 @@ height: 45vh;
     font-size: 1.5rem;
   }
 .stay-button-circle {
-margin-left: 50px !important;
+margin-left: auto !important;
 }
   .stay-with-content button {
-    padding: 10px 0px;
+    background-color: #ea3138;
+    padding: 11px 35px;
     font-size: 0.9rem;
-    min-width: 135px !important;
+    min-width: 100% !important;
   }
 }

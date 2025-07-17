@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import bannerImage from "../assets/banner-bg.jpeg";
+import bannerImage from '../assets/1400.jpg'
 import './Contact.css';
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 

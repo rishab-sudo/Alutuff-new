@@ -2,7 +2,7 @@ import React from 'react'
 import HomeProducts from '../components/HomeProducts'
 import { Container } from 'react-bootstrap'
 import Banner from '../components/Banner';
-    import  bannerImage from "../assets/banner-bg.jpeg"
+  import bannerImage from '../assets/1400.jpg'
 import QuoteBox from '../components/Quote';
 
 const Catalogues = () => {

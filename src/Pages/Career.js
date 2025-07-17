@@ -5,7 +5,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Slider from 'react-slick';
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
-import  bannerImage from "../assets/banner-bg.jpeg"
+import bannerImage from '../assets/1400.jpg'
 
 
 import "./Career.css"

@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../assets/banner-bg.jpeg";
+import bannerImage from '../assets/1400.jpg'
 import Banner from "../components/Banner";
 import "./TestReport.css";
 

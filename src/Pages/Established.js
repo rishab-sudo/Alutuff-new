@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import "./Established.css"
 import  PieChart  from '../components/PieChart'
-import bannerImage from "../assets/banner-bg.jpeg"
+import bannerImage from '../assets/1400.jpg'
 import Banner from '../components/Banner'
 import TestingSlider from '../components/TestingSlider'
 

@@ -19,10 +19,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 const stats = [
-  { id: 1, image: require('../assets/index2_count_icon1.png'), count: 5000, suffix: '+', label: 'Dealers' },
-  { id: 2, image: require('../assets/index2_count_icon1.png'), count: 25, suffix: '+', label: 'Countries Exported To' },
-  { id: 3, image: require('../assets/index2_count_icon1.png'), count: 500, suffix: '+', label: ' Projects Completed' },
-  { id: 4, image: require('../assets/index2_count_icon1.png'), count: 45, suffix: '+', label: ' Years Market Trust' },
+  { id: 1, image: require('../assets/handshake-1--unscreen.gif'), count: 5000, suffix: '+', label: 'Dealers' },
+  { id: 2, image: require('../assets/placeholder-unscreen.gif'), count: 25, suffix: '+', label: 'Countries Exported To' },
+  { id: 3, image: require('../assets/project-unscreen.gif'), count: 500, suffix: '+', label: ' Projects Completed' },
+  { id: 4, image: require('../assets/handshake-1--unscreen.gif'), count: 45, suffix: '+', label: ' Years Market Trust' },
 ];
 const aboutImage = [
   require("../assets/about us 01.png"),
@@ -238,7 +238,7 @@ const settings = {
         <div className="about-stats-wrapper">
           {stats.map(item => (
             <div key={item.id} className="about-stat-card">
-              <img src={item.image} alt={item.label} />
+              <img className='stats-icon' src={item.image} alt={item.label} />
    <h3>
                 <CountUp start={0} end={item.count} duration={2} separator=',' />
                 {item.suffix}

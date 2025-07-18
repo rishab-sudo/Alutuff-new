@@ -391,6 +391,13 @@ margin-left: -20px;
   font-size: 18px;
 
 }
+/*  */
+.stats-icon{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+/*  */
 /* -----------slider-Manufactiring-Unit----------------------------------- */
 .about-slider-container {
   width: 100%;

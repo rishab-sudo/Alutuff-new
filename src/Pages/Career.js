@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap'
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Slider from 'react-slick';
+import Testimonial from "../components/Testimonial"
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import bannerImage from '../assets/1400.jpg'
@@ -28,6 +29,39 @@ const benefitsData = [
     title: "Career Growth Opportunities",
     description: "We support internal promotions and long-term growth through mentorship and structured development paths."
   }
+];
+
+const testimonialsData = [
+  {
+    name: "Amit Sharma",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    review: "The product quality is top-notch. I've been using it for months now without any issues. Highly recommend!",
+  },
+  {
+    name: "Priya Mehta",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    review: "Excellent customer service and on-time delivery. A trustworthy brand with years of experience.",
+  },
+  {
+    name: "Ravi Kumar",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    review: "They offer unmatched quality in this segment. Will definitely come back for future projects.",
+  },
+  {
+    name: "Sneha Agarwal",
+    image: "https://randomuser.me/api/portraits/women/50.jpg",
+    review: "Amazing experience! The team was very cooperative and guided us at every step.",
+  },
+  {
+    name: "Vikas Jain",
+    image: "https://randomuser.me/api/portraits/men/40.jpg",
+    review: "Reliable and consistent. They have delivered on their promises every time we've worked with them.",
+  },
+  {
+    name: "Neha Kapoor",
+    image: "https://randomuser.me/api/portraits/women/47.jpg",
+    review: "Superb design and long-lasting build quality. I would recommend them to anyone looking for premium work.",
+  },
 ];
 
 const values = [
@@ -236,7 +270,8 @@ const Career = () => {
         </div>
       </div>
     </section>
-
+ 
+      <Testimonial testimonials={testimonialsData} />
 
 <CareerForm/>
   

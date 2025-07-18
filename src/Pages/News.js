@@ -31,7 +31,7 @@ const News = () => {
       <div className='w-100' >
               <Banner
                 image={bannerImage}
-                heading="News & Event "
+                heading="News & Events "
                 subheading="Welcome to our website"
               />
             </div>

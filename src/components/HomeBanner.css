@@ -3,7 +3,6 @@
   width: 100%;
   height: 90vh;
   overflow: hidden;
-
 }
 
 .slide {
@@ -19,19 +18,17 @@
 }
 
 .content-box {
-  margin-left: auto !important;
   position: absolute;
   bottom: 68px;
-  right: 0px;
+  right: 0;
   background-color: white;
   padding: 20px 30px;
   width: 45%;
-  border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.8s ease;
-  transition-delay: 0.5s; /* delay for 0.5 sec after image */
+  transition-delay: 0.5s;
 }
 
 .content-box.show-text {
@@ -43,7 +40,8 @@
   margin-bottom: 10px;
 }
 
-.content-box button {
+.content-box button,
+.mobile-content-box button {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: pink;
@@ -71,6 +69,12 @@
   border-radius: 5px;
 }
 
+/* Hide mobile content box by default */
+.mobile-content-box {
+  display: none;
+}
+
+/* Mobile responsive styles */
 @media (max-width: 768px) {
   .home-banner {
     height: 100%;
@@ -83,10 +87,27 @@
   }
 
   .content-box {
-    display: none;
+    display: none !important;
   }
 
-  .mobile-heading {
+   .mobile-heading {
+    display: none !important;  /* 🔴 HIDE OVERLAY ON SMALL SCREENS */
+  }
+
+  .mobile-content-box {
     display: block;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition-delay: 0.3s;
+  }
+
+  .mobile-content-box.show-text {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

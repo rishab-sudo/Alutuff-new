@@ -1,4 +1,4 @@
-import React,{useState}from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ const slides = [
     description: ' Decade of expertise with standards backed by global trust.',
     buttonText: 'Explore Now',
   },
-    {
+  {
     image: require('../assets/2.jpg'),
     heading: 'Made in India, Trusted Globally',
     description: ' Decade of expertise with standards backed by global trust.',
@@ -39,7 +39,7 @@ const HomeBanner = () => {
     <div className="home-banner">
       <Swiper
         modules={[Autoplay]}
-        autoplay={{ delay: 2000, disableOnInteraction: false, reverseDirection: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
         speed={800}
         slidesPerView={1}
@@ -48,15 +48,32 @@ const HomeBanner = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="slide">
-              <img src={slide.image} alt={`Slide ${index + 1}`} className="banner-image" />
+              <img
+                src={slide.image}
+                alt={`Slide ${index + 1}`}
+                className="banner-image"
+              />
+
+              {/* Mobile heading */}
               <div className="mobile-heading">
                 <h1>{slide.heading}</h1>
               </div>
+
+              {/* Desktop content box */}
               <div className={`content-box ${activeIndex === index ? 'show-text' : ''}`}>
                 <h2>{slide.heading}</h2>
                 <p>{slide.description}</p>
                 <Link to="/product">
-                <button className='pink-button'>{slide.buttonText}</button>
+                  <button className="pink-button">{slide.buttonText}</button>
+                </Link>
+              </div>
+
+              {/* Mobile content box */}
+              <div className={`mobile-content-box ${activeIndex === index ? 'show-text' : ''}`}>
+                <h2>{slide.heading}</h2>
+                <p>{slide.description}</p>
+                <Link to="/product">
+                  <button className="pink-button">{slide.buttonText}</button>
                 </Link>
               </div>
             </div>

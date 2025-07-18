@@ -49,13 +49,14 @@ const toggleMenu = () => {
           >
             <span className="dropdown-toggle">More</span>
             <ul className={`dropdown-menu ${moreDropdownOpen ? 'show' : ''}`}>
+                 <li><a href="/catalogues">Catalogues</a></li>
               <li><a href="/News">News & Events</a></li>
               <li><a href="/testReport">Test Reports</a></li>
               <li><a href="/certificates">Certificates</a></li>
             </ul>
           </li>
 
-          <li><a href="/catalogues">Catalogues</a></li>
+        
           <li><a href="/contact">Contact Us</a></li>
           {/* Desktop Become A Dealer Button */}
           <li>
@@ -105,6 +106,7 @@ const toggleMenu = () => {
             </span>
             {mobileMoreOpen && (
               <ul className="side-dropdown-menu">
+               
                 <li><a href="/news" onClick={toggleMenu}>News & Event</a></li>
                 <li><a href="/testReport" onClick={toggleMenu}>Test Reports</a></li>
                 <li><a href="/certificates" onClick={toggleMenu}>Certificates</a></li>

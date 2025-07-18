@@ -1,5 +1,4 @@
 .quote-section {
-  background-image: require("../"); /* Your background image */
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -8,6 +7,17 @@
   align-items: center;
   padding: 40px 20px;
 }
+.stay-with-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+  z-index: 1;
+}
+
 
 .quote-box {
   padding: 5% 25px !important;

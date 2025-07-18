@@ -1,7 +1,7 @@
   .banner-fluid-section {
     height: 360px; /* or less, adjust for your needs */
     background-size: cover; /* not 100% 100% */
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     padding: 0 !important;
     margin: 0 !important;

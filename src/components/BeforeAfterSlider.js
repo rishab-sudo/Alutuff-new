@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./BeforeAfterSlider.css";
-
-import  afterImage from "../assets/before.jpeg";
-import beforeImage from "../assets/after.jpg";
+import  afterImage from "../assets/before2 (2).jpg";
+import beforeImage from "../assets/after2.jpg";
 import { Container } from "react-bootstrap";
 
 const BeforeAfterSlider = () => {

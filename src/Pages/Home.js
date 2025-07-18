@@ -22,7 +22,7 @@ function Home() {
     {/* <WhyDifferent/> */}
       {/* <SlidingImage/> */}
    <OverlappingCards/>
-   <Separate/>
+   {/* <Separate/> */}
    <BeforeAfterSlider/>
    <StickySection/>
    <FaqSection/>

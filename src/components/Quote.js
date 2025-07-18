@@ -8,7 +8,7 @@ const QuoteBox = () => {
   <div
   className="quote-section"
   style={{
-    backgroundImage: `url(${require('../assets/banner-bg.jpeg')})`,
+    backgroundImage: `url(${require('../assets/Strip-2.jpg')})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     minHeight: '45vh',

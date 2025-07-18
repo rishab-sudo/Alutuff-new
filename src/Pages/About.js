@@ -19,10 +19,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 const stats = [
-  { id: 1, image: require('../assets/handshake-1--unscreen.gif'), count: 5000, suffix: '+', label: 'Dealers' },
-  { id: 2, image: require('../assets/placeholder-unscreen.gif'), count: 25, suffix: '+', label: 'Countries Exported To' },
-  { id: 3, image: require('../assets/project-unscreen.gif'), count: 500, suffix: '+', label: ' Projects Completed' },
-  { id: 4, image: require('../assets/handshake-1--unscreen.gif'), count: 45, suffix: '+', label: ' Years Market Trust' },
+  { id: 1, image: require('../assets/s-handshake-1--unscreen.gif'), count: 5000, suffix: '+', label: 'Dealers' },
+  { id: 2, image: require('../assets/s-placeholder-unscreen.gif'), count: 25, suffix: '+', label: 'Countries Exported To' },
+  { id: 3, image: require('../assets/s-project-unscreen.gif'), count: 500, suffix: '+', label: ' Projects Completed' },
+  { id: 4, image: require('../assets/s-handshake-1--unscreen.gif'), count: 45, suffix: '+', label: ' Years Market Trust' },
 ];
 const aboutImage = [
   require("../assets/about us 01.png"),

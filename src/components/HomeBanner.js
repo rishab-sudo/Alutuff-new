@@ -13,19 +13,25 @@ const slides = [
     buttonText: 'Explore Now',
   },
   {
-    image: require('../assets/3.jpg'),
+    image: require('../assets/h1.jpg'),
     heading: 'Styled for Safety',
     description: ' Fire-retardant, weatherproof panels with a high-end finish.',
     buttonText: 'Explore Now',
   },
   {
-    image: require('../assets/4.jpg'),
+    image: require('../assets/h2.png'),
     heading: 'Made in India, Trusted Globally',
     description: ' Decade of expertise with standards backed by global trust.',
     buttonText: 'Explore Now',
   },
   {
-    image: require('../assets/2.jpg'),
+    image: require('../assets/h3.png'),
+    heading: 'Made in India, Trusted Globally',
+    description: ' Decade of expertise with standards backed by global trust.',
+    buttonText: 'Explore Now',
+  },
+    {
+    image: require('../assets/h4.jpg'),
     heading: 'Made in India, Trusted Globally',
     description: ' Decade of expertise with standards backed by global trust.',
     buttonText: 'Explore Now',

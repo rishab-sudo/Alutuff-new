@@ -34,8 +34,7 @@
     background-size: cover; 
     background-position: cover !important;
     background-repeat: no-repeat;
-   
-    margin: 0 !important;
+   margin: 0 !important;
   
   }
   .banner-heading {
@@ -45,7 +44,7 @@
 }
 .banner-text {
   color: white;
-  max-width: 50%;
+  max-width: 80%;
   text-align: left;
 }
 

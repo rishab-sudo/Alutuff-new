@@ -50,15 +50,18 @@ color: #ffffff;
 .dropdown {
   position: relative;
 }
+
+
 .dropdown-toggle::after {
- 
-  display: inline-block;
+ display: inline-block;
   font-size: 22px;
   margin-left: 5px;
   position: relative;
   top: 2px; /* this moves the arrow a bit lower */
 }
-
+.dropdown :hover{
+  color: #ea3138 !important;
+}
 
 .dropdown-menu {
   display: none;
@@ -72,6 +75,7 @@ color: #ffffff;
   min-width: 150px;
   z-index: 1000;
 }
+
 
 .dropdown:hover .dropdown-menu,
 .dropdown-menu.show {
@@ -95,7 +99,7 @@ color: #ffffff;
 }
 /* Dealer Button - Desktop Only */
 .dealer-btn {
-  background-color: gray;
+  background-color: rgba(211, 211, 211, 0.548);
   color: white;
   padding: 10px 8px;
   font-size: 16px;
@@ -107,8 +111,8 @@ color: #ffffff;
 }
 
 .dealer-btn:hover {
-  background-color: #ea3138;
-  color: #fff;
+  /* background-color: #ea3138; */
+  color: #ea3138;
 }
 
 

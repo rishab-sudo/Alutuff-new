@@ -9,7 +9,7 @@ const StayWithUs = () => {
       <div className="stay-with-content">
        
         <h1>Step Into Quality, Step Into Success</h1>
-        <Link to="/contact">
+        <Link to="/dealer">
           <button className='stay-button'>
 Become a Dealer
   <span className="stay-button-circle">

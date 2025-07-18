@@ -111,21 +111,23 @@ const ProductPage = () => {
             {/* Grid View for All */}
             {selectedCategory === "All" && (
               <div className="product-grid">
-                {productsToShow.map((product) => (
-                  <div
-                    className="product-card"
-                    key={`${product.category}-${product.id}`}
-                    onClick={() => {
-                      setSelectedCategory(product.category);
-                      setCurrentImageIndex(0);
-                    }}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img src={product.image} alt={product.title} />
-                    <h4>{product.title}</h4>
-                    <p>{product.description}</p>
-                  </div>
-                ))}
+               {productsToShow.map((product) => (
+  <div
+    className="product-card"
+    key={`${product.category}-${product.id}`}
+    onClick={() => {
+      setSelectedCategory(product.category);
+      setCurrentImageIndex(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to top
+    }}
+    style={{ cursor: "pointer" }}
+  >
+    <img src={product.image} alt={product.title} />
+    <h4>{product.title}</h4>
+    <p>{product.description}</p>
+  </div>
+))}
+
               </div>
             )}
 

@@ -38,9 +38,9 @@ const toggleMenu = () => {
             </ul>
           </li>
 
-          <li><a href="/product">Product</a></li>
+          <li><a href="/product">Products</a></li>
           <li><a href="/projects" onClick={toggleMenu}>Projects</a></li>
-          <li><a href="/career" onClick={toggleMenu}>Career</a></li>
+          <li><a href="/career" onClick={toggleMenu}>Careers</a></li>
 
           <li
             className="dropdown"
@@ -56,7 +56,7 @@ const toggleMenu = () => {
           </li>
 
           <li><a href="/catalogues">Catalogues</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
 
         <div className="hamburger" onClick={toggleMenu}>
@@ -88,7 +88,7 @@ const toggleMenu = () => {
             )}
           </li>
 
-          <li><a href="/product" onClick={toggleMenu}>Product</a></li>
+          <li><a href="/product" onClick={toggleMenu}>Products</a></li>
           <li><a href="/projects" onClick={toggleMenu}>Projects</a></li>
                     <li><a href="/career" onClick={toggleMenu}>Career</a></li>
           {/* Mobile More Dropdown */}
@@ -109,7 +109,7 @@ const toggleMenu = () => {
           </li>
 
           <li><a href="/catalogues" onClick={toggleMenu}>Catalogues</a></li>
-          <li><a href="/contact" onClick={toggleMenu}>Contact</a></li>
+          <li><a href="/contact" onClick={toggleMenu}>Contact Us</a></li>
         </ul>
       </div>
     </nav>

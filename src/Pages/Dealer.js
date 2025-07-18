@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import ContactForm from "../components/ContactForm"
 import './Dealer.css';
-
+import Banner from '../components/Banner';
+import bannerImage from '../assets/1400.jpg'
 import { FaWarehouse, FaNetworkWired, FaIndustry, FaMoneyCheckAlt, FaHandshake, } from 'react-icons/fa';
 import {   FaCheckCircle } from 'react-icons/fa';
 
@@ -11,17 +13,13 @@ const DealerPage = () => {
   return (
     <>
       {/* Section 1: Image Left, Text Right */}
-      <Container fluid className="dealer-container-fluid section-one">
-        <Container className="dealer-inner d-flex flex-column flex-lg-row align-items-center justify-content-between">
-          <div className="dealer-image">
-            <img src={dealerImage} alt="Dealer" />
-          </div>
-          <div className="dealer-text">
-            <h2>Become an Authorized Dealer</h2>
-            <p>Join our growing network and enjoy exclusive benefits, premium products, and full business support. We are looking for partners who share our commitment to quality and customer service.</p>
-          </div>
-        </Container>
-      </Container>
+    <div className='w-100' >
+          <Banner
+            image={bannerImage}
+            heading="Become A Dealer "
+            subheading="Welcome to our website"
+          />
+        </div>
 
       {/* Section 2: Info Boxes and Table */}
       <Container fluid className="dealer-container-fluid section-two">
@@ -91,6 +89,10 @@ const DealerPage = () => {
           </div>
         </Container>
       </Container>
+
+  <ContactForm variant="pageEnd" />
+
+
     </>
   );
 };

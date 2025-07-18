@@ -57,6 +57,10 @@ const toggleMenu = () => {
 
           <li><a href="/catalogues">Catalogues</a></li>
           <li><a href="/contact">Contact Us</a></li>
+          {/* Desktop Become A Dealer Button */}
+          <li>
+<a href="/dealer" className="dealer-btn desktop-only">Become A Dealer</a>
+</li>
         </ul>
 
         <div className="hamburger" onClick={toggleMenu}>
@@ -110,6 +114,9 @@ const toggleMenu = () => {
 
           <li><a href="/catalogues" onClick={toggleMenu}>Catalogues</a></li>
           <li><a href="/contact" onClick={toggleMenu}>Contact Us</a></li>
+          {/* Mobile Become A Dealer Link */}
+<li><a href="/dealer" onClick={toggleMenu}>Become A Dealer</a></li>
+
         </ul>
       </div>
     </nav>

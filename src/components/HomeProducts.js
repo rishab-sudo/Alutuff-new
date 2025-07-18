@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import productData from "../productData";
 import './HomeProducts.css';
 
@@ -113,11 +114,13 @@ const handleToggleRow = () => {
   {filteredProducts.map(product => (
     <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
       <img src={product.image} alt={product.title} />
-      <div className="overlay">
-        <h4>{product.title}</h4>
-        <p>{product.description}</p>
-        <p>{product.text}</p>
-      </div>
+     <div className="overlay">
+  <div className="eye-icon">👁️</div> {/* Eye icon in top-right */}
+  <h4>{product.title}</h4>
+  <p className='text-white'>{product.description}</p>
+  <p className='text-white'>{product.text}</p>
+</div>
+
     </div>
   ))}
 </div>
@@ -141,10 +144,14 @@ const handleToggleRow = () => {
    
 
       {selectedImage && (
-        <div className="image-popup" onClick={() => setSelectedImage(null)}>
-          <img src={selectedImage} alt="Full View" />
-        </div>
-      )}
+  <div className="image-popup" onClick={() => setSelectedImage(null)}>
+    <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+      <button className="close-button" onClick={() => setSelectedImage(null)}>×</button>
+      <img src={selectedImage} alt="Full View" />
+    </div>
+  </div>
+)}
+
     </div>
   );
 }

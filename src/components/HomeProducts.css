@@ -120,24 +120,44 @@ height: 100%;
   margin: 0;
 }
 .image-popup {
-  padding: 0px !important;
-  position: fixed; /* Make it float above everything */
-  top: 80px;
+  position: fixed;
+  top: 50px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Make sure it's on top */
+  z-index: 99;
 }
 
-.image-popup img {
-  max-width: 75% !important;
-  max-height: 75% !important;
-  object-fit: contain;
-  border-radius: 10px;
+.popup-content {
+  position: relative;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+.close-button {
+  position: absolute;
+  top: -25px;
+  right: -35px;
+  font-size: 45px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10000;
+}
+
+.close-button:hover {
+  text-decoration: none !important;
+  color: #ffdddd;
+  background-color: transparent !important; /* ✅ correct value */
 }
 
 .overlay {
@@ -160,6 +180,22 @@ height: 100%;
 
 .product-card:hover .overlay {
   left: 0;
+}
+.eye-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 22px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+
+/* Show and animate eye icon on hover */
+.product-card:hover .eye-icon {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .view-more {
@@ -216,6 +252,17 @@ height: 100%;
 }
 
 @media (max-width: 768px) {
+    .close-button {
+    top: 0px;
+    right: 8px;
+    font-size: 35px;
+    padding: 0px 10px;
+  }
+  .popup-content img {
+  max-width: 95%;
+  max-height: 100%;
+  border-radius: 8px;
+}
   .homeproduct-section {
     padding: 50px 10px;
   }

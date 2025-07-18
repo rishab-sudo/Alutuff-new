@@ -29,6 +29,9 @@
   padding: 0;
   margin: 0;
 }
+.animate-clip {
+  transition: clip-path 0.5s ease-in-out;
+}
 
 .slider-top {
   position: absolute;
@@ -63,8 +66,10 @@
 
 @media (max-width: 768px) {
   .slider-container {
+    padding: 0 11px !important;
+    margin: 0 !important;
     max-width: 98%;
-    height: 300px; /* Smaller height for mobile */
+   height: 225px; /* Smaller height for mobile */
   }
   .slider-image {
     width: 100%;

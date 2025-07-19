@@ -8,19 +8,29 @@ export default function HomeProducts() {
   const [visibleRowCount, setVisibleRowCount] = useState(2);
   const [rowAnimations, setRowAnimations] = useState({});
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 🔥 Match CSS media query
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // 🔥 Match CSS media query
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 991); // 🔥 Include tablets
+
   const rowContainerRef = useRef(null); // 👈 Add at top near useState
 
 const [mobileScrollIndex, setMobileScrollIndex] = useState(0); //
 
   // 🔄 Update isMobile when window resizes
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 768);
+  //   };
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 991); // 🔥 Include tablets
+  };
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   const categories = ['Wooden Prime', 'Marble & Stone', 'Sand Series', 'Rustic Series', 'Bold & Solid', 'Partitions'];
 

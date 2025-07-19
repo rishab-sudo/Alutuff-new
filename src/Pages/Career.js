@@ -1,16 +1,44 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap'
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaCheckCircle } from "react-icons/fa";
 import Slider from 'react-slick';
 import Testimonial from "../components/Testimonial"
 import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import bannerImage from '../assets/1400.jpg'
-
-
-import "./Career.css"
 import CareerForm from '../components/CareerForm';
+import "./Career.css"
+
+const boxData = [
+  {
+    title: "Limitless Growth Opportunities.",
+    description: "Learn, lead, and grow in a high-impact environment.",
+  },
+  {
+    title: "Culture of Innovation.",
+    description: "Your ideas drive transformation.",
+  },
+  {
+    title: "Supportive Leadership.",
+    description: "Be mentored by leaders who empower and inspire.",
+  },
+  {
+    title: "Ownership and Impact.",
+    description: "Take charge, drive results, and shape your journey.",
+  },
+  {
+    title:
+      "Work-Life Integration at Alutuff.",
+    description:
+      "At Alutuff, we understand the importance of a healthy work-life balance. Our flexible policies and supportive culture help employees harmonize their personal and professional lives. We foster an environment where well-being and productivity go hand in hand.",
+  },
+  {
+    title: "Reward and Recognition.",
+    description:
+      "We believe in celebrating excellence. Alutuff's reward and recognition programs are designed to appreciate the efforts of our people, motivating them to reach new heights. Every achievement, big or small, is valued and acknowledged.",
+  },
+];
 
 const benefitsData = [
   {
@@ -114,6 +142,11 @@ const values = [
 ];
 
 const Career = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleBox = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
       const settings = {
     infinite: true,
     speed: 5000,
@@ -270,10 +303,44 @@ const Career = () => {
         </div>
       </div>
     </section>
+
+        <div className="whywork-section">
+      <div className="text-center">
+        <h2 className="page-heading">Why Work With Alutuff?</h2>
+      </div>
+      <p className="whywork-description">
+        At Alutuff, we don't just offer jobs — we build careers with purpose and passion.
+        As a dynamic, fast-growing organization, here's what you can expect:
+      </p>
+
+ <div className="whywork-grid">
+        {boxData.map((item, index) => (
+          <div className="info-box" key={index}>
+            <div className="info-box-header" onClick={() => toggleBox(index)}>
+              <div className="header-content">
+                <FaCheckCircle className="icon" />
+                <span className="header-text">{item.title}</span>
+              </div>
+              <div className="right-icon">
+                {openIndex === index ? (
+                  <FaChevronUp className="dropdown-icon" />
+                ) : (
+                  <FaChevronDown className="dropdown-icon" />
+                )}
+              </div>
+            </div>
+
+            {openIndex === index && (
+              <div className="info-box-description">{item.description}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
  
       <Testimonial testimonials={testimonialsData} />
 
-<CareerForm/>
+<CareerForm className="mt-3"/>
   
 
    </>

@@ -216,6 +216,88 @@ flex-wrap: wrap;
   display: inline-block;
   margin-bottom: 15px;
 }
+/* why-boxes */
+.whywork-section {
+  margin-top: 2.5%;
+  width: 100%;
+  padding: 2.5% 20px;
+  background-color: #f9f9f9;
+}
+
+.whywork-box {
+  width: 80%;
+  margin: 0 auto 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+}
+
+.whywork-box h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+
+.whywork-description {
+  width: 80%;
+  margin: auto;
+  margin-top: -2%;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+
+}
+
+.whywork-grid {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 35px !important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.info-box {
+  margin: auto;
+  width: 75%;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.info-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info-box-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-box-header .icon {
+  color: red;
+  margin-right: 11px !important;
+}
+
+.info-box-header .dropdown-icon {
+  color: red;
+}
+
+.info-box-description {
+  margin-top: 10px;
+    margin-left: 20px !important;
+  color: #333;
+  transition: max-height 0.4s ease-in-out;
+}
+
+
 
 
 /* Responsive */
@@ -276,5 +358,30 @@ min-width: 100% !important;
 .values-career-card {
   min-width: 80%;
 
+}
+/* why-box-css */
+.whywork-description {
+  width: 100%;
+  margin-top: -2% !important;
+  margin: auto ;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+}
+
+.whywork-grid {
+  width: 100%;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Always 2 per row */
+  gap: 20px;
+}
+.info-box {
+  margin: auto;
+  width: 95%;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 }

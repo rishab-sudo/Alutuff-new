@@ -41,12 +41,13 @@ width: 100%;
 }
 }
 
-@media screen and (max-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   .testing-section{
     padding: 0px;
   }
   .testing-content-div{
     padding: 0px;
+    width: 100%;
   }
    .testing-slider-wrapper {
      margin: 0 !important;
@@ -54,7 +55,8 @@ min-width: 100% !important;
 margin: auto !important;
 }
 .testing-slide-image {
-  max-width: 65%;
+  margin: auto !important;
+  width: 70%;
   height: auto;
   object-fit: contain;
   display: block;

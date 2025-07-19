@@ -175,7 +175,7 @@ const Career = () => {
   <div className='w-100' >
           <Banner
             image={bannerImage}
-            heading="Career At Alutuff "
+            heading="Careers At Alutuff "
             subheading="Welcome to our website"
           />
         </div>

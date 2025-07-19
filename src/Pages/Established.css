@@ -174,4 +174,10 @@ height: 100%;
   .business-unit-card {
     width: 95%;
   }
+    .business-entity-wrapper {
+    width: 100% !important;
+  }
+  .business-unit-card{
+width: 100% !important;
+  }
 }

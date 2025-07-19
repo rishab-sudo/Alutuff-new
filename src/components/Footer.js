@@ -31,6 +31,7 @@ const Footer = () => {
   </div>
 
   {/* Quick Links */}
+  
   <div className="footer-column-wrapper">
     <div className="footer-column">
       <div className='col-text-div'>

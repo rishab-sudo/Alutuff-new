@@ -235,7 +235,7 @@ height: 100%;
 } */
 
 /* === Responsive === */
-/* @media (max-width: 991px) {
+@media (max-width: 991px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -249,7 +249,7 @@ height: 100%;
   .product-cards {
     grid-template-columns: repeat(2, 1fr);
   }
-} */
+}
 
 @media (max-width: 768px) {
     .close-button {
@@ -320,32 +320,4 @@ height: 100%;
     margin-top: 20px;
   }
 }
-
-/* Old - max-width: 768px */
-/* Updated to show mobile-slider on tablet too */
-/* Tablet styles for mobile-slider */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-    .homeproduct-section {
-    min-height: 100%!important;
-    padding: 50px 10px;
-  }
-
-  .product-cards {
-    display: none;
-  }
-
-  .mobile-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 15px;
-    padding-bottom: 10px;
-    margin-top: 2rem;
-  }
-
-   .product-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 

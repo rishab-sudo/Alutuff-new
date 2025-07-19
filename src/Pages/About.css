@@ -560,18 +560,29 @@ height: 100% !important;
 }
 }
 
-@media (max-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
   .about-us-text-div{
     text-align: justify;
 
   }
+  .glance-image {
+  position: relative;
+  z-index: 2; /* Bring image above lines */
+}
+
+.glance-image img {
+  min-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+}
     .point-box{
   margin: auto;
 width: 90%;
   }
   .about-slide-image-wrapper img {
  height: 100%;
-  max-width: 90% !important;
+  width: 90% !important;
   object-fit: cover;
 }
   .zigzag-card{

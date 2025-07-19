@@ -95,7 +95,7 @@ const toggleMenu = () => {
 
           <li><a href="/product" onClick={toggleMenu}>Products</a></li>
           <li><a href="/projects" onClick={toggleMenu}>Projects</a></li>
-                    <li><a href="/career" onClick={toggleMenu}>Career</a></li>
+                    <li><a href="/career" onClick={toggleMenu}>Careers</a></li>
           {/* Mobile More Dropdown */}
           <li className="side-dropdown">
             <span
@@ -106,15 +106,15 @@ const toggleMenu = () => {
             </span>
             {mobileMoreOpen && (
               <ul className="side-dropdown-menu">
-               
-                <li><a href="/news" onClick={toggleMenu}>News & Event</a></li>
+               <li><a href="/catalogues" onClick={toggleMenu}>Catalogues</a></li>
+                <li><a href="/news" onClick={toggleMenu}>News & Events</a></li>
                 <li><a href="/testReport" onClick={toggleMenu}>Test Reports</a></li>
                 <li><a href="/certificates" onClick={toggleMenu}>Certificates</a></li>
               </ul>
             )}
           </li>
 
-          <li><a href="/catalogues" onClick={toggleMenu}>Catalogues</a></li>
+          
           <li><a href="/contact" onClick={toggleMenu}>Contact Us</a></li>
           {/* Mobile Become A Dealer Link */}
 <li><a href="/dealer" onClick={toggleMenu}>Become A Dealer</a></li>

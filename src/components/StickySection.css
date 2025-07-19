@@ -111,3 +111,33 @@
     color: #ffffff !important;
   }
 }
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .sticky-scroll-wrapper {
+    display: none; /* Hide the sticky section on mobile */
+  }
+
+  .mobile-scroll-wrapper {
+    margin-top: 0%;
+    display: block; /* Show the mobile layout */
+    padding: 0px 15px;
+    background-color: black;
+    color: #fff !important;
+    }
+
+  .mobile-item {
+    margin-bottom: 40px;
+      color: #fff !important;
+  }
+
+  .mobile-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .mobile-item p {
+    font-size: 18px;
+    color: #ffffff !important;
+  }
+}

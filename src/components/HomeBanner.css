@@ -111,3 +111,33 @@
     transform: translateY(0px);
   }
 }
+
+/* Tablet and iPad: Keep showing mobile layout */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .home-banner {
+height: 100% !important;
+}
+.mobile-content-box {
+  display: block;
+  margin-left: auto !important;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s;
+}
+
+/* Trigger animation with this class */
+.mobile-content-box.show-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  .content-box {
+    display: none;
+  }
+}
+
+

@@ -58,6 +58,27 @@ gap: 35px;
 }
 }
 
-@media screen and (max-width: 768px) {
-    
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .home-about-content-div {
+flex-direction: column;
+justify-content: center;
+width: 100%;
+gap: 35px;
+}
+.home-about-text-div{
+    min-width: 100%;
+    text-align: justify !important;
+}
+.home-about-img1-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-about-img1{
+    min-width: 100%;
+    margin-left: auto;
+    height: auto;
+    background-color: #000;
+}
 }

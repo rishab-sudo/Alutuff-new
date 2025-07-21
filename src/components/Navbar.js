@@ -117,7 +117,7 @@ const toggleMenu = () => {
           
           <li><a href="/contact" onClick={toggleMenu}>Contact Us</a></li>
           {/* Mobile Become A Dealer Link */}
-<li><a href="/dealer" onClick={toggleMenu}>Become A Dealer</a></li>
+<li><a href="/dealer" onClick={toggleMenu}>Become A Dealer</a> </li>
 
         </ul>
       </div>

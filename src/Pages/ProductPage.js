@@ -122,7 +122,7 @@ const ProductPage = () => {
     }}
     style={{ cursor: "pointer" }}
   >
-    <img src={product.image} alt={product.title} />
+    <img className='product-img' src={product.image} alt={product.title} />
     <h4>{product.title}</h4>
     <p>{product.description}</p>
   </div>

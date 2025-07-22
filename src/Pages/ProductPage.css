@@ -377,13 +377,13 @@ min-width: 95% !important;
 .product-detail-image{
   width: 100% !important;
   /* background-color: aqua; */
-
-}
-.product-img{
-  min-width: 100% !important;
+  background-color: #222;
 }
 .slider-image{
+  padding: 0 !important;
+  margin: 0 !important;
   min-width: 100% !important;
+  background-color: aliceblue;
 }
 .image-slider-overlay{
   width: 100% !important;

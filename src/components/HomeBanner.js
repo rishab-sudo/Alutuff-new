@@ -7,21 +7,21 @@ import './HomeBanner.css';
 
 const slides = [
   {
-    image: require('../assets/1.jpg'),
+    image: require('../assets/h1.jpg'),
     heading: 'India’s Leading ACP',
     description: ' Trusted for premium aluminium panels across India’s skyline.',
     buttonText: 'Explore Now',
   },
-  {
-    image: require('../assets/h1.jpg'),
-    heading: 'Styled for Safety',
-    description: ' Fire-retardant, weatherproof panels with a high-end finish.',
-    buttonText: 'Explore Now',
-  },
+  // {
+  //   image: require('../assets/h1.jpg'),
+  //   heading: 'Styled for Safety',
+  //   description: ' Fire-retardant, weatherproof panels with a high-end finish.',
+  //   buttonText: 'Explore Now',
+  // },
   {
     image: require('../assets/h2.png'),
-    heading: 'Made in India, Trusted Globally',
-    description: ' Decade of expertise with standards backed by global trust.',
+    heading: 'Where Design Meets Durability  ',
+    description: ' Alutuff ACP panels, crafted to elevate facades with strength, style, and long-lasting performance..',
     buttonText: 'Explore Now',
   },
   {
@@ -30,10 +30,10 @@ const slides = [
     description: ' Decade of expertise with standards backed by global trust.',
     buttonText: 'Explore Now',
   },
-    {
+  {
     image: require('../assets/h4.jpg'),
-    heading: 'Made in India, Trusted Globally',
-    description: ' Decade of expertise with standards backed by global trust.',
+    heading: 'Styled for Safety',
+    description: ' Fire-retardant, weatherproof panels with a high-end finish.',
     buttonText: 'Explore Now',
   },
 ];

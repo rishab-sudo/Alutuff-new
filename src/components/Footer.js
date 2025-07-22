@@ -38,8 +38,8 @@ const Footer = () => {
                     <a href="/home">Home</a>
                     <a href="/about">About Us</a>
                     <a href="/product">Products</a>
-                    <a href="/career">Career</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/career">Careers</a>
+                    <a href="/contact">Contact Us</a>
                     <a href="/dealer">Become a Dealer</a>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
 
       <div className='copyright-div'>
-        Copyright © 2022 <span style={{ color: "#ea3138" }}>Alutuff</span>. All Right Reserved.
+        Copyright © 2025 <span style={{ color: "#ea3138" }}>Alutuff</span>. All Right Reserved.
       </div>
     </Container>
   );

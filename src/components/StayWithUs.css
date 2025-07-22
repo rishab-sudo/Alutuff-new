@@ -31,7 +31,7 @@
   margin-top: 2rem;
   position: relative; /* To position the circle inside */
   padding: 10px 40px 10px 20px; /* Extra right padding for the circle */
-  background-color: #fff;
+  background-color: #fff !important;
   color: #000;
   border: none;
   border-radius: 30px;

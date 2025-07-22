@@ -363,8 +363,7 @@ width: 100% !important;
   }
   .product-img{
     width: 100% !important;
-    height: 250px !important;
-     object-fit: contain;
+    height: 350px !important;
   }
   /*  */
   .product-detail-info {

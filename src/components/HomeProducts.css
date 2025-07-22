@@ -137,8 +137,8 @@ height: 100%;
 }
 
 .popup-content img {
-  max-width: 75%;
-  max-height: 65%;
+  max-width: 50%;
+  max-height: 50%;
   border-radius: 8px;
 }
 .close-button {

@@ -29,7 +29,7 @@ const Established = () => {
      <div className='w-100' >
           <Banner
             image={bannerImage}
-            heading="ESTABLISHED EXELLENCE "
+            heading="Established Exellence"
             subheading="Welcome to our website"
           />
         </div>

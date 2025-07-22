@@ -45,7 +45,7 @@ const Testimonial = ({ testimonials = [], heading = "Read Reviews, Build with Co
   return (
     <Container fluid className='testimonial-section'>
       <div className='d-flex justify-content-center align-items-center mb-5'>
-        <p className='page-heading'>Decades of Quality, Trusted Across Industries</p>
+        <p className='page-heading'>Culture, Growth, and Impact: In Their Words</p>
       </div>
       <div className="testimonial-content-section">
         <div className="testimonial-left">

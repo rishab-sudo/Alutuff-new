@@ -160,7 +160,8 @@
 }
 
 .glance-image img {
-  width: 95%;
+  margin: auto !important;
+  width: 90%;
   height: 500px;
   border-radius: 10px;
   display: block;

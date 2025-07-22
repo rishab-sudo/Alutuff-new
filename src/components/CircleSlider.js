@@ -9,44 +9,44 @@ const circlesData = [
     id: 1,
     icon: require('../assets/core-icons/continuity (1).png'),
     title: "Consistency & Quality",
-     description: "We deliver consistent and high-quality products and services."
+     description: "      Every panel, every time, built to global standards.    "
 
   },
   {
     id: 2,
     icon: require('../assets/core-icons/idea (1).png'),
     title: "Customer First, Always",
-     description: "We deliver consistent and high-quality products and services."
+     description: "    Your satisfaction is our starting point and ultimate goal.  "
   },
   {
     id: 3,
     icon: require('../assets/core-icons/promise (1).png'),
     title: "Innovation with Purpose",
-    description: "We deliver consistent and high-quality products and services."
+    description: "     We lead with ideas that elevate design and durability.   "
   },
   {
     id: 4,
     icon: require('../assets/core-icons/respect-core (1).png'),
     title: "Respect for People",
-    description: "We deliver consistent and high-quality products and services."
+    description: "    Every relationship is rooted in respect and shared success.    "
   },
   {
     id: 5,
     icon: require('../assets/core-icons/social-responsibility (1).png'),
     title: "Responsibility to Society",
-     description: "We deliver consistent and high-quality products and services."
+     description: "     We grow with care, for people, planet, and progress  "
   },
     {
     id: 6,
     icon: require('../assets/core-icons/technical-service (1).png'),
     title: "Service Is Our Strength",
-     description: "We deliver consistent and high-quality products and services."
+     description: "     More than products, we deliver complete, dependable support.   "
   },
     {
     id: 7,
     icon: require('../assets/core-icons/trustworthiness (1).png'),
-    title: "Transarency & Trust",
-     description: "We deliver consistent and high-quality products and services."
+    title: "Transparency & Trust",
+     description: "   We build trust through honesty, clarity, and action. "
   },
 ];
 

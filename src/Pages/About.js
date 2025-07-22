@@ -32,15 +32,26 @@ const About = () => {
     const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
+  const [counterKey, setCounterKey] = useState(0);
+
 
 const [ref, inView] = useInView({
-  threshold: 0.3, // triggers when 30% visible
+  threshold: 0.2, // triggers when 30% visible
   triggerOnce: true, // only once
 });
 const [zigzagRef, zigzagInView] = useInView({
   threshold: 0.2,
   triggerOnce: true,
 });
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCounterKey(prevKey => prevKey + 1); // re-triggers CountUp
+  }, 5000); // every 2 seconds
+
+  return () => clearInterval(interval);
+}, []);
+
   const images = [
     require('../assets/manu-unit/manu-1.jpg'),
   require('../assets/manu-unit/manu-2.jpg'),
@@ -236,7 +247,7 @@ const settings = {
       <div className="about-banner-overlay"></div> {/* Black Overlay */}
       <Container className="about-banner-content">
         <div className="about-stats-wrapper">
-          {stats.map(item => (
+          {/* {stats.map(item => (
             <div key={item.id} className="about-stat-card">
               <img className='stats-icon' src={item.image} alt={item.label} />
    <h3>
@@ -245,7 +256,20 @@ const settings = {
               </h3>
               <p>{item.label}</p>
             </div>
-          ))}
+          ))} */}
+          {stats.map(item => (
+  <div key={item.id} className="about-stat-card">
+    <img className='stats-icon' src={item.image} alt={item.label} />
+    <h3>
+      {/* <CountUp key={counterKey + item.id} start={0} end={item.count} duration={2} separator=',' /> */}
+      <CountUp key={counterKey + item.id} start={0} end={item.count} duration={2} separator=',' />
+
+      {item.suffix}
+    </h3>
+    <p>{item.label}</p>
+  </div>
+))}
+
         </div>
       </Container>
     </Container>

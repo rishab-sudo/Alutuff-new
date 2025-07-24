@@ -16,7 +16,7 @@ const LinkTree = () => {
         <div className="popup-overlay">
           <div className='popup-content'>
             <button className="close-btn" onClick={handleClose}>×</button>
-            <h2 className="popup-heading">Alutuff Social Links</h2>
+            <h2 className="popup-heading">Alutuff </h2>
             <ul className="social-links">
               <li><a href="https://www.facebook.com/profile.php?id=61578129710470" target="_blank" rel="noreferrer">Facebook</a></li>
               <li><a href="https://www.instagram.com/alutuff.panels/" target="_blank" rel="noreferrer">Instagram</a></li>

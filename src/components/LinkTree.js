@@ -9,7 +9,7 @@ const LinkTree = () => {
 
   return (
     <>
-      <button className="open-popup-btn" onClick={handleOpen}>Open Social Links</button>
+      <button className="open-popup-btn" onClick={handleOpen}>Explore More</button>
 
       {showPopup && (
         <div className="popup-overlay">

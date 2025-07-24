@@ -20,19 +20,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.312); 
-  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.312);
+  z-index: 10000; /* Just under the button */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* Allow spacing on small screens */
+  overflow-y: auto; /* Enable scroll if popup is tall */
 }
 
 .popup-content {
   position: relative;
   width: 350px;
-  height: auto;
-  min-height: 500px;
-border-radius: 20px;
+  max-height: 90vh; /* Limit popup to viewport height */
+  overflow-y: auto; /* Scroll if content is long */
+  border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.966);
   background-color: rgba(0, 0, 0, 0.149);
   padding: 30px 20px 40px;
@@ -40,6 +42,7 @@ border-radius: 20px;
   flex-direction: column;
   align-items: center;
 }
+
 
 .popup-heading {
   font-size: 22px;

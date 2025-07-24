@@ -115,7 +115,7 @@ const handleToggleRow = () => {
     <div key={product.id} className="product-card" onClick={() => setSelectedImage(product.image)}>
       <img src={product.image} alt={product.title} />
      <div className="overlay">
-  <div className="eye-icon">👁️</div> {/* Eye icon in top-right */}
+  {/* <div className="eye-icon">👁️</div>  */}
   <h4>{product.title}</h4>
   <p className='text-white'>{product.description}</p>
   <p className='text-white'>{product.text}</p>

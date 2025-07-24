@@ -21,6 +21,7 @@ import Catalogues from './Pages/Catalogues';
 import Career from './Pages/Career';
 import Loader from './components/Loader';
 import DealerPage from './Pages/Dealer';
+import LinkTree from './components/LinkTree';
 
 function App() {
   const [showLoader, setShowLoader] = useState(() => {
@@ -45,6 +46,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <LinkTree/>
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/home" element={<Home />} />

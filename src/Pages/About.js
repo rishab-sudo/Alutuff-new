@@ -47,7 +47,7 @@ const [zigzagRef, zigzagInView] = useInView({
 useEffect(() => {
   const interval = setInterval(() => {
     setCounterKey(prevKey => prevKey + 1); // re-triggers CountUp
-  }, 5000); // every 2 seconds
+  }, 3500); // every 2 seconds
 
   return () => clearInterval(interval);
 }, []);

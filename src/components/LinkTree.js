@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import cataloguePDF from "../assets/pdf/Shade Card (1).pdf"
 import './LinkTree.css';
 
 const LinkTree = () => {
@@ -24,7 +25,15 @@ const LinkTree = () => {
               <li ><a href="/projects" target="_blank" rel="noreferrer">Projects Portfolio</a></li>
             <li><a href="mailto:sales@alutuff.in">Email</a></li>  
               <li><a href="tel:+916396854974">Call Us</a></li>
-
+<li><a
+style={{ textDecoration:"none"}}
+  href={cataloguePDF}
+  target="_blank"
+  rel="noopener noreferrer"
+  className=""
+>
+  Download Catalogue
+</a></li>
 
              {/*  <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li> */}
 

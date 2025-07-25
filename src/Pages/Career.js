@@ -8,6 +8,7 @@ import { FaRocket, FaLeaf, FaCogs, FaUsers } from 'react-icons/fa';
 import Banner from '../components/Banner';
 import bannerImage from '../assets/1400.jpg'
 import CareerForm from '../components/CareerForm';
+import OpenPosition from "../components/OpenPosition"
 import "./Career.css"
 
 const boxData = [
@@ -339,6 +340,7 @@ const Career = () => {
     </div>
  
       <Testimonial testimonials={testimonialsData} />
+<OpenPosition/>
 
 <CareerForm className="mt-3"/>
   

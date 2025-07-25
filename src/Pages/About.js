@@ -159,11 +159,11 @@ const settings = {
           </Container>
 
       {/* Glance Section */}
- <div ref={ref} className={`glance ${inView ? 'glance-visible' : ''}`}>
+ <div ref={ref} className={`glance ${inView ? 'glance-visible' : ''}`} >
 
-        <h2 className='page-heading' style={{marginBottom:"0rem "}}>Alutuff World-Class Campus at a Glance
+        <h2 className='page-heading' style={{marginBottom:"0rem "}}> Alutuff World-Class Campus at a Glance
 </h2>
-        <p className='section-heading sub-heading' >Built on scale, driven by innovation, a powerhouse of precision manufacturing, skilled talent, and world-class infrastructure excellence.</p>
+        <p className='section-heading sub-heading'> Built on scale, driven by innovation, a powerhouse of precision manufacturing, skilled talent, and world-class infrastructure excellence.</p>
 
         <div className="glance-container">
           {/* Left Points */}

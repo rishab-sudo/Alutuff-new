@@ -47,7 +47,7 @@ function App() {
       <div className="App">
   
         <Navbar />
-            <h1 style={{fontSize:"35px", color:"#0000"}}>helllloooowwwwwwwwwww</h1>
+            <h1 style={{fontSize:"35px", color:"#000",margin:"200px"}}>helllloooowwwwwwwwwww</h1>
         <LinkTree/>
         <Routes>
           <Route path="*" element={<Home />} />

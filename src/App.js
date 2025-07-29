@@ -45,7 +45,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+  
         <Navbar />
+            <h1 style={{fontSize:"35px", color:"#0000"}}>helllloooowwwwwwwwwww</h1>
         <LinkTree/>
         <Routes>
           <Route path="*" element={<Home />} />

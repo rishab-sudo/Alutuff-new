@@ -133,7 +133,7 @@ const ProductPage = () => {
 
             {/* Product Detail Layout */}
             {selectedCategory !== "All" && selectedCategoryData && (
-              <div className="product-detail-layout mt-4">
+              <div className="product-detail-layout ">
                 {/* Left Image with Flip Animation */}
                 <div className="product-detail-image">
                   <div className="image-slider-overlay">

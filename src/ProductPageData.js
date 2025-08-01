@@ -187,9 +187,9 @@ const ProductPageData = [
 
   // 7 - Louvers – Aluminium / WPC Louvers
   {
-    category: 'Louvers – Aluminium / WPC Louvers',
+    category: 'Louvers – Aluminium Louvers',
     details: {
-      material: 'Aluminium or WPC solid/hollow extruded profiles',
+      material: 'Aluminium solid/hollow extruded profiles',
       categoryType: 'Architectural Shading System',
       applications: ['Exterior facades', 'Sunshade systems', 'Pergolas', 'Balcony screens'],
       keyFeatures: [
@@ -203,13 +203,13 @@ const ProductPageData = [
     products: [
       {
         id: 13,
-        title: 'Louvers – Aluminium / WPC Louvers',
+        title: 'Louvers – Aluminium Louvers',
         description: 'Elegant shading solution for facades',
         image: require('./assets/product-page/Louvers – Aluminium   WPC Louvers   1.jpg'),
       },
         {
         id: 14,
-        title: 'Louvers – Aluminium / WPC Louvers',
+        title: 'Louvers – Aluminium Louvers',
         description: 'Elegant shading solution for facades',
         image: require('./assets/product-page/Louvers – Aluminium  WPC Louvers  2.jpg'),
       },
@@ -247,9 +247,9 @@ const ProductPageData = [
     ],
   },
     {
-    category: 'Alutuff PVC/WPC Decorative Panels',
+    category: 'Alutuff PVC Decorative Panels',
     details: {
-      material: ' PVC Celluka or Wood-Plastic Composite (WPC) with rigid polymer base',
+      material: ' PVC Celluka with rigid polymer base',
       categoryType: ' Decorative Cladding & Partition Panel',
       applications: ['Interior partitions, wall cladding, modular furniture, ceilings, kitchens, wet areas, and decorative displays'],
       keyFeatures: [
@@ -265,13 +265,13 @@ const ProductPageData = [
     products: [
       {
         id: 17,
-        title: 'Alutuff PVC/WPC Decorative Panels',
+        title: 'Alutuff PVC Decorative Panels',
         description: 'Moisture-proof panels with versatile stylish finishes',
         image: require('./assets/product-page/PVC  1 .jpg'),
       },
         {
         id: 18,
-        title: 'Alutuff PVC/WPC Decorative Panels',
+        title: 'Alutuff PVC Decorative Panels',
         description: 'Moisture-proof panels with versatile stylish finishes',
         image: require('./assets/product-page/PVC 2.jpg'),
       },

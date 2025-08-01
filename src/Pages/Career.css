@@ -155,6 +155,39 @@
   transform: scale(1.08) translateZ(30px);
   z-index: 1000 !important; /* ✅ Bring to front */
 }
+/*-------------- Life at alutuff----------------- */
+.career-lyfAt-card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.career-lyfAt-card {
+    text-align: left;
+  width: 80%;
+  max-width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.career-center-card
+.life-slide {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+.life-slide-img {
+  width: 90%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.368);
+}
+
 /* career - benifits */
 .benefits-section {
   margin-top: 5%;

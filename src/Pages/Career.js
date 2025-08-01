@@ -148,6 +148,7 @@ const Career = () => {
   const toggleBox = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  // -------------core-values-slider--------------
       const settings = {
     infinite: true,
     speed: 5000,
@@ -170,7 +171,35 @@ const Career = () => {
     ]
   };
       const [expanded, setExpanded] = useState(false);
+      // life-at-alutuff-slider
+      const lifeSliderSettings = {
+    infinite: true,
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    pauseOnHover: true,
+    responsive: [
+         {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 992,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 576,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  };
+
   return (
+    
     <>
       {/* Banner Section */}
   <div className='w-100' >
@@ -274,19 +303,46 @@ const Career = () => {
     </Container>
 <div className='container' style={{width:"65%",height:"5px",backgroundColor:"#333333",borderRadius:"15px",marginTop:"2.5%"}}></div>
       
-         <Container fluid className="career-center-card-section">
-      <Container className="career-center-card">
-          <div className='text-center mx-auto'>
-        <h2 className="page-heading text-center mx-auto" >Life at Alutuff</h2>
-        </div>
-        <p className='text-center page-text'>Where People Drive Progress</p>
-        <p className="page-text">
-         At Alutuff, our people are at the heart of everything we do. We believe in fostering a collaborative, vibrant, and inclusive workplace where innovation thrives and every contribution matters.
-          <br /><br />
-         From meaningful projects to team celebrations, we ensure your journey with us is filled with growth, purpose, and recognition. Together, we build more than products — we build careers, communities, and a better tomorrow.
-  </p>
-      </Container>
-    </Container>
+<Container fluid className="career-lyfAt-card-section">
+  <Container className="career-lyfAt-card">
+    <div className='text-center mx-auto'>
+      <h2 className="page-heading text-center mx-auto">Life at Alutuff</h2>
+    </div>
+
+    {/* Slick carousel starts here */}
+    <Slider {...lifeSliderSettings}>
+      <div className="life-slide">
+        <img src={require("../assets/career-real-images/1.png")} alt="Life at Alutuff 1" className="life-slide-img" />
+      </div>
+      <div className="life-slide">
+        <img src={require("../assets/career-real-images/2.png")} alt="Life at Alutuff 2" className="life-slide-img" />
+      </div>
+      <div className="life-slide">
+        <img src={require("../assets/career-real-images/3.png")} alt="Life at Alutuff 3" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/4.png")} alt="Life at Alutuff 4" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/5.png")} alt="Life at Alutuff 5" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/6.png")} alt="Life at Alutuff 6" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/7.png")} alt="Life at Alutuff 7" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/8.png")} alt="Life at Alutuff 8" className="life-slide-img" />
+      </div>
+         <div className="life-slide">
+        <img src={require("../assets/career-real-images/9.png")} alt="Life at Alutuff 9" className="life-slide-img" />
+      </div>
+      {/* Add more slides as needed */}
+    </Slider>
+  </Container>
+</Container>
+
 
       <section className="benefits-section">
   

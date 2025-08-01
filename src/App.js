@@ -45,7 +45,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+  
         <Navbar />
+         
         <LinkTree/>
         <Routes>
           <Route path="*" element={<Home />} />

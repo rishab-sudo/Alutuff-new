@@ -144,6 +144,7 @@ const values = [
 
 const Career = () => {
     const [openIndex, setOpenIndex] = useState(null);
+const [selectedCategory, setSelectedCategory] = useState("All");
 
   const toggleBox = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -172,6 +173,38 @@ const Career = () => {
   };
       const [expanded, setExpanded] = useState(false);
       // life-at-alutuff-slider
+
+      const lifeImages = [
+  { src: require("../assets/career-real-images/1.png"), alt: "1", category: "Birthday" },
+  { src: require("../assets/career-real-images/2.png"), alt: "2", category: "Events" },
+  { src: require("../assets/career-real-images/3.png"), alt: "3", category: "Training" },
+  { src: require("../assets/career-real-images/4.png"), alt: "4", category: "Birthday" },
+  { src: require("../assets/career-real-images/5.png"), alt: "5", category: "Events" },
+  { src: require("../assets/career-real-images/6.png"), alt: "6", category: "Training" },
+  { src: require("../assets/career-real-images/7.png"), alt: "7", category: "Events" },
+  { src: require("../assets/career-real-images/8.png"), alt: "8", category: "Birthday" },
+  { src: require("../assets/career-real-images/9.png"), alt: "9", category: "Training" },
+];
+
+const getFilteredImages = () => {
+  const filtered = selectedCategory === "All"
+    ? lifeImages
+    : lifeImages.filter((img) => img.category === selectedCategory);
+
+  const minSlides = 8; // adjust based on your `slidesToShow` and need
+  const repeated = [];
+
+  while (repeated.length < minSlides) {
+    repeated.push(...filtered);
+    if (filtered.length === 0) break;
+  }
+
+  return repeated.slice(0, minSlides); // keep only minSlides to avoid huge arrays
+};
+
+const filteredImages = getFilteredImages();
+
+    //  life-at-alutuff-slider
       const lifeSliderSettings = {
     infinite: true,
     speed: 5000,
@@ -307,41 +340,32 @@ const Career = () => {
   <Container className="career-lyfAt-card">
     <div className='text-center mx-auto'>
       <h2 className="page-heading text-center mx-auto">Life at Alutuff</h2>
+
+      {/* Filter Buttons */}
+      <div className="lyf-filter-buttons mt-0">
+        {["All", "Birthday", "Events", "Training"].map((cat) => (
+          <button
+            key={cat}
+            className={`lyf-filter-btn ${selectedCategory === cat ? "active" : ""}`}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
     </div>
 
     {/* Slick carousel starts here */}
     <Slider {...lifeSliderSettings}>
-      <div className="life-slide">
-        <img src={require("../assets/career-real-images/1.png")} alt="Life at Alutuff 1" className="life-slide-img" />
-      </div>
-      <div className="life-slide">
-        <img src={require("../assets/career-real-images/2.png")} alt="Life at Alutuff 2" className="life-slide-img" />
-      </div>
-      <div className="life-slide">
-        <img src={require("../assets/career-real-images/3.png")} alt="Life at Alutuff 3" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/4.png")} alt="Life at Alutuff 4" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/5.png")} alt="Life at Alutuff 5" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/6.png")} alt="Life at Alutuff 6" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/7.png")} alt="Life at Alutuff 7" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/8.png")} alt="Life at Alutuff 8" className="life-slide-img" />
-      </div>
-         <div className="life-slide">
-        <img src={require("../assets/career-real-images/9.png")} alt="Life at Alutuff 9" className="life-slide-img" />
-      </div>
-      {/* Add more slides as needed */}
+      {filteredImages.map((img, idx) => (
+        <div key={idx} className="life-slide">
+          <img src={img.src} alt={`Life at Alutuff ${img.alt}`} className="life-slide-img" />
+        </div>
+      ))}
     </Slider>
   </Container>
 </Container>
+
 
 
       <section className="benefits-section">

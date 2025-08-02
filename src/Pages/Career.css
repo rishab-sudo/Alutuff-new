@@ -167,8 +167,7 @@
 .career-lyfAt-card {
     text-align: left;
   width: 80%;
- 
-  max-width: 100%;
+ max-width: 100%;
   background: #fff;
   padding: 40px;
   border-radius: 10px;
@@ -176,6 +175,7 @@
 }
 .career-center-card
 .life-slide {
+  
   width: 100%;
   position: relative;
   padding: 10px;
@@ -188,6 +188,29 @@
   border-radius: 15px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.368);
 }
+.lyf-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+
+}
+
+.lyf-filter-btn {
+  padding: 8px 16px;
+border: none;
+  border-radius: 8px;
+  background-color: #ea3138;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lyf-filter-btn.active,
+.lyf-filter-btn:hover {
+  background-color: #000;
+  color: white;
+}
 
 /* career - benifits */
 .benefits-section {
@@ -195,9 +218,7 @@
   background-image: url('../assets/career-bg.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
- 
-  position: relative;
-  
+ position: relative;
 }
 
 .benefits-overlay {

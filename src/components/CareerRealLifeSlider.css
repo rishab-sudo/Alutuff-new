@@ -37,13 +37,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-      max-height: 520px;
+      height: 520px;
     margin: auto !important;
 }
 .life-slide-video{
     margin: auto !important;
      width: auto;
-  max-height: 520px;
+  height: 520px;
   object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

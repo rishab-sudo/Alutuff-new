@@ -10,10 +10,10 @@ const lifeMedia = [
   { src: require("../assets/career-real-images/1.png"), alt: "1", type: "image", category: "Birthday" },
   { src: require("../assets/career-real-images/4.png"), alt: "4", type: "image", category: "Birthday" },
   { src: require("../assets/career-real-images/8.png"), alt: "8", type: "image", category: "Birthday" },
-{ src: require("../assets/career-real-images/3.png"), alt: "1", type: "image", category: "Birthday" },
-{ src: require("../assets/career-real-images/5.png"), alt: "1", type: "image", category: "Birthday" },
-{ src: require("../assets/career-real-images/6.png"), alt: "1", type: "image", category: "Birthday" },
-{ src: require("../assets/career-real-images/7.png"), alt: "1", type: "image", category: "Birthday" },
+{ src: require("../assets/career-real-images/3.png"), alt: "3", type: "image", category: "Birthday" },
+{ src: require("../assets/career-real-images/5.png"), alt: "5", type: "image", category: "Birthday" },
+{ src: require("../assets/career-real-images/6.png"), alt: "6", type: "image", category: "Birthday" },
+{ src: require("../assets/career-real-images/7.png"), alt: "7", type: "image", category: "Birthday" },
 
 
   { src: require("../assets/career-real-videos/video1.mp4"), alt: "Event Video 1", type: "video", category: "Events" },

@@ -1,0 +1,68 @@
+/* Outer Section */
+.career-lyfAt-card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  background-color: #ffffff;
+}
+
+/* Inner Card Container */
+.career-lyfAt-card {
+  width: 100%;
+  max-width: 1280px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Slide Container */
+.life-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Slide Image or Video */
+.life-slide-img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.life-slide-video{
+     width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter Button Container */
+.lyf-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+/* Filter Button Style */
+.lyf-filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ea3138;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lyf-filter-btn.active,
+.lyf-filter-btn:hover {
+  background-color: #a02528;
+  color: white;
+}

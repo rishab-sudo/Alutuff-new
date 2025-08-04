@@ -14,9 +14,8 @@ const lifeMedia = [
   { src: require("../assets/career-real-videos/video1.mp4"), alt: "Event Video 1", type: "video", category: "Events" },
   { src: require("../assets/career-real-videos/video2.mp4"), alt: "Event Video 2", type: "video", category: "Events" },
 
-  { src: require("../assets/career-real-images/3.png"), alt: "3", type: "image", category: "Training" },
-  { src: require("../assets/career-real-images/6.png"), alt: "6", type: "image", category: "Training" },
-  { src: require("../assets/career-real-images/9.png"), alt: "9", type: "image", category: "Training" },
+  { src: require("../assets/career-real-videos/video1.mp4"), alt: "Event Video 1", type: "video", category: "Training" },
+  { src: require("../assets/career-real-videos/video2.mp4"), alt: "Event Video 2", type: "video", category: "Training" },
 ];
 
 const CareerRealLifeSlider = () => {

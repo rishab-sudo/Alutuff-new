@@ -33,10 +33,17 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.life-slide-video-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto !important;
+}
 .life-slide-video{
-     width: 100%;
-  height: 80%;
-  object-fit: cover;
+    margin: auto !important;
+     width: auto;
+  height: 500px;
+  object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

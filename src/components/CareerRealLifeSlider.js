@@ -115,6 +115,7 @@ const CareerRealLifeSlider = () => {
                   className="life-slide-img"
                 />
               ) : (
+                <div className='life-slide-video-div'>
                 <video
                   controls
                   className="life-slide-video"
@@ -124,6 +125,7 @@ const CareerRealLifeSlider = () => {
                   <source src={item.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                </div>
               )}
             </div>
           ))}

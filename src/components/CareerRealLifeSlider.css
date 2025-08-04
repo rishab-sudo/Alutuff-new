@@ -28,7 +28,7 @@
 /* Slide Image or Video */
 .life-slide-img {
   width: 100%;
-  height: 560px;
+  height: 520px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -37,12 +37,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+      max-height: 520px;
     margin: auto !important;
 }
 .life-slide-video{
     margin: auto !important;
      width: auto;
-  height: 500px;
+  max-height: 520px;
   object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

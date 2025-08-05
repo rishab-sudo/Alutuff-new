@@ -121,7 +121,7 @@ const Established = () => {
         <p className='page-heading'>A Breif History</p>
       </div>
       <Container className='road-map-content-div'>
-         <img className='road-map-img' src={require("../assets/road-map-alutuff (1).jpeg")} alt=""/>
+         <img className='road-map-img' src={require("../assets/roadmap1.jpeg")} alt=""/>
       </Container>
     </Container>
 

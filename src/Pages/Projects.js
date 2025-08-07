@@ -93,6 +93,13 @@ const allProjects = [
     title: "Private Project 5",
     desc: "Modern Hospital Elevation",
   },
+    {
+    id: 13,
+    type: "private",
+    image: require("../assets/projects/demo.jpeg"),
+    title: "Private Project 5",
+    desc: "Modern Hospital Elevation",
+  },
 
 ];
 

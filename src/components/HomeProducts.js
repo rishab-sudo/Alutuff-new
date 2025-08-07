@@ -147,7 +147,7 @@ const handleToggleRow = () => {
   <div className="image-popup" onClick={() => setSelectedImage(null)}>
     <div className="popup-content" onClick={(e) => e.stopPropagation()}>
       <button className="close-button" onClick={() => setSelectedImage(null)}>×</button>
-      <img src={selectedImage} alt="Full View" />
+      <img className='popup-content-img' src={selectedImage} alt="Full View" />
     </div>
   </div>
 )}

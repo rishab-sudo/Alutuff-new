@@ -14,6 +14,7 @@ const lifeMedia = [
 { src: require("../assets/career-real-images/5.png"), alt: "5", type: "image", category: "Birthday" },
 { src: require("../assets/career-real-images/6.png"), alt: "6", type: "image", category: "Birthday" },
 { src: require("../assets/career-real-images/7.png"), alt: "7", type: "image", category: "Birthday" },
+{ src: require("../assets/career-real-images/99.jpeg"), alt: "9", type: "image", category: "Birthday" },
 
 
   { src: require("../assets/career-real-videos/video1.mp4"), alt: "Event Video 1", type: "video", category: "Events" },

@@ -10,7 +10,7 @@
 /* Inner Card Container */
 .career-lyfAt-card {
   width: 100%;
-  max-width: 1280px;
+  max-width: 75%;
   background: #fff;
   padding: 40px;
   border-radius: 10px;
@@ -28,7 +28,7 @@
 /* Slide Image or Video */
 .life-slide-img {
   width: 100%;
-  height: 520px;
+  height: 450px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -37,13 +37,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-      height: 520px;
+      height: 450px;
+      width: 100%;
     margin: auto !important;
 }
 .life-slide-video{
     margin: auto !important;
      width: auto;
-  height: 520px;
+  height: 450px;
   object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

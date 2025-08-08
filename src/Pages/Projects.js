@@ -196,48 +196,6 @@ const ProjectCarousel = () => {
         </Container>
       </Container>
 
-      {/* GOVERNMENT PROJECTS */}
-      <Container className="project-carousel-container">
-        <div className='d-flex justify-content-center align-items-center mb-5'>
-          <p className="page-heading">GOVERNMENT PROJECTS</p>
-        </div>
-
-        <Swiper
-          modules={[Autoplay]}
-          loop={true}
-          autoplay={{ delay: 2500 }}
-          className="project-swiper"
-          breakpoints={{
-            0: { slidesPerView: 1, centeredSlides: false },
-            768: { slidesPerView: 2, centeredSlides: true },
-            992: { slidesPerView: 3, centeredSlides: true },
-          }}
-        >
-          {governmentData.map((item) => (
-            <SwiperSlide key={item.id} className="project-card">
-              <div className="project-inner">
-                <img src={item.image} alt={item.title} />
-                {/* <h3>{item.title}</h3>
-                <p>{item.desc}</p> */}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
-
-      {/* GOVERNMENT CLIENTS */}
-      <Container className="clients-section">
-        <h2 className="page-heading">Government Clients</h2>
-        <div className="clients-grid">
-          {governmentClients.map((client, index) => (
-            <div className="client-box" key={index}>
-              <FaBuilding className="client-icon" />
-              <span>{client}</span>
-            </div>
-          ))}
-        </div>
-      </Container>
-
       {/* PRIVATE PROJECTS */}
       <Container className="project-carousel-container">
         <div className='d-flex justify-content-center align-items-center mb-5'>
@@ -285,6 +243,49 @@ const ProjectCarousel = () => {
           </button>
         </div>
       </Container>
+      {/* GOVERNMENT PROJECTS */}
+      <Container className="project-carousel-container">
+        <div className='d-flex justify-content-center align-items-center mb-5'>
+          <p className="page-heading">GOVERNMENT PROJECTS</p>
+        </div>
+
+        <Swiper
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 2500 }}
+          className="project-swiper"
+          breakpoints={{
+            0: { slidesPerView: 1, centeredSlides: false },
+            768: { slidesPerView: 2, centeredSlides: true },
+            992: { slidesPerView: 3, centeredSlides: true },
+          }}
+        >
+          {governmentData.map((item) => (
+            <SwiperSlide key={item.id} className="project-card">
+              <div className="project-inner">
+                <img src={item.image} alt={item.title} />
+                {/* <h3>{item.title}</h3>
+                <p>{item.desc}</p> */}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
+
+      {/* GOVERNMENT CLIENTS */}
+      <Container className="clients-section">
+        <h2 className="page-heading">Government Clients</h2>
+        <div className="clients-grid">
+          {governmentClients.map((client, index) => (
+            <div className="client-box" key={index}>
+              <FaBuilding className="client-icon" />
+              <span>{client}</span>
+            </div>
+          ))}
+        </div>
+      </Container>
+
+
     </>
   );
 };

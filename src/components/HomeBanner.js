@@ -52,38 +52,46 @@ const HomeBanner = () => {
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="slide">
-              <img
-                src={slide.image}
-                alt={`Slide ${index + 1}`}
-                className="banner-image"
-              />
+    <SwiperSlide key={index}>
+  <div className="slide">
+    <img
+      src={slide.image}
+      alt={`Slide ${index + 1}`}
+      className="banner-image"
+    />
 
-              {/* Mobile heading */}
-              <div className="mobile-heading">
-                <h1>{slide.heading}</h1>
-              </div>
+    {/* 🔼 Top-right image */}
+    <img
+      src={require('../assets/15-yearss.png')} // <-- replace this with your actual image
+      alt="Top Right"
+      className="top-right-image"
+    />
 
-              {/* Desktop content box */}
-              <div className={`content-box ${activeIndex === index ? 'show-text' : ''}`}>
-                <h2>{slide.heading}</h2>
-                <p>{slide.description}</p>
-                <Link to="/product">
-                  <button className="pink-button">{slide.buttonText}</button>
-                </Link>
-              </div>
+    {/* Mobile heading */}
+    <div className="mobile-heading">
+      <h1>{slide.heading}</h1>
+    </div>
 
-              {/* Mobile content box */}
-              <div className={`mobile-content-box ${activeIndex === index ? 'show-text' : ''}`}>
-                <h2>{slide.heading}</h2>
-                <p>{slide.description}</p>
-                <Link to="/product">
-                  <button className="pink-button">{slide.buttonText}</button>
-                </Link>
-              </div>
-            </div>
-          </SwiperSlide>
+    {/* Desktop content box */}
+    <div className={`content-box ${activeIndex === index ? 'show-text' : ''}`}>
+      <h2>{slide.heading}</h2>
+      <p>{slide.description}</p>
+      <Link to="/product">
+        <button className="pink-button">{slide.buttonText}</button>
+      </Link>
+    </div>
+
+    {/* Mobile content box */}
+    <div className={`mobile-content-box ${activeIndex === index ? 'show-text' : ''}`}>
+      <h2>{slide.heading}</h2>
+      <p>{slide.description}</p>
+      <Link to="/product">
+        <button className="pink-button">{slide.buttonText}</button>
+      </Link>
+    </div>
+  </div>
+</SwiperSlide>
+
         ))}
       </Swiper>
     </div>

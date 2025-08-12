@@ -22,6 +22,7 @@ import Career from './Pages/Career';
 import Loader from './components/Loader';
 import DealerPage from './Pages/Dealer';
 import LinkTree from './components/LinkTree';
+import Demo from './Pages/Demo';
 
 function App() {
   const [showLoader, setShowLoader] = useState(() => {
@@ -47,9 +48,9 @@ function App() {
       <div className="App">
   
         <Navbar />
-         
         <LinkTree/>
         <Routes>
+        {/* <Route path="/" element={<Demo />} /> */}
           <Route path="*" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />

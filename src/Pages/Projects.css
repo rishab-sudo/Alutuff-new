@@ -127,13 +127,15 @@ margin-top: 1.5rem;
   max-width: 100%;/* 3 cards * ~300px + spacing */
   margin: auto;
   padding: 80px 20px;
-  perspective: 1200px;
+  perspective: 1400px;
   overflow: hidden; /* prevents left cut-off */
 }
 
 
 .project-swiper {
+  width: 100%;
   overflow: visible;
+
 }
 
 .project-card {
@@ -236,6 +238,7 @@ color: #ea3138;
   text-align: left;
   color: #444;
 }
+
 @media (max-width: 768px) {
   .projects-banner-section{
     padding: 0 !important;
@@ -305,4 +308,8 @@ margin-top:  0px !important;
   .client-box {
     width: 100%;
   }
+
 }
+
+/*  */
+
